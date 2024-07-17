@@ -2,18 +2,17 @@ import { Link } from "react-router-dom";
 import Headline from "../../../Shared/Headline/Headline";
 import Marquee from "react-fast-marquee";
 import { FaBath, FaBed, FaMapMarkerAlt, FaMedal, FaRulerVertical, FaStar } from "react-icons/fa";
-import Button from "../../../Shared/Button/Button";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-const Service = () => {
+const Properties = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         AOS.refresh();
     }, []);
 
-    const services = [
+    const Properties = [
         {
             imageURL: "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
             baths: "4",
@@ -22,7 +21,10 @@ const Service = () => {
             name: "Mike Heaven Estates",
             text: "760 Isidro Knolls, Japan, JP 165561, ID",
             price: "100,500",
-            rate: "2"
+            rate: "2",
+            type:"Vila",
+            condition:"Rental",
+
         },
         {
             imageURL: "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
@@ -32,7 +34,9 @@ const Service = () => {
             name: "Mike Heaven Estates",
             text: "760 Isidro Knolls, Japan, JP 165561, ID",
             price: "100,500",
-            rate: "2"
+            rate: "2",
+            type:"Farmhouse",
+            condition:"sell",
         },
         {
             imageURL: "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
@@ -42,7 +46,33 @@ const Service = () => {
             name: "Mike Heaven Estates",
             text: "760 Isidro Knolls, Japan, JP 165561, ID",
             price: "100,500",
-            rate: "2"
+            rate: "2",
+            type:"Studio Apartment",
+            condition:"sell",
+        },
+        {
+            imageURL: "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
+            baths: "4",
+            bed: "4",
+            area: "2218",
+            name: "Mike Heaven Estates",
+            text: "760 Isidro Knolls, Japan, JP 165561, ID",
+            price: "100,500",
+            rate: "2",
+            type:"Penthouse",
+            condition:"sell",
+        },
+        {
+            imageURL: "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
+            baths: "4",
+            bed: "4",
+            area: "2218",
+            name: "Mike Heaven Estates",
+            text: "760 Isidro Knolls, Japan, JP 165561, ID",
+            price: "100,500",
+            rate: "2",
+            type:"Rowhouse",
+            condition:"Rental",
         },
     ];
 
@@ -50,8 +80,8 @@ const Service = () => {
         <div className="my-[100px]">
             <div className="flex justify-center text-center" data-aos="fade-up">
                 <Headline
-                    subheading1={"WHY WE DO"}
-                    headline={"Quality Tailored Service"}
+                    subheading1={"PROPERTY"}
+                    headline={"Quality Tailored Property"}
                 />
             </div>
             <div className="flex justify-center text-center mb-4" data-aos="fade-up">
@@ -62,49 +92,49 @@ const Service = () => {
 
             <Marquee speed={50} pauseOnHover={true} className="gap-5">
                 <div className="flex gap-5">
-                    {services.map((service, index) => (
+                    {Properties.map((Property, index) => (
                         <div key={index} className="border border-gray-300 rounded-lg shadow-lg overflow-hidden w-10/12 max-h-full" data-aos="fade-up">
                             <Link to="/">
                                 <div className="w-full">
-                                    <img src={service.imageURL} alt={service.name} className="w-full h-[250px] object-cover z-0 relative" />
-                                    <div className="w-15 px-2 py-1 ml-2 z-0 fixed mt-[-240px] bg-blue-600 border rounded-lg hover:bg-yellow-400 hover:text-white font-bold">
-                                      Rental
+                                    <img src={Property.imageURL} alt={Property.name} className="w-full h-[250px] object-cover z-0 relative" />
+                                    <div className="w-18 px-2 py-1 ml-2 z-0 fixed mt-[-240px] bg-blue-600 border rounded-lg hover:bg-yellow-400 hover:text-white font-bold">
+                                     {Property.type}
                                     </div>
-                                    <div className="w-[60px] px-2 py-2 ml-[370px] z-0 fixed mt-[-240px] bg-blue-600 flex justify-center border rounded-lg hover:bg-yellow-400 hover:text-white">
-                                        <FaMedal size={18} />
+                                    <div className="w-[60px] p-1 ml-[370px] z-0 fixed mt-[-240px] bg-blue-600 flex justify-center border rounded-lg font-bold hover:bg-yellow-400 hover:text-white">
+                                    {Property.condition}
                                     </div>
                                     
                                     <div className="p-4">
                                         <div className="flex justify-between text-gray-500 my-3">
                                             <div className="flex gap-2">
                                                 <FaBath />
-                                                <span>{service.baths} Baths</span>
+                                                <span>{Property.baths} Baths</span>
                                             </div>
                                             <div className="flex gap-2">
                                                 <FaBed size={20} />
-                                                <span>{service.bed} Beds</span>
+                                                <span>{Property.bed} Beds</span>
                                             </div>
                                             <div className="flex gap-1">
                                                 <FaRulerVertical size={18} />
                                                 <span>Area:</span>
-                                                <span>{service.area} /m2</span>
+                                                <span>{Property.area} /m2</span>
                                             </div>
                                         </div>
                                         <hr className="p-3" />
                                         <div className="my-2">
-                                            <h1 className="text-2xl font-bold mb-2">{service.name}</h1>
+                                            <h1 className="text-2xl font-bold mb-2">{Property.name}</h1>
                                             <div className="flex gap-2">
                                                 <FaMapMarkerAlt size={20} />
-                                                <p className="text-gray-500 mb-2">{service.text}</p>
+                                                <p className="text-gray-500 mb-2">{Property.text}</p>
                                             </div>
                                         </div>
                                         <hr className="p-3" />
                                         <div className="my-2 flex justify-between">
                                             <div>
-                                                <span className="text-xl font-bold">${service.price}</span>
+                                                <span className="text-xl font-bold">${Property.price}</span>
                                             </div>
                                             <div className="flex gap-2">
-                                                <span className="text-xl font-bold">{service.rate}</span>
+                                                <span className="text-xl font-bold">{Property.rate}</span>
                                                 <FaStar color="yellow" size={22} />
                                             </div>
                                         </div>
@@ -115,13 +145,9 @@ const Service = () => {
                     ))}
                 </div>
             </Marquee>
-            <div className="flex justify-center text-center my-4" data-aos="fade-up">
-                <Button>
-                    Visit All Properties
-                </Button>
-            </div>
+           
         </div>
     );
 };
 
-export default Service;
+export default Properties;

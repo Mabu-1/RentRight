@@ -5,8 +5,8 @@ import Newsletter from "../Newsletter/Newsletter";
 import Package from "../Package/Package";
 import Partners from "../Partners/Partners";
 import Requirement from "../Requirement/Requirement";
-import Service from "../Service/Service";
-import Testimonial from "../Testimonial/Testimonial";
+
+
 import Unique from "../Unique/Unique";
 
 const Home = () => {
@@ -16,9 +16,7 @@ const Home = () => {
            <AboutUs></AboutUs>
            <Unique></Unique>
            <Leading></Leading>
-           <Service></Service>
            <Requirement></Requirement>
-           <Testimonial></Testimonial>
            <Package></Package>
            <Partners></Partners>
            <Newsletter></Newsletter>

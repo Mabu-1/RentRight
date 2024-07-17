@@ -70,10 +70,12 @@ const Leading = () => {
                     </div>
                 ))}
             </div>
-            <div className="flex justify-center text-center my-2" data-aos="fade-up">
+            <div className="flex justify-center text-center my-4" data-aos="fade-up">
+                <Link to="/property">
                 <Button>
                     Visit All Properties
                 </Button>
+                </Link>
             </div>
         </div>
     );

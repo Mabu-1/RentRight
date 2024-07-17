@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 const Navbar = () => {
   let Links = [
     { name: "HOME", link: "/" },
-    { name: "PROPERTY", link: "/" },
+    { name: "PROPERTY", link: "/property" },
     { name: "SERVICE", link: "/" },
     { name: "ABOUT US", link: "/" },
     { name: "CONTACT US", link: "/" },
@@ -30,7 +30,7 @@ const Navbar = () => {
           {
             Links.map((link) => (
               <li key={link.name} className='md:ml-8  md:my-0 my-7 px-1'>
-                <Link href={link.link} className='text-black hover:text-[#3d07ff] font-bold duration-500'>{link.name}</Link>
+                <Link to={link.link} className='text-black hover:text-[#3d07ff] font-bold duration-500'>{link.name}</Link>
               </li>
             ))
           }
