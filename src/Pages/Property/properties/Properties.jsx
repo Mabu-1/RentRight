@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Headline from "../../../Shared/Headline/Headline";
 import Marquee from "react-fast-marquee";
-import { FaBath, FaBed, FaMapMarkerAlt, FaMedal, FaRulerVertical, FaStar } from "react-icons/fa";
+import { FaBath, FaBed, FaMapMarkerAlt,  FaRulerVertical, FaStar } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";

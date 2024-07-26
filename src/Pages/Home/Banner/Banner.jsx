@@ -18,10 +18,10 @@ const Banner = () => {
 
     return (
         <div className="mt-[150px] gap-17 relative">
-            <div className="flex md:flex-row sm:flex-col gap-8">
-                <div data-aos="fade-right">
+            <div className="flex md:flex-row sm:flex-col gap-[60px]">
+                <div className=' text-start md:text-start sm:text-center' data-aos="fade-right">
                     <div>
-                        <h6 className="text-4xl font-semibold">Modern</h6>
+                        <h6 className="text-4xl  font-semibold">Modern</h6>
                     </div>
                     <div>
                         <h6 className="text-6xl font-bold">Homes</h6>
@@ -32,8 +32,8 @@ const Banner = () => {
                     <div>
                         <p className="text-gray-500">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
                     </div>
-                    <div>
-                        <div className="flex gap-5 mt-5">
+                    <div className=''>
+                        <div className="flex justify-start md:justify-start sm:justify-center gap-5 mt-5">
                             <div className="flex gap-2">
                                 <IoMail className="text-4xl text-red-600" />
                                 <p className="text-md mt-1">rentright2024@gmail.com</p>
@@ -43,7 +43,7 @@ const Banner = () => {
                                 <p className="text-md mt-1">+083461612717</p>
                             </div>
                         </div>
-                        <div className='flex gap-3 mt-8'>
+                        <div className='flex justify-start md:justify-start sm:justify-center gap-3 mt-8'>
                             <FaFacebookSquare className='text-[#1d1ddd] text-4xl' />
                             <RiInstagramFill className='text-[#d71ddd] text-[37px]' />
                             <FaYoutube className='text-[#dd1d1d] text-[39px]' />
@@ -51,7 +51,7 @@ const Banner = () => {
                     </div>
                 </div>
                
-                <div className="relative z-0" data-aos="fade-up">
+                <div className="relative z-0 block md:block sm:hidden" data-aos="fade-up">
                 <div className="absolute top-[-30px] right-[-50px] transform translate-x-1/2 -translate-y-1/2 z-10 bg-yellow-400 rounded-full w-[150px] h-[150px] flex items-center justify-center shadow-lg" data-aos="zoom-in">
                     <p className="text-3xl font-bold text-blue-500">30% off</p>
                 </div>
