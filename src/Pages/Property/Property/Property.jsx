@@ -1,16 +1,20 @@
+import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import Properties from "../properties/Properties";
 import SearchBar from "../SearchBar/SearchBar";
-import Testimonial from "../Testimonial/Testimonial";
+
 
 
 const Property = () => {
     return (
         <div>
+            <Helmet>
+            <title>RentRight | PROPERTY</title>
+        </Helmet>
           <Banner></Banner>
           <SearchBar></SearchBar>
           <Properties></Properties>
-          <Testimonial></Testimonial>
+         
         </div>
     );
 };

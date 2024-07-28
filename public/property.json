@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
+      "baths": "3",
+      "bed": "4",
+      "area": "2200",
+      "name": "Green Haven Villas",
+      "address": "123 Maple Street, Tokyo, JP 123456",
+      "price": "150,000",
+      "type": "Vila",
+      "condition": "Rental"
+    },
+    {
+      "id": 2,
+      "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
+      "baths": "2",
+      "bed": "3",
+      "area": "1800",
+      "name": "Sunnybrook Farm",
+      "address": "456 Oak Avenue, Kyoto, JP 654321",
+      "price": "200,000",
+      "type": "Farmhouse",
+      "condition": "Sell"
+    },
+    {
+      "id": 3,
+      "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
+      "baths": "1",
+      "bed": "2",
+      "area": "900",
+      "name": "Urban Studio",
+      "address": "789 Pine Lane, Osaka, JP 987654",
+      "price": "80,000",
+      "type": "Studio Apartment",
+      "condition": "Sell"
+    },
+    {
+      "id": 4,
+      "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
+      "baths": "3",
+      "bed": "5",
+      "area": "3000",
+      "name": "Skyline Penthouse",
+      "address": "101 Cedar Boulevard, Sapporo, JP 246810",
+      "price": "500,000",
+      "type": "Penthouse",
+      "condition": "Sell"
+    },
+    {
+      "id": 5,
+      "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
+      "baths": "2",
+      "bed": "3",
+      "area": "1500",
+      "name": "Cosy Rowhouse",
+      "address": "202 Birch Road, Nagoya, JP 135791",
+      "price": "120,000",
+      "type": "Rowhouse",
+      "condition": "Rental"
+    }
+  ]
+  

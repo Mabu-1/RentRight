@@ -1,5 +1,6 @@
 
 
+import { Helmet } from "react-helmet-async";
 import Achievement from "../Achievement/Achievement";
 import Agents from "../Agents/Agents";
 import Amenities from "../Amenities/Amenities";
@@ -13,6 +14,9 @@ const AboutUs = () => {
     
     return (
         <div>
+          <Helmet>
+            <title>RentRight | ABOUT US</title>
+        </Helmet>
             <Banner></Banner>
             <MobileApp></MobileApp>
             <Amenities></Amenities>

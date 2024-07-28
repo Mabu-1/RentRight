@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
+   const {user,logOut} = useContext(AuthContext);
+   const handleLogOut = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => console.log(error));
+}
   let Links = [
     { name: "HOME", link: "/" },
     { name: "PROPERTY", link: "/property" },
-    { name: "SERVICE", link: "/" },
+    { name: "SERVICE", link: "/service" },
     { name: "ABOUT US", link: "/aboutUS" },
     { name: "CONTACT US", link: "/contactUS" },
   ];
@@ -36,14 +43,24 @@ const Navbar = () => {
           }
 
           <div className='md:flex px-1 gap-6'>
-            <Link to="/" >
+          {
+            user ? <>
+              
+              <button className='bg-yellow-500 hover:bg-[#3d07ff]  hover:text-white p-2  flex justify-center text-center border rounded-lg font-bold' onClick ={handleLogOut} >
+                LogOut
+              </button>
+          
+            </> :<>
+            <Link to="/login" >
               <Button >
                 Login
               </Button>
             </Link>
+            </>
+          }
             <Link to="/"  >
               <Button >
-                Visit Our Property
+                Visit Your Property
               </Button>
             </Link>
           </div>
