@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "imageURL": "https://i.ibb.co/FDn5CwM/455613071.jpg",
+      "name": "Basic Listing Plan",
+      "price": 20,
+      "benefits": ["Basic Listing", "Free Documentation"]
+    },
+    {
+      "id": 2,
+      "imageURL": "https://i.ibb.co/KLBDHWz/pexels-max-rahubovskiy-6782426-780x470.jpg",
+      "name": "Self Service Plan",
+      "price": 30,
+      "benefits": ["Project Plan Cost", "Free Documentation"]
+    },
+    {
+      "id": 3,
+      "imageURL": "https://i.ibb.co/FDn5CwM/455613071.jpg",
+      "name": "Standard Service Plan",
+      "price": 40,
+      "benefits": ["Project Plan Cost", "Basic Listing", "Free Documentation"]
+    },
+    {
+      "id": 4,
+      "imageURL": "https://i.ibb.co/qyF79Qm/d09208183125ab47493d5de2f8710b6faa27d7cc-3000x2000.webp",
+      "name": "Agent Service Plan",
+      "price": 50,
+      "benefits": ["Project Plan Cost", "Free Documentation", "Assistance", "Assistance By Agent"]
+    },
+    {
+      "id": 5,
+      "imageURL": "https://i.ibb.co/FDn5CwM/455613071.jpg",
+      "name": "Premium Listing Plan",
+      "price": 60,
+      "benefits": ["Premium Listing", "Free Documentation", "Assistance"]
+    },
+    {
+      "id": 6,
+      "imageURL": "https://i.ibb.co/FDn5CwM/455613071.jpg",
+      "name": "Brokerage Plan Cost",
+      "price": 70,
+      "benefits": ["Project Plan Cost", "Free Documentation", "Assistance", "Assistance By Agent", "Premium Listing"]
+    },
+    {
+      "id": 7,
+      "imageURL": "https://i.ibb.co/KLBDHWz/pexels-max-rahubovskiy-6782426-780x470.jpg",
+      "name": "Advanced Service Plan",
+      "price": 80,
+      "benefits": ["Project Plan Cost", "Premium Listing", "Free Documentation", "Assistance", "Agent Support"]
+    },
+    {
+      "id": 8,
+      "imageURL": "https://i.ibb.co/FDn5CwM/455613071.jpg",
+      "name": "Deluxe Service Plan",
+      "price": 100,
+      "benefits": ["Premium Listing", "Free Documentation", "Assistance", "Dedicated Agent Support"]
+    },
+    {
+      "id": 9,
+      "imageURL": "https://i.ibb.co/FDn5CwM/455613071.jpg",
+      "name": "Ultimate Service Plan",
+      "price": 120,
+      "benefits": ["Project Plan Cost", "Premium Listing", "Free Documentation", "Full Assistance", "Dedicated Agent Support", "Home Staging"]
+    }
+  ]
+  

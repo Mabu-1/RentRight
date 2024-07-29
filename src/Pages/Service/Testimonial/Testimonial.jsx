@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 import Headline from "../../../Shared/Headline/Headline";
 import { FaStar } from "react-icons/fa";
@@ -11,43 +11,12 @@ const Testimonial = () => {
         AOS.refresh();
     }, []);
 
-    const reviews = [
-        {
-            imageUrl: "https://i.ibb.co/2qDnGGw/testimonial-type2-01.jpg",
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
-            star: "4",
-            name: "Mabu",
-            profession: "Bank Manager"
-        },
-        {
-            imageUrl: "https://i.ibb.co/yWccvbF/testimonial-type2-02.jpg",
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
-            star: "4",
-            name: "Mabu",
-            profession: "Bank Manager"
-        },
-        {
-            imageUrl: "https://i.ibb.co/px569Nn/testimonial-type2-03.jpg",
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
-            star: "4",
-            name: "Mabu",
-            profession: "Bank Manager"
-        },
-        {
-            imageUrl: "https://i.ibb.co/6Ht5b6k/testimonial-type2-04.jpg",
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
-            star: "4",
-            name: "Mabu",
-            profession: "Bank Manager"
-        },
-        {
-            imageUrl: "https://i.ibb.co/cTp557j/testimonial-type2-05.jpg",
-            text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
-            star: "4",
-            name: "Mabu",
-            profession: "Bank Manager"
-        }
-    ];
+    const [reviews, setreviews] = useState([]);
+    useEffect(() => {
+        fetch('review.json')
+            .then(res => res.json())
+            .then(data => setreviews(data));
+    }, []);
 
     return (
         <div className="my-7">

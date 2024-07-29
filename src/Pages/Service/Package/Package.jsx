@@ -1,7 +1,7 @@
 import Headline from "../../../Shared/Headline/Headline";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../../Shared/Button/Button";
 
 const Package = () => {
@@ -10,26 +10,12 @@ const Package = () => {
         AOS.refresh();
     }, []);
 
-    const pack = [
-        {
-            imageURL: "https://i.ibb.co/KLBDHWz/pexels-max-rahubovskiy-6782426-780x470.jpg",
-            name: "Self Service Plan",
-            price: "30",
-            benefits: ["Project Plan Cost", "Free Documentation"]
-        },
-        {
-            imageURL: "https://i.ibb.co/qyF79Qm/d09208183125ab47493d5de2f8710b6faa27d7cc-3000x2000.webp",
-            name: "Agent Service Plan",
-            price: "50",
-            benefits: ["Project Plan Cost", "Free Documentation", "Assistance", "Assistance By Agent"]
-        },
-        {
-            imageURL: "https://i.ibb.co/FDn5CwM/455613071.jpg",
-            name: "Brokerage Plan Cost",
-            price: "70",
-            benefits: ["Project Plan Cost", "Free Documentation", "Assistance", "Assistance By Agent", "Premium Listing"]
-        },
-    ];
+    const [pack, setPack] = useState([]);
+    useEffect(() => {
+        fetch('package.json')
+            .then(res => res.json())
+            .then(data => setPack(data));
+    }, []);
 
     return (
         <div className="my-10">
@@ -49,7 +35,7 @@ const Package = () => {
                 </div>
             </div>
 
-            <div className="flex justify-evenly md:flex-row sm:flex-col gap-5 my-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 my-3">
                 {pack.map((pac, index) => (
                     <div key={index} className="bg-gray-200 hover:bg-gray-800 hover:text-white hover:border-white border-4 rounded-lg border-blue-400 flex flex-col" data-aos="fade-up" data-aos-delay={index * 100}>
                         <div className="flex justify-center">

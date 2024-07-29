@@ -5,22 +5,24 @@ import { FaBath, FaBed, FaMapMarkerAlt,  FaRulerVertical, FaStar } from "react-i
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
+import Button from "../../../Shared/Button/Button";
 
 const Properties = () => {
     const [Properties,setProperties] = useState([]);
-   useEffect( () =>
-{
-     fetch('property.json')
-     .then(res =>res.json())
-     .then( data =>setProperties(data))
-},[])
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         AOS.refresh();
     }, []);
 
-    
+    useEffect( () =>
+ {
+      fetch('property.json')
+      .then(res =>res.json())
+      .then( data =>setProperties(data))
+ },[])
+ 
+
     return (
         <div className="my-[100px]">
             <div className="flex justify-center text-center" data-aos="fade-up">
@@ -42,13 +44,7 @@ const Properties = () => {
                             <Link to="/">
                                 <div className="w-full">
                                     <img src={Property.imageURL} alt={Property.name} className="w-full h-[250px] object-cover z-0 relative" />
-                                    <div className="w-18 px-2 py-1 ml-2 z-0 fixed mt-[-240px] bg-blue-600 border rounded-lg hover:bg-yellow-400 hover:text-white font-bold">
-                                     {Property.type}
-                                    </div>
-                                    <div className="w-[60px] p-1 ml-[370px] z-0 fixed mt-[-240px] bg-blue-600 flex justify-center border rounded-lg font-bold hover:bg-yellow-400 hover:text-white">
-                                    {Property.condition}
-                                    </div>
-                                    
+                                
                                     <div className="p-4">
                                         <div className="flex justify-between text-gray-500 my-3">
                                             <div className="flex gap-2">
@@ -67,16 +63,16 @@ const Properties = () => {
                                         </div>
                                         <hr className="p-3" />
                                         <div className="my-2">
-                                            <h1 className="text-2xl font-bold mb-2">{Property.name}</h1>
+                                            <h1 className="text-2xl font-bold mb-2 ">{Property.name}</h1>
                                             <div className="flex gap-2">
                                                 <FaMapMarkerAlt size={20} />
                                                 <p className="text-gray-500 mb-2">{Property.address}</p>
                                             </div>
                                         </div>
                                         <hr className="p-3" />
-                                        <div className="my-2 flex justify-between">
+                                        <div className=" flex justify-between">
                                             <div>
-                                                <span className="text-xl font-bold">${Property.price}</span>
+                                                <span className="text-2xl font-bold text-green-600">$ {Property.price}</span>
                                             </div>
                                            
                                         </div>
@@ -87,7 +83,13 @@ const Properties = () => {
                     ))}
                 </div>
             </Marquee>
-           
+            <div className="flex justify-center text-center my-4" data-aos="fade-up">
+                <Link to="/property">
+                <Button>
+                    Visit All Properties
+                </Button>
+                </Link>
+            </div>
         </div>
     );
 };

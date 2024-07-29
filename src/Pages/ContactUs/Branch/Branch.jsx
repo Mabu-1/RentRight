@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Headline from "../../../Shared/Headline/Headline";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
 
@@ -13,40 +13,14 @@ const Branch = () => {
         AOS.refresh();
     }, []);
 
-    const branches = [
+    const [branches,setBranches] = useState([]);
+    useEffect( () =>
         {
-            imageUrl: "https://i.ibb.co/V3VkkQd/Contact-Pg-Country-4.jpg",
-            location: "USA",
-            address: "58A, East Madison Street, Baltimore, MD",
-            phone: "+000 - 123456789",
-            email: "info@example.com",
-            hours: "Mon-Fri: 9 AM - 6 PM"
-        },
-        {
-            imageUrl: "https://i.ibb.co/jkv0xY5/Contact-Pg-Country-3.jpg",
-            location: "Spain",
-            address: "Manzana Alicia Briseño, 59, Rubí, Cbr 36738",
-            phone: "000-123-456-789",
-            email: "contact@example.com",
-            hours: "Mon-Fri: 10 AM - 8 PM"
-        },
-        {
-            imageUrl: "https://i.ibb.co/2WG3B6s/Contact-Pg-Country-2.jpg",
-            location: "France",
-            address: "7 Sente Des Pierres Mayettes, 33305 Dijon",
-            phone: "000-123-45 67 89",
-            email: "support@example.com",
-            hours: "Mon-Fri: 9 AM - 7 PM"
-        },
-        {
-            imageUrl: "https://i.ibb.co/nggknwN/Contact-Pg-Country-1.jpg",
-            location: "New York",
-            address: "60 Wooster Street New York, NY 10012",
-            phone: "+00-123456789",
-            email: "admin@example.com",
-            hours: "Mon-Fri: 10 AM - 9 PM"
-        }
-    ];
+             fetch('branch.json')
+             .then(res =>res.json())
+             .then( data =>setBranches(data))
+        },[])
+        
 
     return (
         <div className="my-[100px]">

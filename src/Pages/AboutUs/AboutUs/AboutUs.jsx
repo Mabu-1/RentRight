@@ -7,6 +7,7 @@ import Amenities from "../Amenities/Amenities";
 import Banner from "../Banner/Banner";
 import FAQ from "../FAQ/FAQ";
 import MobileApp from "../MobileAPP/MobileAPP";
+import Leading from "../Leading/Leading";
 
 
 
@@ -20,6 +21,7 @@ const AboutUs = () => {
             <Banner></Banner>
             <MobileApp></MobileApp>
             <Amenities></Amenities>
+            <Leading></Leading>
             <Achievement></Achievement>
             <FAQ></FAQ>
             <Agents></Agents>
