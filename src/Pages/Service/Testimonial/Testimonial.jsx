@@ -4,6 +4,9 @@ import Headline from "../../../Shared/Headline/Headline";
 import { FaStar } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import useReview from "../../../hooks/useReview";
+import Loading from "../../../Loading/Loading";
+import Card from "./Card";
 
 const Testimonial = () => {
     useEffect(() => {
@@ -11,13 +14,10 @@ const Testimonial = () => {
         AOS.refresh();
     }, []);
 
-    const [reviews, setreviews] = useState([]);
-    useEffect(() => {
-        fetch('review.json')
-            .then(res => res.json())
-            .then(data => setreviews(data));
-    }, []);
-
+    const [review,  loading] = useReview(); 
+   if(loading)
+    return <Loading></Loading>
+     
     return (
         <div className="my-7">
             <div data-aos="fade-up">
@@ -30,23 +30,8 @@ const Testimonial = () => {
 
             <Marquee speed={70} pauseOnHover={true} className="gap-5">
                 <div className="flex gap-5">
-                    {reviews.map((review, index) => (
-                        <div key={index} className="bg-gray-200 border-2 border-yellow-300 rounded-lg" data-aos="fade-up">
-                            <div className="flex gap-5">
-                                <div className="flex justify-center">
-                                    <img src={review.imageUrl} alt={`Review by ${review.name}`} className="p-5 md:p-5 sm:p-2" />
-                                </div>
-                                <div className="w-[350px] md:w-[350px] sm:[150px] gap-2">
-                                    <div className="flex gap-2">
-                                        <span className="text-xl font-bold">{review.star}</span>
-                                        <FaStar color="yellow" size={22} />
-                                    </div>
-                                    <p className="my-12 md:my-12 sm:my-6">{review.text}</p>
-                                    <p className="font-bold">{review.name}</p>
-                                    <p>{review.profession}</p>
-                                </div>
-                            </div>
-                        </div>
+                    {review.map((review) => (
+                       <Card key={review._id} review={review}/>
                     ))}
                 </div>
             </Marquee>

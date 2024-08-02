@@ -1,31 +1,31 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "imageUrl": "https://i.ibb.co/7gsxBWR/Service-Img-1.jpg",
         "name": "Swimming Pool"
     },
     {
-        "id": 2,
+        "_id": 2,
         "imageUrl": "https://i.ibb.co/253Mh4K/Service-Img-6.jpg",
         "name": "Gym"
     },
     {
-        "id": 3,
+        "_id": 3,
         "imageUrl": "https://i.ibb.co/h9MRGzP/Service-Img-5.jpg",
         "name": "Spa"
     },
     {
-        "id": 4,
+        "_id": 4,
         "imageUrl": "https://i.ibb.co/8Bd7xpY/Service-Img-4.jpg",
         "name": "Clubhouse"
     },
     {
-        "id": 5,
+        "_id": 5,
         "imageUrl": "https://i.ibb.co/WvyLmW3/Service-Img-3.jpg",
         "name": "Tennis Court"
     },
     {
-        "id": 6,
+        "_id": 6,
         "imageUrl": "https://i.ibb.co/gJYh7Ld/Service-Img-2.jpg",
         "name": "Playground"
     }

@@ -19,21 +19,21 @@ const AboutUs = () => {
                     subheading="ABOUT US" 
                     headline="Our Continuous Focus And Innovation Are Driven By Our Mission To Simplify Complete Real Estate For Both Individuals And Corporations." 
                 />
-                <div className="flex justify-between font-bold">
+                <div className="flex justify-between font-bold ">
                     <div data-aos="fade-up">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl">275+</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl text-[#1d1ddd]">275+</h3>
                         <p className="text-sm sm:text-md text-gray-400 ml-2 sm:m-1 md:ml-2">GLOBAL OFFICE</p>
                     </div>
                     <div data-aos="fade-up">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl">425K+</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl text-[#dd1dd3]">425K+</h3>
                         <p className="text-sm sm:text-md text-gray-400 ml-2 sm:m-1 md:ml-2">WORLDWIDE CLIENTS</p>
                     </div>
                     <div data-aos="fade-up">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl">100%</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl text-[#2f9f2d]">100%</h3>
                         <p className="text-sm sm:text-md text-gray-400 ml-2 sm:m-1 md:ml-2">SATISFACTION</p>
                     </div>
                     <div data-aos="fade-up">
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl">4/5</h3>
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl text-[#ba592d]">4/5</h3>
                         <p className="text-sm sm:text-md text-gray-400 ml-2 sm:m-1 md:ml-2">CLIENT RATINGS</p>
                     </div>
                 </div>

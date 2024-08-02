@@ -55,14 +55,12 @@ const Leading = () => {
             <div className="flex flex-wrap justify-center gap-7">
                 {images.map((image, index) => (
                     <div key={index} className="" data-aos="fade-up">
-                        <Link to="/">
-                            <div className="relative w-[230px] h-[230px] overflow-hidden rounded-full group">
-                                <img src={image.imageUrl} alt={image.headline} className="w-full h-full object-cover rounded-full transition duration-300 ease-in-out group-hover:opacity-0" />
-                                <div className="absolute inset-0 bg-yellow-500 flex items-center justify-center rounded-full opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
-                                    <span className=" text-2xl font-semibold ">Read more</span>
-                                </div>
+                       
+                            <div className="w-[230px] h-[230px] overflow-hidden rounded-full group">
+                                <img src={image.imageUrl} alt={image.headline} className="w-full h-full object-cover rounded-full " />
+                              
                             </div>
-                        </Link>
+                        
                         <div className="flex-col justify-center text-center my-2">
                             <h1 className="text-2xl font-bold">{image.headline}</h1>
                             <p className="font-md">{image.subheading}</p>

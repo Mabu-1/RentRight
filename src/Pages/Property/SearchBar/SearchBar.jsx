@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import { FaBath, FaBed, FaDollarSign } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import { IoHome } from 'react-icons/io5';
+import { RiHomeSmileFill } from 'react-icons/ri';
 
 const SearchBar = () => {
 
@@ -29,6 +30,8 @@ const SearchBar = () => {
             className="focus:outline-none bg-transparent w-1/2 lg:w-auto "
           />
           <span className="text-gray-500 mx-2">-</span>
+          <FaDollarSign className="text-gray-500 mr-2 h-[30px] w-[40px]" />
+
           <input
             type="number"
             placeholder="Max Price"
@@ -58,23 +61,14 @@ const SearchBar = () => {
           </select>
         </div>
         <div className="flex items-center border border-gray-300 rounded-lg w-full p-2">
-          <FaBed className="text-gray-500 mr-7 h-[30px] w-[40px]" />
-          <select className="focus:outline-none bg-transparent w-full lg:w-auto text-xl">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+        <RiHomeSmileFill className="text-gray-500 mr-2 h-[30px] w-[40px]" />
+        <select className="focus:outline-none bg-transparent w-full lg:w-auto">
+            <option>Rent</option>
+            <option>Sell</option>
+            
           </select>
         </div>
-        <div className="flex items-center border border-gray-300 rounded-lg w-full p-2 gap-7">
-          <FaBath className="text-gray-500 mr-7 h-[30px] w-[40px]" />
-          <select className="focus:outline-none bg-transparent w-full lg:w-auto text-xl">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-        </div>
+       
        
       </div>
       <div className='flex justify-center items-center mt-5'>

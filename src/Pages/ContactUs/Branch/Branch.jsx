@@ -3,8 +3,9 @@ import Headline from "../../../Shared/Headline/Headline";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
-import { FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
-import { IoLocation } from "react-icons/io5";
+import useBranch from "../../../hooks/useBranch";
+import Loading from '../../../Loading/Loading';
+import Card from "./Card";
 
 
 const Branch = () => {
@@ -13,14 +14,11 @@ const Branch = () => {
         AOS.refresh();
     }, []);
 
-    const [branches,setBranches] = useState([]);
-    useEffect( () =>
-        {
-             fetch('branch.json')
-             .then(res =>res.json())
-             .then( data =>setBranches(data))
-        },[])
-        
+    const [branch, loading] = useBranch();
+    if (loading)
+        return <Loading></Loading>
+
+
 
     return (
         <div className="my-[100px]">
@@ -37,34 +35,8 @@ const Branch = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {branches.map((branch, index) => (
-                    <div key={index} className="border border-gray-300 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-                        <Link to="/">
-                            <div className="w-full">
-                                <img src={branch.imageUrl} alt={branch.location} className="w-full h-[250px] object-cover" />
-                                <div className="p-4 bg-gray-800 text-white">
-                                    <h3 className="text-2xl font-bold mb-2">{branch.location}</h3>
-                                   
-                                    <div className="flex items-center gap-2 mb-2">
-                                    <IoLocation />
-                                        <span>{branch.address}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <FaPhone />
-                                        <span>{branch.phone}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2 mb-2">
-                                        <FaEnvelope />
-                                        <span>{branch.email}</span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <FaClock />
-                                        <span>{branch.hours}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
+                {branch.map((branch) => (
+                   <Card key={branch._id} branch={branch}/>
                 ))}
             </div>
         </div>

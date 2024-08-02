@@ -1,40 +1,40 @@
 [
     {
-        "id": 1,
+        "_id": 1,
         "imageUrl": "https://i.ibb.co/2qDnGGw/testimonial-type2-01.jpg",
-        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
+        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda inc_idunt beatae? Aperiam!",
         "star": 5,
         "name": "Alice Johnson",
         "profession": "Software Engineer"
     },
     {
-        "id": 2,
+        "_id": 2,
         "imageUrl": "https://i.ibb.co/yWccvbF/testimonial-type2-02.jpg",
-        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
+        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda inc_idunt beatae? Aperiam!",
         "star": 4,
         "name": "Bob Smith",
         "profession": "Marketing Manager"
     },
     {
-        "id": 3,
+        "_id": 3,
         "imageUrl": "https://i.ibb.co/px569Nn/testimonial-type2-03.jpg",
-        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
+        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda inc_idunt beatae? Aperiam!",
         "star": 3,
         "name": "Catherine Lee",
         "profession": "Product Designer"
     },
     {
-        "id": 4,
+        "_id": 4,
         "imageUrl": "https://i.ibb.co/6Ht5b6k/testimonial-type2-04.jpg",
-        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
+        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda inc_idunt beatae? Aperiam!",
         "star": 5,
-        "name": "David Brown",
+        "name": "Dav_id Brown",
         "profession": "Project Manager"
     },
     {
-        "id": 5,
+        "_id": 5,
         "imageUrl": "https://i.ibb.co/cTp557j/testimonial-type2-05.jpg",
-        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda incidunt beatae? Aperiam!",
+        "about": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi corporis nostrum numquam perferendis alias fugit veniam assumenda inc_idunt beatae? Aperiam!",
         "star": 4,
         "name": "Emily Davis",
         "profession": "Graphic Designer"

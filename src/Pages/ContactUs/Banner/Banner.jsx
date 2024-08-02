@@ -13,8 +13,8 @@ const Banner = () => {
 
     return (
         <div className="mt-[150px]">
-            <div className="flex md:flex-row sm:flex-col-reverse gap-8">
-                <div className="flex-1 text-start md:text-start sm:text-center" data-aos="fade-right">
+            <div className="flex md:flex-row sm:flex-col-reverse gap-8 ">
+                <div className="flex-1 text-start md:text-start sm:text-center mt-[100px] md:mt-[100px] sm:mt-[-60px]" data-aos="fade-right">
                     <div>
                         <h6 className="text-4xl font-semibold">Get in</h6>
                     </div>
@@ -30,7 +30,7 @@ const Banner = () => {
                 </div>
 
                 <div className="flex-1 justify-center mt-[-100px] md:mt-[-100px] sm:mt-[1px]" data-aos="fade-up">
-                    <img src="https://i.ibb.co/z27wQD2/5132732.jpg" alt="" className="h-[500px]" />
+                    <img src="https://i.ibb.co/z27wQD2/5132732.jpg" alt="" className="" />
                 </div>
             </div>
         </div>
