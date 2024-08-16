@@ -1,7 +1,9 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";   
+
 const Card = ({feature}) => {
+    const {imageUrl,name} =feature;
     useEffect(() => {
         AOS.init({
             duration: 1000, // Duration of animations in milliseconds
@@ -14,13 +16,13 @@ const Card = ({feature}) => {
             className="relative border overflow-hidden w-10/12 max-h-full group"
         >
             <img
-                src={feature.imageUrl}
-                alt={feature.name}
+                src={imageUrl}
+                alt={name}
                 className="w-full h-[300px] object-cover"
             />
             <div
             >
-                <p className="text-over-image">{feature.name}</p>
+                <p className="text-over-image">{name}</p>
             </div>
         </div>
     );

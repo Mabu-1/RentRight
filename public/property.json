@@ -1,6 +1,6 @@
 [
   {
-    "_id": 1,
+    
     "imageURL": "https://i.ibb.co/3ddFJrZ/istockphoto-1492424940-2048x2048.jpg",
     "baths": 3,
     "bed": 4,
@@ -22,10 +22,11 @@
       "name": "Jane Smith",
       "phone": "+1234567891",
       "email": "jane.smith@example.com"
-    }
+    },
+    "email":""
   },
   {
-    "_id": 2,
+   
     "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
     "baths": 2,
     "bed": 3,
@@ -47,10 +48,11 @@
       "name": "Tom Johnson",
       "phone": "+1234567892",
       "email": "tom.johnson@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 3,
+    
     "imageURL": "https://i.ibb.co/v4Xg1hC/images.jpg",
     "baths": 1,
     "bed": 2,
@@ -72,10 +74,11 @@
       "name": "John Doe",
       "phone": "+1234567890",
       "email": "john.doe@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 4,
+   
     "imageURL": "https://i.ibb.co/fCVPntq/images-1.jpg",
     "baths": 3,
     "bed": 5,
@@ -97,10 +100,11 @@
       "name": "Alice Brown",
       "phone": "+1234567893",
       "email": "alice.brown@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 5,
+    
     "imageURL": "https://i.ibb.co/XVQRx2f/603-ne-92nd-ave.webp",
     "baths": 2,
     "bed": 3,
@@ -122,10 +126,11 @@
       "name": "David Green",
       "phone": "+1234567894",
       "email": "david.green@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 6,
+  
     "imageURL": "https://i.ibb.co/3ddFJrZ/istockphoto-1492424940-2048x2048.jpg",
     "baths": 1,
     "bed": 2,
@@ -147,10 +152,11 @@
       "name": "Emily White",
       "phone": "+1234567895",
       "email": "emily.white@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 7,
+  
     "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
     "baths": 2,
     "bed": 4,
@@ -172,10 +178,11 @@
       "name": "Frank Wilson",
       "phone": "+1234567896",
       "email": "frank.wilson@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 8,
+ 
     "imageURL": "https://i.ibb.co/v4Xg1hC/images.jpg",
     "baths": 3,
     "bed": 5,
@@ -197,10 +204,11 @@
       "name": "George Martinez",
       "phone": "+1234567897",
       "email": "george.martinez@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 9,
+    
     "imageURL": "https://i.ibb.co/fCVPntq/images-1.jpg",
     "baths": 2,
     "bed": 3,
@@ -222,10 +230,11 @@
       "name": "Hannah Davis",
       "phone": "+1234567898",
       "email": "hannah.davis@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 10,
+    
     "imageURL": "https://i.ibb.co/XVQRx2f/603-ne-92nd-ave.webp",
     "baths": 1,
     "bed": 2,
@@ -247,10 +256,11 @@
       "name": "Irene Lee",
       "phone": "+1234567899",
       "email": "irene.lee@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 11,
+  
     "imageURL": "https://i.ibb.co/3ddFJrZ/istockphoto-1492424940-2048x2048.jpg",
     "baths": 3,
     "bed": 4,
@@ -272,10 +282,11 @@
       "name": "Jack Lewis",
       "phone": "+1234567800",
       "email": "jack.lewis@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 12,
+   
     "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
     "baths": 2,
     "bed": 3,
@@ -297,10 +308,11 @@
       "name": "Kelly Walker",
       "phone": "+1234567801",
       "email": "kelly.walker@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 13,
+    
     "imageURL": "https://i.ibb.co/v4Xg1hC/images.jpg",
     "baths": 1,
     "bed": 2,
@@ -322,10 +334,11 @@
       "name": "Laura Miller",
       "phone": "+1234567802",
       "email": "laura.miller@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 14,
+    
     "imageURL": "https://i.ibb.co/fCVPntq/images-1.jpg",
     "baths": 3,
     "bed": 5,
@@ -347,10 +360,11 @@
       "name": "Michael Clark",
       "phone": "+1234567803",
       "email": "michael.clark@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 15,
+   
     "imageURL": "https://i.ibb.co/XVQRx2f/603-ne-92nd-ave.webp",
     "baths": 2,
     "bed": 3,
@@ -372,10 +386,11 @@
       "name": "Nancy Harris",
       "phone": "+1234567804",
       "email": "nancy.harris@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 16,
+    
     "imageURL": "https://i.ibb.co/3ddFJrZ/istockphoto-1492424940-2048x2048.jpg",
     "baths": 3,
     "bed": 4,
@@ -397,10 +412,11 @@
       "name": "Olivia Young",
       "phone": "+1234567805",
       "email": "olivia.young@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 17,
+    
     "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
     "baths": 2,
     "bed": 3,
@@ -422,10 +438,11 @@
       "name": "Paul King",
       "phone": "+1234567806",
       "email": "paul.king@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 18,
+   
     "imageURL": "https://i.ibb.co/v4Xg1hC/images.jpg",
     "baths": 1,
     "bed": 2,
@@ -447,10 +464,11 @@
       "name": "Rachel Martinez",
       "phone": "+1234567807",
       "email": "rachel.martinez@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 19,
+   
     "imageURL": "https://i.ibb.co/fCVPntq/images-1.jpg",
     "baths": 3,
     "bed": 5,
@@ -472,10 +490,11 @@
       "name": "Steven Martinez",
       "phone": "+1234567808",
       "email": "steven.martinez@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 20,
+   
     "imageURL": "https://i.ibb.co/XVQRx2f/603-ne-92nd-ave.webp",
     "baths": 2,
     "bed": 3,
@@ -497,10 +516,11 @@
       "name": "Sarah Wilson",
       "phone": "+1234567809",
       "email": "sarah.wilson@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 21,
+ 
     "imageURL": "https://i.ibb.co/3ddFJrZ/istockphoto-1492424940-2048x2048.jpg",
     "baths": 2,
     "bed": 3,
@@ -522,10 +542,11 @@
       "name": "William Moore",
       "phone": "+1234567810",
       "email": "william.moore@example.com"
-    }
+    },
+     "email":""
   },
   {
-    "_id": 22,
+   
     "imageURL": "https://i.ibb.co/MsjqKwT/eco-friendly-house-0-1200.jpg",
     "baths": 2,
     "bed": 3,
@@ -547,10 +568,12 @@
       "name": "Xander Thomas",
       "phone": "+1234567811",
       "email": "xander.thomas@example.com"
-    }
+    },
+    "email":""
+    
   },
   {
-    "_id": 23,
+    
     "imageURL": "https://i.ibb.co/v4Xg1hC/images.jpg",
     "baths": 2,
     "bed": 3,
@@ -572,10 +595,11 @@
       "name": "Yara Wilson",
       "phone": "+1234567812",
       "email": "yara.wilson@example.com"
-    }
+    },
+    "email":""
   },
   {
-    "_id": 24,
+
     "imageURL": "https://i.ibb.co/fCVPntq/images-1.jpg",
     "baths": 3,
     "bed": 5,
@@ -597,10 +621,10 @@
       "name": "Zachary Anderson",
       "phone": "+1234567813",
       "email": "zachary.anderson@example.com"
-    }
+    },
+    "email":""
   },
   {
-    "_id": 25,
     "imageURL": "https://i.ibb.co/XVQRx2f/603-ne-92nd-ave.webp",
     "baths": 2,
     "bed": 3,
@@ -622,6 +646,7 @@
       "name": "Alice Brown",
       "phone": "+1234567814",
       "email": "alice.brown@example.com"
-    }
+    },
+    "email":""
   }
 ]

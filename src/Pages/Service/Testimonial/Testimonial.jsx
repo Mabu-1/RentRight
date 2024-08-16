@@ -14,9 +14,19 @@ const Testimonial = () => {
         AOS.refresh();
     }, []);
 
-    const [review,  loading] = useReview(); 
-   if(loading)
-    return <Loading></Loading>
+    const { data, isLoading, isError, error } = useReview();
+
+   
+    if (isLoading) {
+        return <Loading />;
+    }
+    if (isError) {
+        return <div className="text-red-500 text-center">Error: {error.message}</div>;
+    }
+
+    if (!data || data.length === 0) {
+        return <div className="text-center text-gray-500">No Amenties found.</div>;
+    }
      
     return (
         <div className="my-7">
@@ -30,7 +40,7 @@ const Testimonial = () => {
 
             <Marquee speed={70} pauseOnHover={true} className="gap-5">
                 <div className="flex gap-5">
-                    {review.map((review) => (
+                    {data.map((review) => (
                        <Card key={review._id} review={review}/>
                     ))}
                 </div>

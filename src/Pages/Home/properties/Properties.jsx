@@ -5,19 +5,32 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Button from "../../../Shared/Button/Button";
-import useProperties from "../../../hooks/useProperties";
 import Loading from "../../../Loading/Loading";
 import Card from "./Card";
+import useProperty from "../../../hooks/useProperty";
 
 const Properties = () => {
-    const [Properties, loading] = useProperties();
+    
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         AOS.refresh();
     }, []);
 
-    if (loading) return <Loading />;
+    const { data, isLoading, isError, error } = useProperty();
+
+   
+    if (isLoading) {
+        return <Loading />;
+    }
+    if (isError) {
+        return <div className="text-red-500 text-center">Error: {error.message}</div>;
+    }
+
+    if (!data || data.length === 0) {
+        return <div className="text-center text-gray-500">No Amenties found.</div>;
+    }
+
 
     return (
         <div className="my-[100px]">
@@ -35,7 +48,7 @@ const Properties = () => {
 
             <Marquee speed={50} pauseOnHover={true} className="gap-5">
                 <div className="flex gap-5">
-                    {Properties.map((Property) => (
+                    {data.map((Property) => (
                         <Card key={Property._id} Property={Property} />
                     ))}
                 </div>

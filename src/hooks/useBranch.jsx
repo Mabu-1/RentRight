@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
+const useBranch= () => {
 
-const useBranch = () => {
-    const [branch, setBranch] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const { data, isLoading, isFetching, refetch } = useQuery(
+        {
+            queryKey: ["branch"],
+            queryFn: async () => {
+                const data = await fetch("http://localhost:5000/branch");
+                return await data.json();
+            }
+        }
+       
+    );
 
-    useEffect(() => {
-        fetch('branch.json')
-            .then(res => res.json())
-            .then(data => 
-                setBranch(data))
-                setLoading(false);
-    }, [])
-
-    return [branch,loading]
+    return { data, isLoading, isFetching, refetch };
 };
 
 export default useBranch;

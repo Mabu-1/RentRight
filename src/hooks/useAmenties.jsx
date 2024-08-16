@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
+const useAmenties= () => {
 
-const useAmenties = () => {
-    const [feature, setFeature] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const { data, isLoading, isFetching, refetch } = useQuery(
+        {
+            queryKey: ["feature"],
+            queryFn: async () => {
+                const data = await fetch("http://localhost:5000/feature");
+                return await data.json();
+            }
+        }
+       
+    );
 
-    useEffect(() => {
-        fetch('feature.json')
-            .then(res => res.json())
-            .then(data => 
-                setFeature(data))
-                setLoading(false);
-    }, [])
-
-    return [feature,loading]
+    return { data, isLoading, isFetching, refetch };
 };
 
 export default useAmenties;

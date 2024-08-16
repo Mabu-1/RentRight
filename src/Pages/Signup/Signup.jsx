@@ -7,59 +7,78 @@ import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 const Signup = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [showPassword, setShowPassword] = useState(false);
-    const { createUser ,updateUserProfile} = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
-
-    const onSubmit = (data) => {
-        createUser(data.email, data.password)
-            .then(result => {
-                const loggedUser = result.user;
-                console.log(loggedUser);
-                updateUserProfile(data.name, data.photoURL)
-                    .then(() => {
-                        // create user entry in the database
-                        const userInfo = {
-                            name: data.name,
-                            email: data.email
-                        }
-                    })
-                    .catch(error => {
-                        // Handle the error with Swal.fire
-                        Swal.fire({
-                            icon: "error",
-                            title: "Oops...",
-                            text: "Something went wrong while adding user to the database!",
-                        });
-                        console.error("Database insertion error:", error);
-                    });
-
-                reset();
-                Swal.fire({
-                    position: 'top-centre',
-                    icon: 'success',
-                    title: 'User created successfully.',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-                navigate('/');
-            })
-            .catch(error => {
-                // Handle the error with Swal.fire
-                Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Something went wrong while adding user to the database!",
-                });
-                console.error("Database insertion error:", error);
+    const onSubmit = async (data) => {
+        try {
+            // Upload image to imgbb
+            const imageFile = new FormData();
+            imageFile.append('image', data.photoURL[0]);
+            
+            const res = await axiosPublic.post(image_hosting_api, imageFile, {
+                headers: {
+                    'content-type': 'multipart/form-data'
+                }
             });
-
-
-    }
+    
+            const photoURL = res.data.data.display_url;
+    
+            // Create user with email and password
+            const result = await createUser(data.email, data.password);
+            const loggedUser = result.user;
+    
+            // Update user profile with name and photoURL
+            await updateUserProfile(data.name, photoURL);
+    
+            // Save user information to the database
+            const userInfo = {
+                name: data.name,
+                email: data.email,
+                image: photoURL, // Use the correct photoURL
+                buy:"",
+                service:"",
+                address:"",
+                profession:"",
+                phone:"",
+                buyDate:"",
+                serviceDate:"",
+                servicePaid:"no",
+              
+            };
+    
+            await axiosPublic.post('/users', userInfo);
+    
+            reset();
+            Swal.fire({
+                position: 'top-centre',
+                icon: 'success',
+                title: 'User created successfully.',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            navigate('/');
+    
+        } catch (error) {
+            // Handle the error with Swal.fire
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong while processing your request!",
+            });
+            console.error("Error:", error);
+        }
+    };
+    
+    
 
     return (
         <div className="flex flex-col md:flex-row">
@@ -79,7 +98,7 @@ const Signup = () => {
                     </div>
                     <div className="form-control mb-2 border-neutral">
                         <label className="block mb-2 text-sm font-bold">Photo URL</label>
-                        <input type="url" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered text-black" />
+                        <input type="file" {...register("photoURL", { required: true })} placeholder="Photo URL" className="input input-bordered text-black" />
                         {errors.photoURL && <span className="text-red-600">Photo URL is required</span>}
                     </div>
                     <div className="form-control mb-2 border-neutral">

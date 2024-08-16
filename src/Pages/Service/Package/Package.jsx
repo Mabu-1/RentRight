@@ -1,21 +1,33 @@
 import Headline from "../../../Shared/Headline/Headline";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import Loading from '../../../Loading/Loading';
 import usePackage from "../../../hooks/usePackage";
 import Card from "./Card";
+import { Link } from "react-router-dom";
+import Button from "../../../Shared/Button/Button";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Package = () => {
+    const {user} =useContext(AuthContext);
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         AOS.refresh();
     }, []);
-    const [pack, loading] = usePackage();
+    const { data, isLoading, isError, error } = usePackage();
 
+    
+    if (isLoading) {
+        return <Loading />;
+    }
+    if (isError) {
+        return <div className="text-red-500 text-center">Error: {error.message}</div>;
+    }
 
-    if (loading)
-        return <Loading></Loading>
+    if (!data || data.length === 0) {
+        return <div className="text-center text-gray-500">No Amenties found.</div>;
+    }
 
         return (
             <div className="my-10">
@@ -36,10 +48,17 @@ const Package = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 my-3">
-                    {pack.map((pack) => (
-                        <Card key={pack._id} pack={pack} />
+                    {data.map((pack) => (
+                        <Card key={pack._id} pack={pack } />
                     ))}
                 </div>
+                <div className="flex justify-center text-center my-4" data-aos="fade-up">
+                <Link to="/custom">
+                    <Button >
+                        Custom Service
+                    </Button>
+                </Link>
+            </div>
             </div>
         );
 };

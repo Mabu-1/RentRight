@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
+const usePackage= () => {
 
-const usePackage = () => {
-    const [pack, setPackage] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const { data, isLoading, isFetching, refetch } = useQuery(
+        {
+            queryKey: ["package"],
+            queryFn: async () => {
+                const data = await fetch("http://localhost:5000/package");
+                return await data.json();
+            }
+        }
+       
+    );
 
-    useEffect(() => {
-        fetch('package.json')
-            .then(res => res.json())
-            .then(data => 
-                setPackage(data))
-                setLoading(false);
-    }, [])
-
-    return [pack,loading]
+    return { data, isLoading, isFetching, refetch };
 };
 
 export default usePackage;

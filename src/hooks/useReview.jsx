@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
+const useReview= () => {
 
-const useReview = () => {
-    const [review, setReview] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const { data, isLoading, isFetching, refetch } = useQuery(
+        {
+            queryKey: ["review"],
+            queryFn: async () => {
+                const data = await fetch("http://localhost:5000/review");
+                return await data.json();
+            }
+        }
+       
+    );
 
-    useEffect(() => {
-        fetch('review.json')
-            .then(res => res.json())
-            .then(data => 
-                setReview(data))
-                setLoading(false);
-    }, [])
-
-    return [review,loading]
+    return { data, isLoading, isFetching, refetch };
 };
 
 export default useReview;

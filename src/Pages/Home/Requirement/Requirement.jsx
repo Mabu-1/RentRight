@@ -61,8 +61,8 @@ const Requirement = () => {
                         </div>
                     </div>
                 </div>
-                <div data-aos="fade-up">
-                    <Headline headline="Personalized Service To Fulfill Requirements" />
+                <div className="my-[100px]" data-aos="fade-up">
+                    <Headline  headline2="Personalized Service To Fulfill Requirements" />
                     <p className="text-gray-400">Non odio euismod lacinia at. Sed viverra tellus in hac. Scelerisque in dictum non consectetur a. In est ante in nibh mauris cursus mattis. Viverra ipsum nunc aliquet bibendum.</p>
                     <div className="flex gap-[20px] my-[50px]" data-aos="fade-up">
                         <div className="flex gap-3">
@@ -79,7 +79,7 @@ const Requirement = () => {
                         </div>
                     </div>
 
-                    <div className="flex gap-[60px] my-[50px]" data-aos="fade-up">
+                    <div className="flex gap-[60px] my-[100px]" data-aos="fade-up">
                         <div>
                             <CountUp
                                 className="text-4xl font-bold"
@@ -115,11 +115,8 @@ const Requirement = () => {
                         </div>
                     </div>
 
-                    <div className="flex gap-5 my-[70px]" data-aos="fade-up">
-                        <BsBank2 size={30} />
-                        <p className="text-xl text-gray-400">Check What Is The Maximum Loan Amount You Can Obtain?</p>
-                    </div>
-                    <Button data-aos="fade-up">Schedule A Visit</Button>
+                  
+                 
                 </div>
             </div>
         </div>

@@ -14,14 +14,23 @@ const Branch = () => {
         AOS.refresh();
     }, []);
 
-    const [branch, loading] = useBranch();
-    if (loading)
-        return <Loading></Loading>
+    const { data, isLoading, isError, error } = useBranch();
 
+   
+    if (isLoading) {
+        return <Loading />;
+    }
+    if (isError) {
+        return <div className="text-red-500 text-center">Error: {error.message}</div>;
+    }
+
+    if (!data || data.length === 0) {
+        return <div className="text-center text-gray-500">No Amenties found.</div>;
+    }
 
 
     return (
-        <div className="my-[100px]">
+        <div className="my-[50px]">
             <div className="flex justify-center text-center" data-aos="fade-up">
                 <Headline
                     subheading1={"Contact"}
@@ -35,7 +44,7 @@ const Branch = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {branch.map((branch) => (
+                {data.map((branch) => (
                    <Card key={branch._id} branch={branch}/>
                 ))}
             </div>

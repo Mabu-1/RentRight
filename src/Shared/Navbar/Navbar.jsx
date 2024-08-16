@@ -5,12 +5,12 @@ import Button from '../Button/Button';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Navbar = () => {
-   const {user,logOut} = useContext(AuthContext);
-   const handleLogOut = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
     logOut()
-        .then(() => { })
-        .catch(error => console.log(error));
-}
+      .then(() => { })
+      .catch(error => console.log(error));
+  }
   let Links = [
     { name: "HOME", link: "/" },
     { name: "PROPERTY", link: "/property" },
@@ -43,30 +43,43 @@ const Navbar = () => {
           }
 
           <div className='md:flex px-1 gap-6'>
-          {
-            user ? <>
-              
-              <button className='bg-yellow-500 hover:bg-[#3d07ff]  hover:text-white p-2  flex justify-center text-center border rounded-lg font-bold' onClick ={handleLogOut} >
-                LogOut
-              </button>
-          
-            </> :<>
-            <Link to="/login" >
-              <Button >
-                Login
-              </Button>
-            </Link>
-            </>
-          }
-            <Link to="/"  >
-              <Button >
-                Visit Your Property
-              </Button>
-            </Link>
-          </div>
-        </ul>
+            {
+              user ? <>
+
+                <button className='bg-yellow-500 hover:bg-[#3d07ff]  hover:text-white p-2  flex justify-center text-center border rounded-lg font-bold' onClick={handleLogOut} >
+                  LogOut
+                </button>
+
+              </> : <>
+                <Link to="/login" >
+                  <Button >
+                    Login
+                  </Button>
+                </Link>
+              </>
+            }
+
+            {
+              user?.email === "umahtab65@gmail.com"?
+              <>
+              <Link to="/dashboard/admin"  >
+                <Button >
+                  Admin
+                </Button>
+              </Link>
+          </> :
+          <><Link to="/dashboard/home"  >
+            <Button >
+              Visit Your Property
+            </Button>
+          </Link>
+          </>
+         }
+
       </div>
-    </div>
+    </ul>
+      </div >
+    </div >
   );
 }
 

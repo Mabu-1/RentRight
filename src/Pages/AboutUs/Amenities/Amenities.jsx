@@ -9,7 +9,7 @@ import Loading from '../../../Loading/Loading';
 import Card from './Card';
 
 const Amenities = () => {
-const [feature,loading] =useAmenties();
+    const { data, isLoading, isError, error } = useAmenties();
 
     useEffect(() => {
         AOS.init({
@@ -17,8 +17,16 @@ const [feature,loading] =useAmenties();
         });
     }, []);
 
-   if(loading)
-    return <Loading></Loading>
+    if (isLoading) {
+        return <Loading />;
+    }
+    if (isError) {
+        return <div className="text-red-500 text-center">Error: {error.message}</div>;
+    }
+
+    if (!data || data.length === 0) {
+        return <div className="text-center text-gray-500">No Amenties found.</div>;
+    }
     return (
         <div className="my-7">
             <Headline 
@@ -28,7 +36,7 @@ const [feature,loading] =useAmenties();
 
             <Marquee speed={50} pauseOnHover={true} className="gap-5">
                 <div className="flex gap-5">
-                {feature.map((feature) => (
+                {data.map((feature) => (
                         <Card key={feature._id} feature={feature} />
                     ))}
                 </div>

@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
+const useAgent= () => {
 
-const useAgents = () => {
-    const [agent, setAgent] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const { data, isLoading, isFetching, refetch } = useQuery(
+        {
+            queryKey: ["agent"],
+            queryFn: async () => {
+                const data = await fetch("http://localhost:5000/agent");
+                return await data.json();
+            }
+        }
+       
+    );
 
-    useEffect(() => {
-        fetch('agent.json')
-            .then(res => res.json())
-            .then(data => 
-                setAgent(data))
-                setLoading(false);
-    }, [])
-
-    return [agent,loading]
+    return { data, isLoading, isFetching, refetch };
 };
 
-export default useAgents;
+export default useAgent;
