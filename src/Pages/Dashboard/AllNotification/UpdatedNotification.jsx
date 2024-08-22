@@ -47,7 +47,7 @@ const UpdatedNotification = () => {
     };
 
     return (
-        <div className="p-8 max-w-7xl mx-auto bg-gray-100 rounded-lg shadow-lg">
+        <div className="p-4 sm:p-8 max-w-7xl mx-auto bg-gray-100 rounded-lg shadow-lg">
             <div className="p-6 bg-white rounded-lg">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold text-blue-900 mb-4">{notification.title}</h1>
@@ -88,7 +88,7 @@ const UpdatedNotification = () => {
 
                     <button
                         type="submit"
-                        className="col-span-2 bg-blue-500 text-white p-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300"
+                        className="sm:col-span-2 bg-blue-500 text-white p-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300"
                     >
                         Update Notification
                     </button>

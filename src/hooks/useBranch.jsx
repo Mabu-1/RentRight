@@ -6,7 +6,7 @@ const useBranch= () => {
         {
             queryKey: ["branch"],
             queryFn: async () => {
-                const data = await fetch("http://localhost:5000/branch");
+                const data = await fetch("https://rent-right-server.vercel.app/branch");
                 return await data.json();
             }
         }

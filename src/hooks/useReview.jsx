@@ -6,7 +6,7 @@ const useReview= () => {
         {
             queryKey: ["review"],
             queryFn: async () => {
-                const data = await fetch("http://localhost:5000/review");
+                const data = await fetch("https://rent-right-server.vercel.app/review");
                 return await data.json();
             }
         }

@@ -4,7 +4,7 @@ import Loading from "../../../Loading/Loading";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const Notification = () => {
-    const { data, isLoading, isError, error ,refetch} = useNotification();
+    const { data, isLoading, isError, error, refetch } = useNotification();
     const axiosPublic = useAxiosPublic();
     const [read, setRead] = useState('All');
 
@@ -21,10 +21,8 @@ const Notification = () => {
     );
 
     const handleState = async (id) => {
-        // Find the notification with the given id
         const stateFilter = data?.find(p => p._id.toString() === id.toString());
 
-        // If a matching notification is found, update its state
         if (stateFilter) {
             const stateId = stateFilter._id;
 
@@ -39,14 +37,15 @@ const Notification = () => {
         refetch();
     };
 
-
     return (
-        <div>
+        <div className="max-w-3xl mx-auto p-4">
             <div className="text-center">
-                <h1 className="text-6xl font-bold text-red-600 my-[50px]">Notification</h1>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-red-600 my-[30px] sm:my-[40px] md:my-[50px]">
+                    Notification
+                </h1>
             </div>
             <div className="flex justify-center items-center mb-6">
-                <div className="w-[150px] border border-gray-300 rounded-lg px-3 py-2 font-bold">
+                <div className="w-[120px] sm:w-[150px] border border-gray-300 rounded-lg px-3 py-2 font-bold">
                     <select
                         className="focus:outline-none bg-transparent w-full"
                         value={read}
@@ -58,22 +57,24 @@ const Notification = () => {
                     </select>
                 </div>
             </div>
-            <div className="space-y-4 p-4">
+            <div className="space-y-4  sm:p-4">
                 {filteredNotifications.length > 0 ? (
                     filteredNotifications.map((notification, index) => (
-                        <div key={index} className={`p-4 border rounded-lg ${notification.state === 'unread' ? 'bg-yellow-100' : 'bg-white'}`}>
-                            <h2 className="text-xl font-bold">{notification.title}</h2>
-                            <div className="flex justify-between">
-                                <p>{notification.message}</p>
+                        <div
+                            key={index}
+                            className={`p-4 border rounded-lg ${notification.state === 'unread' ? 'bg-yellow-100' : 'bg-white'} shadow-sm`}
+                        >
+                            <h2 className="text-lg sm:text-xl font-bold">{notification.title}</h2>
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-2 sm:mt-0">
+                                <p className="text-sm sm:text-base">{notification.message}</p>
                                 <button
                                     onClick={() => handleState(notification._id)}
-                                    className={`p-1 font-semibold bg-red-500 rounded-lg ${notification.state === 'unread' ? 'block' : 'hidden'}`}
+                                    className={`mt-2 sm:mt-0 sm:ml-4 p-2 text-xs sm:text-sm font-semibold bg-red-500 text-white rounded-lg ${notification.state === 'unread' ? 'block' : 'hidden'}`}
                                 >
                                     Read
                                 </button>
-
                             </div>
-                            <div className="text-gray-500 text-sm">
+                            <div className="text-gray-500 text-xs sm:text-sm mt-2">
                                 <span>{notification.date}</span> | <span>{notification.time}</span>
                             </div>
                         </div>

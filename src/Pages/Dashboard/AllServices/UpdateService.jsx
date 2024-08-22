@@ -33,11 +33,10 @@ const UpdateService = () => {
     };
 
     return (
-        <div className="p-8 max-w-4xl mx-auto bg-gray-100 rounded-lg shadow-lg">
+        <div className="p-4 sm:p-8 max-w-4xl mx-auto bg-gray-100 rounded-lg shadow-lg">
             <div className="p-6 bg-white rounded-lg">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold text-blue-900 mb-4">{service.name}</h1>
-                    <p className="text-gray-600 text-xl mb-4">{service.description}</p>
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -62,7 +61,7 @@ const UpdateService = () => {
                         {errors.price && <span className="text-red-600">Price is required</span>}
                     </div>
 
-                    <div className="col-span-2">
+                    <div className="sm:col-span-2">
                         <label className="block text-gray-700">Benefits</label>
                         {fields.map((field, index) => (
                             <div key={field.id} className="flex items-center mb-2">
@@ -91,7 +90,7 @@ const UpdateService = () => {
 
                     <button
                         type="submit"
-                        className="col-span-2 bg-blue-500 text-white p-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300"
+                        className="sm:col-span-2 bg-blue-500 text-white p-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300"
                     >
                         Update Service
                     </button>

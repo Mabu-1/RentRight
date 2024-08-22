@@ -1,24 +1,18 @@
 import { Elements } from "@stripe/react-stripe-js";
-import {  useLoaderData } from "react-router-dom";
-import CheckoutForm from "./CheckoutForm";
 import { loadStripe } from "@stripe/stripe-js";
+import { useLoaderData } from "react-router-dom";
+import CheckoutForm from "./CheckoutForm";
 
 
-
-const PropertyBuy = () => {
-
-const property = useLoaderData(); 
+const PackageBuy = () => {
+    const packages = useLoaderData(); 
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 
     return (
         <div className="my-7">
-                    
-          
-
-      
-               
+                         
             <Elements stripe={stripePromise}>
-                    <CheckoutForm property={property}></CheckoutForm>
+                    <CheckoutForm packages={packages}></CheckoutForm>
                 </Elements>
                 
               
@@ -27,4 +21,4 @@ const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
     );
 };
 
-export default PropertyBuy;
+export default PackageBuy;

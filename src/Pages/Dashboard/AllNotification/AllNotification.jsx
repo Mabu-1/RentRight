@@ -67,10 +67,10 @@ const AllNotification = () => {
                             <tr>
                                 <th>#</th>
                                 <th>Title</th>
-                                <th>Message</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Type</th>
+                                <th className="hidden md:table-cell">Message</th>
+                                <th  className="hidden md:table-cell">Date</th>
+                                <th  className="hidden md:table-cell">Time</th>
+                                <th  className="hidden md:table-cell">Type</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
@@ -80,16 +80,16 @@ const AllNotification = () => {
                                 <tr key={item._id}>
                                     <td>{index + 1}</td>
                                     <td>{item.title}</td>
-                                    <td>{item.message}</td>
-                                    <td>{item.date}</td>
-                                    <td>{item.time}</td>
-                                    <td>{item.type}</td>
+                                    <td  className="hidden md:table-cell">{item.message}</td>
+                                    <td  className="hidden md:table-cell">{item.date}</td>
+                                    <td  className="hidden md:table-cell">{item.time}</td>
+                                    <td  className="hidden md:table-cell">{item.type}</td>
                                    
                                    
                                     
                                     <td>
                                         <Link to={`/dashboard/updateNotification/${item._id}`}>
-                                            <button className="btn btn-ghost btn-lg bg-orange-500">
+                                            <button className="btn btn-ghost btn-sm sm:btn-sm md:btn-lg bg-orange-500">
                                                 <FaEdit className="text-white"></FaEdit>
                                             </button>
                                         </Link>
@@ -97,7 +97,7 @@ const AllNotification = () => {
                                     <td>
                                         <button
                                             onClick={() => handleDeleteItem(item)}
-                                            className="btn btn-ghost btn-lg"
+                                            className="btn btn-ghost btn-sm mdLbtn-sm md:btn-lg"
                                         >
                                             <FaTrashAlt className="text-red-600"></FaTrashAlt>
                                         </button>

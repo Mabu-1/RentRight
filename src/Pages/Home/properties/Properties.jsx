@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Headline from "../../../Shared/Headline/Headline";
 import Marquee from "react-fast-marquee";
 import AOS from "aos";
@@ -8,10 +7,9 @@ import Button from "../../../Shared/Button/Button";
 import Loading from "../../../Loading/Loading";
 import Card from "./Card";
 import useProperty from "../../../hooks/useProperty";
+import { Link } from "react-router-dom";
 
 const Properties = () => {
-    
-
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
         AOS.refresh();
@@ -19,7 +17,9 @@ const Properties = () => {
 
     const { data, isLoading, isError, error } = useProperty();
 
-   
+    // Filter properties based on condition
+    const filtered = data && Array.isArray(data) ? data.filter(p => p.condition !== "Sold") : [];
+
     if (isLoading) {
         return <Loading />;
     }
@@ -27,10 +27,9 @@ const Properties = () => {
         return <div className="text-red-500 text-center">Error: {error.message}</div>;
     }
 
-    if (!data || data.length === 0) {
-        return <div className="text-center text-gray-500">No Amenties found.</div>;
+    if (!filtered.length) {
+        return <div className="text-center text-gray-500">No Properties found.</div>;
     }
-
 
     return (
         <div className="my-[100px]">
@@ -42,17 +41,22 @@ const Properties = () => {
             </div>
             <div className="flex justify-center text-center mb-4" data-aos="fade-up">
                 <div className="max-w-[700px]">
-                    <p className="text-gray-400">Aldus Corporation, which later merged with Adobe Systems, ushered lorem information age with its desktop publishing software Aldus PageMaker</p>
+                    <p className="text-gray-400">
+                        Aldus Corporation, which later merged with Adobe Systems, ushered the information age with its desktop publishing software Aldus PageMaker.
+                    </p>
                 </div>
             </div>
 
-            <Marquee speed={50} pauseOnHover={true} className="gap-5">
-                <div className="flex gap-5">
-                    {data.map((Property) => (
-                        <Card key={Property._id} Property={Property} />
-                    ))}
-                </div>
-            </Marquee>
+            <div className="overflow-x-hidden">
+                <Marquee speed={50} pauseOnHover={true} className="gap-5">
+                    <div className="flex gap-5">
+                        {data.map((Property) => (
+                            <Card key={Property._id} Property={Property} />
+                        ))}
+                    </div>
+                </Marquee>
+            </div>
+
             <div className="flex justify-center text-center my-4" data-aos="fade-up">
                 <Link to="/property">
                     <Button>

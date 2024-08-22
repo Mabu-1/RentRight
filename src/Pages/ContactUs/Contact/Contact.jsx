@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaInsta
 const Contact = () => {
     return (
         <div className="my-8 " data-aos="fade-up">
-            <h3 className="text-4xl text-yellow-400 font-bold text-center mb-4">Get in Touch</h3>
+            <h3 className="text-4xl text-yellow-400 font-bold text-center mb-[30px]">Get in Touch</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 text-center ">
 
                 <div className="bg-white p-2 rounded-lg shadow-lg">

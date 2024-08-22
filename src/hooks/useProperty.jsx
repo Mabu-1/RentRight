@@ -6,7 +6,7 @@ const useProperty= () => {
         {
             queryKey: ["property"],
             queryFn: async () => {
-                const data = await fetch("http://localhost:5000/property");
+                const data = await fetch("https://rent-right-server.vercel.app/property");
                 return await data.json();
             }
         }

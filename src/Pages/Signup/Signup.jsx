@@ -14,7 +14,7 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 const Signup = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const [showPassword, setShowPassword] = useState(false);
-    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const { createUser, handleUpdateProfile} = useContext(AuthContext);
     const navigate = useNavigate();
     const axiosPublic = useAxiosPublic();
 
@@ -37,19 +37,15 @@ const Signup = () => {
             const loggedUser = result.user;
     
             // Update user profile with name and photoURL
-            await updateUserProfile(data.name, photoURL);
+            await handleUpdateProfile(data.name, photoURL);
     
             // Save user information to the database
             const userInfo = {
                 name: data.name,
                 email: data.email,
                 image: photoURL, // Use the correct photoURL
-                buy:"",
+                buy:0,
                 service:"",
-                address:"",
-                profession:"",
-                phone:"",
-                buyDate:"",
                 serviceDate:"",
                 servicePaid:"no",
               

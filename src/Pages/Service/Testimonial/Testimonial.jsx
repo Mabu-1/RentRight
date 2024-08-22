@@ -38,7 +38,7 @@ const Testimonial = () => {
             </div>
             <p className="text-gray-400 mb-4" data-aos="fade-up">Aliquet enim tortor at auctor urna nunc id cursus. Mattis molestie a iaculis at erat pellentesque adipiscing commodo elit.</p>
 
-            <Marquee speed={70} pauseOnHover={true} className="gap-5">
+            <Marquee speed={100} pauseOnHover={true} className="gap-5">
                 <div className="flex gap-5">
                     {data.map((review) => (
                        <Card key={review._id} review={review}/>

@@ -36,7 +36,6 @@ const CreateNotification = () => {
             if (response.status === 200) {
                 Swal.fire("Success!", "Notification created successfully!", "success");
                 reset();
-                
             }
         } catch (error) {
             console.error("Error creating notification:", error);
@@ -45,15 +44,15 @@ const CreateNotification = () => {
     };
 
     return (
-        <div className="my-7 p-8 max-w-4xl mx-auto bg-gray-100 rounded-lg shadow-lg">
+        <div className="my-7 p-4 sm:p-8 max-w-4xl mx-auto bg-gray-100 rounded-lg shadow-lg">
             <div className="text-center mb-7">
-                <h1 className="text-red-600 font-bold text-5xl">Create Notification</h1>
+                <h1 className="text-red-600 font-bold text-3xl sm:text-5xl">Create Notification</h1>
             </div>
-            <div className="p-6 bg-white rounded-b-lg">
-                <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 gap-6 mb-4">
+            <div className="p-4 sm:p-6 bg-white rounded-lg">
+                <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 gap-4 sm:gap-6">
 
                     <div>
-                        <label className="block text-gray-700">Title</label>
+                        <label className="block text-gray-700 mb-2">Title</label>
                         <input
                             type="text"
                             {...register("title", { required: "Title is required" })}
@@ -63,7 +62,7 @@ const CreateNotification = () => {
                     </div>
 
                     <div>
-                        <label className="block text-gray-700">Message</label>
+                        <label className="block text-gray-700 mb-2">Message</label>
                         <textarea
                             {...register("message", { required: "Message is required" })}
                             className="w-full p-3 border border-gray-300 rounded-lg h-32"
@@ -73,7 +72,7 @@ const CreateNotification = () => {
 
                     <button
                         type="submit"
-                        className="bg-red-500 text-white p-3 rounded-lg font-bold hover:bg-red-700 transition duration-300"
+                        className="bg-red-500 text-white p-3 rounded-lg font-bold hover:bg-red-700 transition duration-300 col-span-1"
                     >
                         Create Notification
                     </button>

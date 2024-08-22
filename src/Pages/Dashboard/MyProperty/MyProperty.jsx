@@ -40,7 +40,7 @@ const MyProperty = () => {
                     </div>
                     <p className="text-gray-700">You haven't purchased any property yet.</p>
                     <Link to="/property">
-                        <button className="mt-4 bg-red-500 text-white py-2 px-4 rounded-lg">
+                        <button className="my-4 bg-red-500 text-white py-2 px-4 rounded-lg">
                             Purchase a Property
                         </button>
                     </Link>

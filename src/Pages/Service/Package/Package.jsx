@@ -47,18 +47,18 @@ const Package = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 my-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3">
                     {data.map((pack) => (
                         <Card key={pack._id} pack={pack } />
                     ))}
                 </div>
-                <div className="flex justify-center text-center my-4" data-aos="fade-up">
+                {/* <div className="flex justify-center text-center my-4" data-aos="fade-up">
                 <Link to="/custom">
                     <Button >
                         Custom Service
                     </Button>
                 </Link>
-            </div>
+            </div> */}
             </div>
         );
 };

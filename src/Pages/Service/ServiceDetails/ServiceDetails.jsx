@@ -65,8 +65,10 @@ const ServiceDetails = () => {
                             <div className="text-4xl text-yellow-400 mb-4">
                                 {service.icon}
                             </div>
-                            <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
-                            <p className="text-gray-500 text-center">{service.description}</p>
+                          <div className="text-center">
+                          <h3 className="text-2xl font-bold mb-2">{service.title}</h3>
+                          <p className="text-gray-500 text-center">{service.description}</p>
+                            </div>
                         </div>
                     </div>
                 ))}

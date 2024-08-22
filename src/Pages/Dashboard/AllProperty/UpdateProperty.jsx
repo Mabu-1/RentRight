@@ -1,17 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-
-
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
-
 const UpdateProperty = () => {
-   
     const property = useLoaderData();
     const axiosPublic = useAxiosPublic();
-    const { register, handleSubmit,formState: { errors } } = useForm({
+    const { register, handleSubmit, formState: { errors } } = useForm({
         defaultValues: property
     });
 
@@ -22,8 +18,6 @@ const UpdateProperty = () => {
             const response = await axiosPublic.put(`/property/${property._id}`, data);
             if (response.status === 200) {
                 Swal.fire("Success!", "Property updated successfully!", "success");
-    
-                // Refetch the property data
                 navigate(`/dashboard/updateProperty/${property._id}`);
             }
         } catch (error) {
@@ -31,28 +25,24 @@ const UpdateProperty = () => {
             Swal.fire("Error!", "There was a problem updating the property.", "error");
         }
     };
-    
 
     return (
-        <div className="p-8 max-w-4xl mx-auto bg-gray-100 rounded-lg shadow-lg">
+        <div className="p-4 sm:p-8 max-w-4xl mx-auto bg-gray-100 rounded-lg shadow-lg">
             <img
                 src={property.imageURL}
                 alt={property.name}
-                className="w-full h-full object-cover rounded-t-lg"
+                className="w-full h-64 object-cover rounded-t-lg mb-6 sm:h-full"
             />
             <div className="p-6 bg-white rounded-b-lg">
-              
-
-                <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-
+                <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
-                        <label className="block text-gray-700">Name </label>
+                        <label className="block text-gray-700">Name</label>
                         <input
                             type="text"
                             {...register("name", { required: true })}
                             className="w-full p-3 border border-gray-300 rounded-lg"
                         />
-                        {errors.area && <span className="text-red-600">Name is required</span>}
+                        {errors.name && <span className="text-red-600">Name is required</span>}
                     </div>
 
                     <div>
@@ -62,8 +52,9 @@ const UpdateProperty = () => {
                             {...register("description", { required: true })}
                             className="w-full p-3 border border-gray-300 rounded-lg"
                         />
-                        {errors.baths && <span className="text-red-600">Description of baths is required</span>}
+                        {errors.description && <span className="text-red-600">Description is required</span>}
                     </div>
+
                     <div>
                         <label className="block text-gray-700">Area (m²)</label>
                         <input
@@ -136,16 +127,13 @@ const UpdateProperty = () => {
 
                     <div>
                         <label className="block text-gray-700">Pet Friendly</label>
-                       
-                            <select
-                                {...register("petFriendly", { required: true })}
-                                className="w-full p-3 border border-gray-300 rounded-lg"
-                            >
-                                <option value={true} selected={true}>Yes</option>
-                                <option value={false} selected={false}>No</option>
-                            </select>
-
-                       
+                        <select
+                            {...register("petFriendly", { required: true })}
+                            className="w-full p-3 border border-gray-300 rounded-lg"
+                        >
+                            <option value={true}>Yes</option>
+                            <option value={false}>No</option>
+                        </select>
                         {errors.petFriendly && <span className="text-red-600">Pet friendly status is required</span>}
                     </div>
 
@@ -192,16 +180,18 @@ const UpdateProperty = () => {
                         {errors.condition && <span className="text-red-600">Condition is required</span>}
                     </div>
 
-                    <div className="col-span-2">
+
+                    <div className="sm:col-span-2">
                         <label className="block text-gray-700">Owner Contact Name</label>
                         <input
                             type="text"
                             {...register("ownerContact.name", { required: true })}
                             className="w-full p-3 border border-gray-300 rounded-lg"
                         />
-                        {errors.ownerContact?.phone && <span className="text-red-600">Owner's name is required</span>}
+                        {errors.ownerContact?.name && <span className="text-red-600">Owner's name is required</span>}
                     </div>
-                    <div className="col-span-2">
+
+                    <div className="sm:col-span-2">
                         <label className="block text-gray-700">Owner Contact Phone</label>
                         <input
                             type="text"
@@ -211,7 +201,7 @@ const UpdateProperty = () => {
                         {errors.ownerContact?.phone && <span className="text-red-600">Owner's phone is required</span>}
                     </div>
 
-                    <div className="col-span-2">
+                    <div className="sm:col-span-2">
                         <label className="block text-gray-700">Owner Contact Email</label>
                         <input
                             type="email"
@@ -223,7 +213,7 @@ const UpdateProperty = () => {
 
                     <button
                         type="submit"
-                        className="col-span-2 bg-blue-500 text-white p-3 rounded-lg font-bold hover:bg-blue-700 transition duration-300"
+                        className="sm:col-span-2 bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors"
                     >
                         Update Property
                     </button>

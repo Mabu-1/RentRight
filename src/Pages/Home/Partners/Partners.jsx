@@ -15,6 +15,7 @@ const Partners = () => {
         { imageURL: "https://i.ibb.co/KyjJHfq/images-1.png" },
         { imageURL: "https://i.ibb.co/9HwmPzf/images.png" },
         { imageURL: "https://i.ibb.co/zSZHdgw/download.png" },
+        { imageURL: "https://i.ibb.co/9rPwP8h/images.png" },
     ];
 
     return (
@@ -26,10 +27,10 @@ const Partners = () => {
                 />
                 <p className="my-2">A pellentesque sit amet porttitor eget dolor morbi non arcu. Tincidunt dui ut ornare lectus sit amet est placerat in. Quisque egestas diam.</p>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4" data-aos="fade-up" data-aos-delay="200">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="200">
                 {images.map((image, index) => (
                     <div key={index} className="flex justify-center items-center p-2 bg-gray-100 rounded-lg">
-                        <img src={image.imageURL} alt={`Partner ${index + 1}`} className="w-[450px] h-[100px] object-cover rounded-lg" />
+                        <img src={image.imageURL} alt={`Partner ${index + 1}`} className="w-full h-[100px] object-cover rounded-lg" />
                     </div>
                 ))}
             </div>

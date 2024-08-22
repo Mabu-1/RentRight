@@ -19,10 +19,10 @@ const Card = ({ agent }) => {
                 className="w-[300px] h-[350px] object-cover rounded-lg"
             />
             <div className="text-white text-start md:text-start sm:text-center">
-                <h3 className="text-4xl font-semibold">{name}</h3>
-                <p className="text-2xl">{profession}</p>
-                <p className="text-xl mt-2">{about}</p>
-                <div className="flex mt-4 gap-4 md:flex md:justify-start sm:flex sm:justify-center">
+                <h3 className="text-2xl sm:text-2xl md:text-4xl font-semibold">{name}</h3>
+                <p className="text-xl sm:text-xl md:text-2xl">{profession}</p>
+                <p className="text-base sm:text-base md:text-xl mt-2">{about}</p>
+                <div className="flex mt-6 gap-4 md:flex md:justify-start sm:flex sm:justify-center">
                     <a href={'/'} target="_blank" rel="noopener noreferrer">
                         <FaFacebook className="text-[#3b5998] w-[70px] h-[50px]" />
                     </a>

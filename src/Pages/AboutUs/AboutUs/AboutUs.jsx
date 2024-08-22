@@ -19,7 +19,7 @@ const AboutUs = () => {
             <title>RentRight | ABOUT US</title>
         </Helmet>
             <Banner></Banner>
-            <MobileApp></MobileApp>
+           
             <Amenities></Amenities>
             <Leading></Leading>
             <Achievement></Achievement>

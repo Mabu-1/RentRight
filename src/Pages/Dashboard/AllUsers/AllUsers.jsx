@@ -73,12 +73,12 @@ const AllUsers = () => {
                                 <th>
                                     #
                                 </th>
-                                <th>Image</th>
+                                <th  className="hidden md:table-cell">Image</th>
                                 <th>Name</th>
-                                <th>Address</th>
-                                <th>Phone</th>
-                                <th> Service</th>
-                                <th>Property</th>
+                                <th  className="hidden md:table-cell">Address</th>
+                                <th  className="hidden md:table-cell">Phone</th>
+                                <th  className="hidden md:table-cell">Service</th>
+                                <th  className="hidden md:table-cell">Property</th>
                                
                                 <th>Delete</th>
                             </tr>
@@ -89,7 +89,7 @@ const AllUsers = () => {
                                     <td>
                                         {index + 1}
                                     </td>
-                                    <td>
+                                    <td  className="hidden md:table-cell">
                                         <div className="flex items-center gap-3">
                                             <div className="avatar">
                                                 <div className="mask mask-squircle w-12 h-12">
@@ -102,13 +102,13 @@ const AllUsers = () => {
                                     <td>
                                         {item.name}
                                     </td>
-                                    <td>
+                                    <td  className="hidden md:table-cell">
                                         {item.address}
                                     </td>
-                                    <td>
+                                    <td  className="hidden md:table-cell">
                                         {item.phone}
                                     </td>
-                                    <td>
+                                    <td  className="hidden md:table-cell">
                                       {
                                         item.service ? 
                                         <>
@@ -119,7 +119,7 @@ const AllUsers = () => {
                                         </>
                                       }
                                     </td>
-                                    <td>
+                                    <td  className="hidden md:table-cell">
                                       {
                                         item.buy ? 
                                         <>

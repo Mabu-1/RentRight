@@ -12,7 +12,6 @@ import PropertyBuy from "../Pages/Property/properties/PropertyBuy";
 import CustomService from "../Pages/Service/Package/CustomService";
 import Dashboard from "../layout/Dashboard";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
-import Payment from "../Pages/Dashboard/Payment/Payment";
 import Review from "../Pages/Dashboard/Review/Review";
 import PrivateRoute from "./PrivateRoute";
 import Notification from "../Pages/Dashboard/Notification/Notification";
@@ -28,6 +27,10 @@ import UpdateProperty from "../Pages/Dashboard/AllProperty/UpdateProperty";
 import UpdateService from "../Pages/Dashboard/AllServices/UpdateService";
 import AllNotification from "../Pages/Dashboard/AllNotification/AllNotification";
 import UpdatedNotification from "../Pages/Dashboard/AllNotification/UpdatedNotification";
+import PackageBuy from "../Pages/Service/Package/PackageBuy";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import MyService from "../Pages/Dashboard/MyService/MyService";
+import Payment from "../Pages/Dashboard/MyService/Payment";
 
 
 
@@ -48,18 +51,24 @@ const router = createBrowserRouter([
             {
                 path:"property",
                 element: <Property></Property>,
-                loader:() => fetch('http://localhost:5000/propertyCount')
+                loader:() => fetch('https://rent-right-server.vercel.app/propertyCount')
 
             },
             {
                 path:"property/:id",
                 element: <PropertyInfo></PropertyInfo>,
-                loader: ({params}) => fetch(`http://localhost:5000/property/${params.id}`)
+                loader: ({params}) => fetch(`https://rent-right-server.vercel.app/property/${params.id}`)
             },
             {
                 path:"propertyBuy/:id",
                 element: <PropertyBuy></PropertyBuy>,
-                loader: ({params}) => fetch(`http://localhost:5000/property/${params.id}`)
+                loader: ({params}) => fetch(`https://rent-right-server.vercel.app/property/${params.id}`)
+
+            },
+            {
+                path:"packageBuy/:id",
+                element: <PackageBuy></PackageBuy>,
+                loader: ({params}) => fetch(`https://rent-right-server.vercel.app/package/${params.id}`)
 
             },
             {
@@ -103,9 +112,21 @@ const router = createBrowserRouter([
                 element:<MyProperty></MyProperty>
             },
             {
-                path:'payment',
-                element:<Payment></Payment>
+                path:'myService',
+                element:<MyService></MyService>
             },
+           
+            {
+                path:'payment/:id',
+                element:<Payment>,</Payment>,
+                loader: ({params}) => fetch(`https://rent-right-server.vercel.app/package/${params.id}`)
+            },
+
+            {
+                path:'paymentHistory',
+                element:<PaymentHistory></PaymentHistory>
+            },
+
             {
                 path:'notification',
                 element:<Notification></Notification>
@@ -123,21 +144,21 @@ const router = createBrowserRouter([
             {
                 path:'updateProperty/:id',
                 element:<UpdateProperty></UpdateProperty>,
-                loader: ({params}) => fetch(`http://localhost:5000/property/${params.id}`)
+                loader: ({params}) => fetch(`https://rent-right-server.vercel.app/property/${params.id}`)
 
                 
             },
             {
                 path:'updateService/:id',
                 element:<UpdateService></UpdateService>,
-                loader: ({params}) => fetch(`http://localhost:5000/package/${params.id}`)
+                loader: ({params}) => fetch(`https://rent-right-server.vercel.app/package/${params.id}`)
 
                 
             },
             {
                 path:'updateNotification/:id',
                 element:<UpdatedNotification></UpdatedNotification>,
-                loader: ({params}) => fetch(`http://localhost:5000/notification/${params.id}`)
+                loader: ({params}) => fetch(`https://rent-right-server.vercel.app/notification/${params.id}`)
 
                 
             },

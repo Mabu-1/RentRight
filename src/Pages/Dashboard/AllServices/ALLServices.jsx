@@ -66,8 +66,8 @@ const ALLServices = () => {
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                <th>Price</th>
-                                <th>Benefits</th>
+                                <th className="hidden md:table-cell">Price</th>
+                                <th className="hidden md:table-cell">Benefits</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
@@ -78,8 +78,8 @@ const ALLServices = () => {
                                     <td>{index + 1}</td>
                                    
                                     <td className="text-orange-400 font-bold">{item.name}</td>
-                                    <td className="text-green-600 font-semibold">${item.price}</td>
-                                    <td>
+                                    <td className="text-green-600 font-semibold hidden sm:table-cell">${item.price}</td>
+                                    <td className="hidden md:table-cell">
                                         {Array.isArray(item.benefits) ? item.benefits.map((benefit, idx) => (
                                             <div key={idx}>
                                                 <p className="font-semibold">{benefit}</p>
@@ -89,7 +89,7 @@ const ALLServices = () => {
                                     </td>
                                     <td>
                                         <Link to={`/dashboard/updateService/${item._id}`}>
-                                            <button className="btn btn-ghost btn-lg bg-orange-500">
+                                            <button className="btn btn-ghost btn-sm sm:btn-sm md:btn-lg bg-orange-500">
                                                 <FaEdit className="text-white"></FaEdit>
                                             </button>
                                         </Link>
@@ -97,7 +97,7 @@ const ALLServices = () => {
                                     <td>
                                         <button
                                             onClick={() => handleDeleteItem(item)}
-                                            className="btn btn-ghost btn-lg"
+                                            className="btn btn-ghost btn-sm sm:btn-sm md:btn-lg"
                                         >
                                             <FaTrashAlt className="text-red-600"></FaTrashAlt>
                                         </button>

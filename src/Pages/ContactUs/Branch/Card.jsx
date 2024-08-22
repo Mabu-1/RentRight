@@ -19,8 +19,8 @@ const Card = ({branch}) => {
                 <h3 className="text-2xl font-bold mb-2">{location}</h3>
 
                 <div className="flex items-center gap-2 mb-2">
-                    <IoLocation />
-                    <span>{address}</span>
+                    <IoLocation className="text-3xl sm:text-3xl md:text-2xl"/>
+                    <span className="mt-3 sm:mt-3 md:mt-[8px] text-base sm:text-base ">{address}</span>
                 </div>
                 <div className="flex items-center gap-2 mb-2">
                     <FaPhone />

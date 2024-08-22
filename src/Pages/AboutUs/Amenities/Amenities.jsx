@@ -3,7 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import Marquee from "react-fast-marquee";
 import Headline from "../../../Shared/Headline/Headline";
-import "./Styles.css";
 import useAmenties from '../../../hooks/useAmenties';
 import Loading from '../../../Loading/Loading';
 import Card from './Card';

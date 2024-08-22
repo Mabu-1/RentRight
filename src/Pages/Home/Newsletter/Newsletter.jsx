@@ -11,10 +11,10 @@ const Newsletter = () => {
     return (
         <div className="my-7" data-aos="fade-up">
             <div className="text-center">
-                <h3 className="text-6xl font-bold text-yellow-400">Newsletter</h3>
+                <h3 className="text-4xl sm:flex-4xl md:text-6xl lg:text-6xl font-bold text-yellow-400">Newsletter</h3>
             </div>
-            <div className="flex gap-4 justify-center mt-4">
-                <div className="flex items-center border-2 border-blue-600 p-2 w-[300px] gap-2">
+            <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row gap-4 justify-center mt-4">
+                <div className="flex items-center border-2 border-blue-600 rounded-lg p-2 w-[300px] gap-2">
                 
                     <input
                         type="email"
@@ -22,11 +22,11 @@ const Newsletter = () => {
                         className="outline-none w-full"
                     />
                 </div>
-               <div className='flex justify-center items-center'>
-               <Button>
+               
+               <Button className="w-full ">
                     Subscribe
                 </Button>
-               </div>
+             
             </div>
         </div>
     );

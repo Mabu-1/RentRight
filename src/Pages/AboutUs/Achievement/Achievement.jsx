@@ -15,11 +15,13 @@ const Achievement = () => {
     }, []);
 
     return (
-        <div className="my-7">
-            <Headline
+        <div className="my-[40px]">
+         <div className='text-center'>
+         <Headline
                 subheading1={"Prime destination"}
                 headline1={"Modern & Luxury Private Property"}
             />
+         </div>
             <div className="my-2 flex justify-center items-center text-center">
                 <p className="text-gray-400">Dui accumsan sit amet nulla facilisi morbi tempus. Fermentum iaculis eu non diam phasellus vestibulum. Praesent elementum facilisis leo vel fringilla.</p>
             </div>
@@ -54,26 +56,7 @@ const Achievement = () => {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center my-2 gap-10">
-                <div data-aos="fade-up" data-aos-delay="400" className="flex items-center bg-yellow-400 p-4 rounded-md text-white">
-                    <p className="mr-2 font-bold">Get in Touch</p>
-                    <FaArrowRight />
-                </div>
-                <div data-aos="fade-up" data-aos-delay="500" className="flex items-center p-4 rounded-md">
-                    <IoIosCall className="mr-2 h-[40px] w-[40px]" />
-                    <div>
-                        <p className="font-bold">Call us Anytime</p>
-                        <p>+90792972337</p>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="600" className="flex items-center  p-4 rounded-md">
-                    <IoIosMail className="mr-2 h-[40px] w-[40px]" />
-                    <div>
-                        <p className="font-bold">Email us Anytime</p>
-                        <p>resicraft77@gmail.com</p>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     );
 };

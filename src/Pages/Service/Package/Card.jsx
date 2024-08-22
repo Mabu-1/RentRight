@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContext, useEffect } from "react";
@@ -5,74 +18,65 @@ import Swal from "sweetalert2";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import useUser from "../../../hooks/UseUser";
-
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const Card = ({ pack }) => {
 
     const { _id, name, price, benefits,bought } = pack;
-   
+   const navigate=useNavigate();
+   const location = useLocation();
     const { data } = useUser();
-    const axiosPublic = useAxiosPublic();
+ 
     const { user } = useContext(AuthContext);
    
 
     const handleBook = async () => {
+
+     
         const email = user?.email;
         const serviceData = data.find((u) => u.email === email);
         const userServiceId = serviceData?.service;
      
-      
-        if (userServiceId === _id) {
-            Swal.fire({
-                position: "top-center",
-                icon: "warning",
-                title: "Your have already bought this service",
-                showConfirmButton: false,
-                timer: 1000
-              });
-               
-               return;
-        }
-        else {
-            const result = await Swal.fire({
-                title: 'Confirm Purchase',
-                text: "Are you sure you want to complete the Service?",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, complete purchase'
-            });
+        if (user && user.email) {
+            // TODO: Add functionality for logged-in 
+            if (userServiceId === _id) {
+                Swal.fire({
+                    position: "top-center",
+                    icon: "warning",
+                    title: "Your have already bought this service",
+                    showConfirmButton: false,
+                    timer: 1000
+                  });
+                   
+                   return;
+            }
+            else {
 
-            if (result.isConfirmed) {
-                try {
-
-                    const serviceBoughtDate = new Date().toISOString().split('T')[0];
-                const buy = bought+1;
-                console.log(buy);
-                const packId = _id;
-                   await axiosPublic.put(`/package/${packId}`, {bought:buy})
-                    const propertyBuy = await axiosPublic.put(`/users/${email}`, { service: _id, serviceDate: serviceBoughtDate, servicePaid: "yes" });
-                    console.log('Property purchase updated:', propertyBuy.data);
-
-                    await Swal.fire(
-                        'Purchased!',
-                        'Your purchase has been completed.',
-                        'success'
-                    );
-                } catch (error) {
-                    Swal.fire({
-                        icon: "error",
-                        title: "Oops...",
-                        text: "Something went wrong while adding user to the database!",
-                    });
-                    console.error("Database insertion error:", error);
+                return navigate(`/packageBuy/${_id}`);
+                
                 }
             }
+        
+        else {
+            Swal.fire({
+                title: "You are not Logged In",
+                text: "Please login to buy your home",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, login!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Send the user to the login page
+                    navigate('/login', { state: { from: location } });
+                }
+            });
         }
-    };
-
+        };
+       
+    
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
@@ -103,3 +107,5 @@ const Card = ({ pack }) => {
 };
 
 export default Card;
+
+

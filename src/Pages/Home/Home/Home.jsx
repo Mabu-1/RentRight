@@ -17,11 +17,11 @@ const Home = () => {
             <Helmet>
                 <title>RentRight | HOME</title>
             </Helmet>
-            <Banner></Banner>
-            <AboutUs></AboutUs>
+            <Banner></Banner>         
             <Unique></Unique>
             <Properties></Properties>
             <Requirement></Requirement>
+            <AboutUs></AboutUs>
             <Partners></Partners>
             <Register></Register>
             <Newsletter></Newsletter>
