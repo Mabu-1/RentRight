@@ -129,12 +129,12 @@ const Signup = () => {
 
                     <button
                         type="submit"
-                        className="my-1 p-3 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold bg-yellow-500 hover:bg-[#3d07ff]"
+                        className="my-1 p-3 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold bg-[#e27a54] hover:bg-[#eb7043]"
                     >
                         Sign Up
                     </button>
 
-                    <p className="text-center mt-4">Already have an account? Please <Link className="text-blue-600 font-bold" to='/login'>Login</Link></p>
+                    <p className="text-center mt-4">Already have an account? Please <Link className="text-[#eb7043] font-bold" to='/login'>Login</Link></p>
                 </form>
             </div>
         </div>

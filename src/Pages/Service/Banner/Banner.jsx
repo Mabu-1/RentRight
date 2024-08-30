@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="flex flex-col-reverse sm:flex-col-reverse md:flex-row lg:flex-row gap-4">
                 <div className="flex-1 ">
                     <div>
-                        <img src="https://i.ibb.co/m57qs00/3d-rendering-house-model.jpg" alt="" className="border rounded-full " />
+                        <img src="https://i.ibb.co/3prVrDy/3d-rendering-house-model-min1.jpg" alt="" className="border rounded-full " />
 
                     </div>
                 </div>

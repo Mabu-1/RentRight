@@ -82,9 +82,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end mt-1 sm:mt-1 md:mt-3">
-          {loading ? (
-            <div>Loading...</div> // Optional loading state
-          ) : user ? (
+          {user ? (
             <div className="relative inline-block text-left">
               <button
                 onClick={handleToggleDropdown}
@@ -108,7 +106,7 @@ const Navbar = () => {
                     aria-labelledby="user-menu"
                   >
                     <p className="block px-4 py-2 text-sm text-gray-700">{user.displayName}</p>
-                    {user?.email === "umahtab65@gmail.com" ?
+                    {user?.email === "umahtab65@gmail.com" ? (
                       <Link
                         to="/dashboard/admin"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -116,7 +114,7 @@ const Navbar = () => {
                       >
                         Dashboard
                       </Link>
-                      :
+                    ) : (
                       <Link
                         to="/dashboard/home"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -124,7 +122,7 @@ const Navbar = () => {
                       >
                         Dashboard
                       </Link>
-                    }
+                    )}
                     <button
                       onClick={handleLogOut}
                       className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
@@ -144,6 +142,7 @@ const Navbar = () => {
             </Link>
           )}
         </div>
+
       </div>
     </div>
   );

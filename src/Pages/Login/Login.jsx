@@ -185,7 +185,7 @@ const Login = () => {
                     <button
                         onClick={handleStandardLogin}
                         disabled={!captchaValid}
-                        className={`my-2 p-3 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold ${!captchaValid ? 'bg-gray-400 cursor-not-allowed' : 'bg-yellow-500 hover:bg-[#3d07ff]'}`}
+                        className={`my-2 p-3 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold ${!captchaValid ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#af5b3c] hover:bg-[#eb7043]'}`}
                     >
                         Sign In
                     </button>
@@ -193,12 +193,12 @@ const Login = () => {
                     <button
                         onClick={() => handleGoogleSignIn(googleLogin)} 
                         
-                        className={`my-2 p-1 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold  bg-[#dd1d77] hover:bg-[#9832a5]`}
+                        className={`my-2 p-1 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold  bg-[#d88b6e] hover:bg-[#ff7847]`}
                     >
                         <FcGoogle className="text-4xl" />
                     </button>
                     <p className="text-center mt-4">
-                        Do not have an account? Please <Link className="text-blue-600 font-bold" to='/signup'>Register</Link>
+                        Do not have an account? Please <Link className="text-[#eb7043] font-bold" to='/signup'>Register</Link>
                     </p>
                 </div>
             </div>
