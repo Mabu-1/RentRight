@@ -16,21 +16,21 @@ const Card = ({ agent }) => {
             <img
                 src={imageUrl}
                 alt={name}
-                className="w-[300px] h-[350px] object-cover rounded-lg"
+                className="w-[200px] h-[250px] object-cover rounded-lg"
             />
             <div className="text-white text-start md:text-start sm:text-center">
-                <h3 className="text-2xl sm:text-2xl md:text-4xl font-semibold">{name}</h3>
-                <p className="text-xl sm:text-xl md:text-2xl">{profession}</p>
-                <p className="text-base sm:text-base md:text-xl mt-2">{about}</p>
+                <h3 className="text-lg sm:text-lg md:text-xl font-semibold">{name}</h3>
+                <p className="text-md sm:text-md md:text-lg">{profession}</p>
+                <p className="text-sm sm:text-sm md:text-base mt-2">{about}</p>
                 <div className="flex mt-6 gap-4 md:flex md:justify-start sm:flex sm:justify-center">
                     <a href={'/'} target="_blank" rel="noopener noreferrer">
-                        <FaFacebook className="text-[#3b5998] w-[70px] h-[50px]" />
+                        <FaFacebook className="text-[#3b5998] w-[30px] h-[30px]" />
                     </a>
                     <a href={'/'} target="_blank" rel="noopener noreferrer">
-                        <FaInstagram className="text-[#e1306c] w-[70px] h-[50px]" />
+                        <FaInstagram className="text-[#e1306c] w-[30px] h-[30px]" />
                     </a>
                     <a href={'/'} target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className="text-[#0077b5] w-[70px] h-[50px]" />
+                        <FaLinkedin className="text-[#0077b5] w-[30px] h-[30px]" />
                     </a>
                 </div>
             </div>

@@ -6,20 +6,25 @@ import Card from "./Card";
 import useProperty from "../../../hooks/useProperty";
 import { FaDollarSign, FaMapMarkerAlt, FaBuilding, FaExchangeAlt } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
 const Properties = () => {
     const { count } = useLoaderData();
     const [currentPage, setCurrentPage] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(3);
-    const [minPrice, setMinPrice] = useState('');
-    const [maxPrice, setMaxPrice] = useState('');
     const [location, setLocation] = useState('');
     const [propertyType, setPropertyType] = useState('');
     const [condition, setCondition] = useState('');
     const [filteredProperties, setFilteredProperties] = useState([]);
     const [pagesToShow, setPagesToShow] = useState(2); // Default to showing 2 pages plus Prev/Next
-
+    const [priceRange, setPriceRange] = useState([80000, 1000000]); // Updated initial price range
     const { data, isLoading, isError, error } = useProperty();
+
+    const handlePriceChange = (event, newValue) => {
+        setPriceRange(newValue);
+
+    };
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
@@ -48,18 +53,20 @@ const Properties = () => {
     const handleSearch = () => {
         if (data && Array.isArray(data)) {
             const filtered = data.filter(p => p.condition !== "Sold")
-                .filter(property => (
-                    (!minPrice || property.price >= parseFloat(minPrice)) &&
-                    (!maxPrice || property.price <= parseFloat(maxPrice)) &&
-                    (!location || property.city === location) &&
-                    (!propertyType || property.type === propertyType) &&
-                    (!condition || property.condition === condition)
-                ));
+                .filter(property => {
+                    const isPriceInRange = property.price >= priceRange[0] && property.price <= priceRange[1];
+                    const isLocationMatch = !location || property.city === location;
+                    const isPropertyTypeMatch = !propertyType || property.type === propertyType;
+                    const isConditionMatch = !condition || property.condition === condition;
+
+                    return isPriceInRange && isLocationMatch && isPropertyTypeMatch && isConditionMatch;
+                });
 
             setFilteredProperties(filtered);
-            setCurrentPage(0); // Reset to first page when searching
+            setCurrentPage(0); // Reset to the first page when searching
         }
     };
+
 
     useEffect(() => {
         if (data) {
@@ -71,8 +78,6 @@ const Properties = () => {
         setItemsPerPage(parseInt(e.target.value));
         setCurrentPage(0); // Reset to first page when items per page change
     };
-
-
 
     if (isLoading) {
         return <Loading />;
@@ -91,7 +96,6 @@ const Properties = () => {
 
     // Calculate total pages based on filtered properties
     const totalPages = Math.ceil(filteredProperties.length / itemsPerPage);
-
 
     // Function to get visible pages
     const getVisiblePages = () => {
@@ -131,101 +135,124 @@ const Properties = () => {
     };
 
     return (
-        <div className="my-[20px]">
+        <div className="mb-4">
+            <div className="relative mb-8">
+                <img
+                    src="https://i.ibb.co/BtxYTC6/NRI-Property-In-India.jpg"
+                    alt=""
+                    className="w-full object-cover h-[600px] sm:h-[600px] md:h-[600px] lg:h-[400px]"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center  " data-aos="fade-up">
+                    <div className="p-2 text-white">
+                        <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-2">
+                            Find Your <br /> Dream Property
+                        </h1>
+                        <p className="text-md sm:text-md md:text-lg font-bold">
+                            Search through our extensive list of properties.
+                        </p>
+                    </div>
 
-            <div className="relative  mb-8">
-                <img src="https://i.ibb.co/NWg7btm/4255359.jpg" alt="" className="h-full sm:h-full md:h-[400px] lg:h-[400px] w-full object-cover" />
-                <div className="absolute top-0 left-0 w-full h-full flex flex-col   bg-opacity-50 text-center " data-aos="fade-up">
-                    <div className="mt-8 p-2">
-                    <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-2 ">Find Your  <br/> <span className="text-red-600"> Dream</span> <span className="text-blue-600">Property</span></h1>
-                    <p className=" text-md sm:text-md md:text-xl lg:text-xl font-bold">Search through our extensive list of properties.</p>
+                    {/* Search Bar */}
+                    <div className="relative z-10 gap-2 flex flex-col justify-center items-center bg-white lg:flex-row rounded-lg w-[250px] md:w-[500px] lg:w-[900px] font-bold mt-4 px-4 py-9">
+                        <div className="flex flex-col items-center   rounded-lg  w-full lg:w-auto space-x-2 lg:mt-[-34px]  ">
+                            <div className="text-center ">
+                                <span className="text-md font-semibold">Price Range:<br /> ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}</span>
+                            </div>
+                            <Box className="w-full sm:w-full md:w-full lg:w-[200px] px-4 lg:border-r-2 border-gray-200">
+                                <Slider
+                                    value={priceRange}
+                                    onChange={handlePriceChange}
+                                    valueLabelDisplay="auto"
+                                    min={80000}
+                                    max={1000000}
+                                    step={50000}
+                                    aria-labelledby="range-slider"
+                                    sx={{
+                                        color: '#eb7043', // Set the active track and thumb color
+                                        '& .MuiSlider-thumb': {
+                                            backgroundColor: '#eb7043', // Set the thumb color
+                                        },
+                                        '& .MuiSlider-rail': {
+                                            color: '#d1d1d1', // Set the unselected portion of the slider color
+                                        },
+                                        '& .MuiSlider-valueLabel': {
+                                            backgroundColor: '#eb7043', // Set the value label background color
+                                        },
+                                    }}
+                                />
+                            </Box>
+
+                        </div>
+                        <div className="flex items-center   w-full lg:w-auto p-2 lg:border-r-2 border-gray-200">
+                            <FaMapMarkerAlt className="text-red-700 h-[20px] w-[14px]" />
+                            <select
+                                className="focus:outline-none bg-transparent w-full text-sm"
+                                value={location}
+                                onChange={(e) => setLocation(e.target.value)}
+                            >
+                                <option value="">Select Location</option>
+                                <option>New York</option>
+                                <option>Los Angeles</option>
+                                <option>Chicago</option>
+                                <option>Houston</option>
+                                <option>Phoenix</option>
+                            </select>
+                        </div>
+
+                        <div className="flex items-center lg:border-r-2 border-gray-200 px-3 py-2 w-full lg:w-auto">
+                            <FaBuilding className="text-yellow-700 h-[20px] w-[14px]" />
+                            <select
+                                className="focus:outline-none bg-transparent w-full text-sm"
+                                value={propertyType}
+                                onChange={(e) => setPropertyType(e.target.value)}
+                            >
+                                <option value="">Property Type</option>
+                                <option>Penthouse</option>
+                                <option>Rowhouse</option>
+                                <option>Studio Apartment</option>
+                                <option>Farmhouse</option>
+                                <option>Villa</option>
+                            </select>
+                        </div>
+
+                        <div className="flex items-center lg:border-r-2 border-gray-200 w-full lg:w-auto p-2">
+                            <FaExchangeAlt className="text-blue-700 h-[20px] w-[14px]" />
+                            <select
+                                className="focus:outline-none  bg-transparent w-full text-sm"
+                                value={condition}
+                                onChange={(e) => setCondition(e.target.value)}
+                            >
+                                <option value="">Availability</option>
+                                <option>Rental</option>
+                                <option>Sell</option>
+                            </select>
+                        </div>
+                        <div className="flex justify-center items-center">
+                            <button
+                                onClick={handleSearch}
+                                className="bg-[#e67850] hover:bg-[#eb7043] text-white hover:text-black px-6 py-2 rounded-lg font-semibold text-md"
+                            >
+                                SEARCH
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className="relative lg:absolute lg:bottom-[-20px] lg:left-0 w-full lg:p-4 lg:bg-opacity-90 rounded-t-lg" data-aos="fade-up">
-    {/* Search Bar */}
-    <div className="flex flex-col justify-center items-center lg:flex-row p-5 rounded-lg space-y-4 lg:space-y-0 lg:space-x-4 w-full font-bold">
-        <div className="flex items-center border-2 border-blue-600 rounded-lg p-2 w-full  lg:w-auto space-x-2">
-            <FaDollarSign className="text-green-600 h-[20px] w-[20px] sm:w-[20px] md:w-[14px]" />
-            <input
-                type="number"
-                placeholder="Min Price"
-                className="focus:outline-none bg-transparent w-full sm:w-full md:w-full lg:w-[120px] text-sm placeholder-black"
-                value={minPrice}
-                onChange={(e) => setMinPrice(e.target.value)}
-            />
-            <span className="text-red-500">-</span>
-            <FaDollarSign className="text-green-600 h-[20px] w-[20px] sm:w-[20px] md:w-[14px]" />
-            <input
-                type="number"
-                placeholder="Max Price"
-                className="focus:outline-none bg-transparent w-full sm:w-full md:w-full lg:w-[120px] text-sm placeholder-black"
-                value={maxPrice}
-                onChange={(e) => setMaxPrice(e.target.value)}
-            />
-        </div>
-
-        <div className="flex items-center border-2 border-blue-600 rounded-lg w-full lg:w-auto p-2">
-            <FaMapMarkerAlt className="text-red-700 h-[20px] w-[14px]" />
-            <select
-                className="focus:outline-none bg-transparent w-full text-sm"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-            >
-                <option value="">Select Location</option>
-                <option>New York</option>
-                <option>Los Angeles</option>
-                <option>Chicago</option>
-                <option>Houston</option>
-                <option>Phoenix</option>
-            </select>
-        </div>
-
-        <div className="flex items-center border-2 border-blue-600 rounded-lg px-3 py-2 w-full lg:w-auto">
-            <FaBuilding className="text-yellow-700 h-[20px] w-[14px]" />
-            <select
-                className="focus:outline-none bg-transparent w-full text-sm"
-                value={propertyType}
-                onChange={(e) => setPropertyType(e.target.value)}
-            >
-                <option value="">Property Type</option>
-                <option>Penthouse</option>
-                <option>Rowhouse</option>
-                <option>Studio Apartment</option>
-                <option>Farmhouse</option>
-                <option>Villa</option>
-            </select>
-        </div>
-
-        <div className="flex items-center border-2 border-blue-600 rounded-lg w-full lg:w-auto p-2">
-            <FaExchangeAlt className="text-blue-700 h-[20px] w-[14px]" />
-            <select
-                className="focus:outline-none bg-transparent w-full text-sm"
-                value={condition}
-                onChange={(e) => setCondition(e.target.value)}
-            >
-                <option value="">Availability</option>
-                <option>Rental</option>
-                <option>Sell</option>
-            </select>
-        </div>
-    </div>
-
-    <div className="flex justify-center items-center my-5">
-        <button
-            onClick={handleSearch}
-            className="bg-blue-900 text-white px-6 py-2 rounded-lg font-semibold text-2xl w-[200px]"
-        >
-            SEARCH
-        </button>
-    </div>
-</div>
-
             </div>
+
             {/* Render Paginated Properties */}
-            <div className="grid grid-cols-1 gap-8">
-                {paginatedProperties.map((property) => (
-                    <Card key={property._id} Property={property} />
-                ))}
+            <div>
+                {paginatedProperties.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {paginatedProperties.map((property) => (
+                            <Card key={property._id} Property={property} />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="flex flex-col justify-center items-center ">
+                        <img src="https://i.postimg.cc/856bvW6m/5219070.jpg" alt="No Data Found" className="w-full md:w-1/2 lg:w-1/4" />
+                        <h3 className="text-xl md:text-4xl font-bold ">No Properties found</h3>
+                    </div>
+                )}
             </div>
 
             {/* Pagination Controls */}
@@ -234,7 +261,7 @@ const Properties = () => {
                     <button
                         key={index}
                         onClick={() => handlePageClick(page)}
-                        className={`p-2 min-w-[40px] rounded-lg ${currentPage === page ? 'bg-blue-600 text-white' : 'bg-gray-300'
+                        className={`p-2 min-w-[40px] rounded-lg ${currentPage === page ? 'bg-[#eb7043] text-white' : 'bg-gray-300'
                             }`}
                     >
                         {page === "Prev" || page === "Next" ? page : page + 1}
@@ -242,9 +269,9 @@ const Properties = () => {
                 ))}
                 <select className="ml-2 p-2 rounded-lg" value={itemsPerPage} onChange={handleItemsPerPage}>
                     <option value="3">3</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
                 </select>
             </div>
         </div>

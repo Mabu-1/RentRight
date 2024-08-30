@@ -50,7 +50,7 @@ const Properties = () => {
             <div className="overflow-x-hidden">
                 <Marquee speed={50} pauseOnHover={true} className="gap-5">
                     <div className="flex gap-5">
-                        {data.map((Property) => (
+                        {filtered.map((Property) => (
                             <Card key={Property._id} Property={Property} />
                         ))}
                     </div>

@@ -44,7 +44,7 @@ const Leading = () => {
             <div className="flex justify-center" data-aos="fade-up">
                 <Headline
                     subheading1={"WHY WE ARE LEADING"}
-                    headline={"One-Stop Real Estate Solution"}
+                    headline1={"One-Stop Real Estate Solution"}
                 />
             </div>
             <div className="flex justify-center text-center mb-4" data-aos="fade-up">
@@ -56,14 +56,14 @@ const Leading = () => {
                 {images.map((image, index) => (
                     <div key={index} className="" data-aos="fade-up">
                        
-                            <div className="w-[230px] h-[230px] overflow-hidden rounded-full group">
+                            <div className="w-[180px] h-[180px] overflow-hidden rounded-full group">
                                 <img src={image.imageUrl} alt={image.headline} className="w-full h-full object-cover rounded-full " />
                               
                             </div>
                         
                         <div className="flex-col justify-center text-center my-2">
-                            <h1 className="text-2xl font-bold">{image.headline}</h1>
-                            <p className="font-md">{image.subheading}</p>
+                            <h1 className="text-lg font-bold">{image.headline}</h1>
+                            <p className="text-md">{image.subheading}</p>
                         </div>
                     </div>
                 ))}

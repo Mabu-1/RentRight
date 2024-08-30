@@ -22,7 +22,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (loading) {
-      <Loading/>
+      <Loading />
       return;
     }
 
@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="navbar max-w-screen-2xl mx-auto px-4 lg:px-16">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -52,28 +52,33 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2"
+              className="menu menu-sm dropdown-content bg-white rounded-box z-[1] text-md w-52 p-2"
             >
-              <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/">HOME</a></li>
-              <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/property">PROPERTY</a></li>
-              <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/service">SERVICE</a></li>
-              <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/aboutUS">ABOUT US</a></li>
-              <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/contactUS">CONTACT US</a></li>
+              <li><a className=" font-heading font-bold " href="/">HOME</a></li>
+              <li><a className=" font-heading font-bold " href="/property">PROPERTY</a></li>
+              <li><a className=" font-heading font-bold " href="/service">SERVICE</a></li>
+              <li><a className=" font-heading font-bold " href="/aboutUS">ABOUT US</a></li>
+              <li><a className=" font-heading font-bold " href="/contactUS">CONTACT US</a></li>
             </ul>
           </div>
-          <a href="/">
-            <h3 className='ml-2 text-2xl sm:text-2xl md:text-3xl font-bold text-blue-600'>
-              Rent<span className='text-yellow-600'>Right</span>
+          <a href="/" className='hidden sm:hidden md:block'>
+            <h3 className='ml-2 text-xl sm:text-xl md:text-2xl font-bold '>
+              Rent<span className='text-[#eb7043]'>Right</span>
             </h3>
           </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className='menu menu-horizontal px-1'>
-            <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/">HOME</a></li>
-            <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/property">PROPERTY</a></li>
-            <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/service">SERVICE</a></li>
-            <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/aboutUS">ABOUT US</a></li>
-            <li><a className="text-lg font-heading font-bold bg-transparent hover:bg-blue-200 focus:bg-blue-200 active:bg-blue-300" href="/contactUS">CONTACT US</a></li>
+        <div className="navbar-center ">
+          <a href="/" className='block sm:block md:hidden'>
+            <h3 className='ml-2 text-xl sm:text-xl md:text-2xl  font-bold '>
+              Rent<span className='text-[#eb7043]'>Right</span>
+            </h3>
+          </a>
+          <ul className=' px-2 lg:px-1  hidden md:flex  md:gap-[10px] lg:gap-[20px] text-[13px] lg:text-[15px] '>
+            <li><a className=" hover:text-[#eb6838] font-heading font-bold " href="/">HOME</a></li>
+            <li><a className="hover:text-[#eb6838] font-heading font-bold " href="/property">PROPERTY</a></li>
+            <li><a className="hover:text-[#eb6838] font-heading font-bold " href="/service">SERVICE</a></li>
+            <li><a className="hover:text-[#eb6838] font-heading font-bold " href="/aboutUS">ABOUT US</a></li>
+            <li><a className="hover:text-[#eb6838] font-heading font-bold " href="/contactUS">CONTACT US</a></li>
           </ul>
         </div>
         <div className="navbar-end mt-1 sm:mt-1 md:mt-3">
@@ -122,7 +127,7 @@ const Navbar = () => {
                     }
                     <button
                       onClick={handleLogOut}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-1 text-sm text-gray-700 hover:bg-gray-100"
                       role="menuitem"
                     >
                       Logout
@@ -133,7 +138,7 @@ const Navbar = () => {
             </div>
           ) : (
             <Link to="/login">
-              <button className='bg-yellow-500 hover:bg-[#3d07ff] mt-1 ms:mt-1 md:mt-3 hover:text-white p-2 flex justify-center text-center border rounded-lg font-bold'>
+              <button className='bg-[#ff7542db] hover:bg-[#eb7043] mt-[-4px] text-sm sm:text-sm md:text-base hover:text-white p-[4px] sm:p-[5px] md:px-2 md:py-1 flex justify-center text-center border rounded-lg font-bold'>
                 Login
               </button>
             </Link>

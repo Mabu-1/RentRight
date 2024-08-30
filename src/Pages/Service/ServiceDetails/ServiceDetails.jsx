@@ -62,7 +62,7 @@ const ServiceDetails = () => {
                 {services.map((service, index) => (
                     <div key={index} className="border border-gray-300 rounded-lg shadow-lg overflow-hidden p-6" data-aos="fade-up">
                         <div className="flex flex-col items-center">
-                            <div className="text-4xl text-yellow-400 mb-4">
+                            <div className="text-4xl text-[#eb7043] mb-4">
                                 {service.icon}
                             </div>
                           <div className="text-center">

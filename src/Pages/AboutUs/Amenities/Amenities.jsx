@@ -27,7 +27,7 @@ const Amenities = () => {
         return <div className="text-center text-gray-500">No Amenties found.</div>;
     }
     return (
-        <div className="my-7">
+        <div className="mt-[100px]">
             <Headline 
                 subheading={"EXCLUSIVE PROPERTIES"}
                 headline={"Luxurious Amenities"}

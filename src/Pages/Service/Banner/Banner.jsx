@@ -14,10 +14,10 @@ const Banner = () => {
                 <div className="flex-1  flex text-center items-center justify-center">
                     <div className="mb-6 ">
                         <div className="">
-                            <h6 className="text-4xl sm:text-4xl md:text-4xl lg:text-5xl text-yellow-400  font-bold">Find Your</h6>
+                            <h6 className="text-2xl sm:text-2xl  md:text-3xl   font-bold">Find Your</h6>
                         </div>
                         <div className="mb-4">
-                            <h6 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-blue-600 font-bold">Perfect Future House</h6>
+                            <h6 className="text-3xl sm:text-3xl md:text-4xl  text-[#eb7043] font-bold">Perfect Future House</h6>
                         </div>
                         <div>
                             <p className="text-2xl sm:text-2xl md:text-2xl  font-bold">We Give the Best Price</p>

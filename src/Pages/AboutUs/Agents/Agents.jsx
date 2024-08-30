@@ -4,6 +4,7 @@ import 'aos/dist/aos.css'; // Import AOS styles
 import Loading from '../../../Loading/Loading';
 import Card from './Card';
 import useAgent from '../../../hooks/useAgent';
+import Headline from '../../../Shared/Headline/Headline';
 
 const Agents = () => {
     useEffect(() => {
@@ -28,9 +29,12 @@ const Agents = () => {
 
     return (
         <div className="my-7">
-            <h2 data-aos="fade-right" className="text-4xl font-bold text-yellow-400 text-center mb-8">
-                Meet Our Agents
-            </h2>
+            <Headline
+                data-aos="fade-up"
+                subheading1={"Meet Our Agents"}
+                headline1={"Guiding You Home with Expertise and Care"}
+            />
+
             <div className="grid grid-cols-1 gap-8">
                 {data.map((agent) => (
                     <Card key={agent._id} agent={agent} />

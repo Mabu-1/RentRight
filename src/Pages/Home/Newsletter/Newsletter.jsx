@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Button from "../../../Shared/Button/Button";
+import Headline from '../../../Shared/Headline/Headline';
 
 const Newsletter = () => {
     useEffect(() => {
@@ -9,12 +10,16 @@ const Newsletter = () => {
     }, []);
 
     return (
-        <div className="my-7" data-aos="fade-up">
-            <div className="text-center">
-                <h3 className="text-4xl sm:flex-4xl md:text-6xl lg:text-6xl font-bold text-yellow-400">Newsletter</h3>
-            </div>
+        <div className="my-7 " data-aos="fade-up">
+           <Headline 
+           subheading1={"Newsletter"}
+           headline1={"Subscribe to our newsletter to receive the latest updates,"}
+           headline3={" exclusive offers & news."}
+           head
+           />
+           
             <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row gap-4 justify-center mt-4">
-                <div className="flex items-center border-2 border-blue-600 rounded-lg p-2 w-[300px] gap-2">
+                <div className="flex items-center border-2 border-[#eb7043] rounded-lg p-2 gap-2">
                 
                     <input
                         type="email"

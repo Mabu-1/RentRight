@@ -27,7 +27,7 @@ const MyProperty = () => {
         <div className="border-4 rounded-lg border-red-600 m-6">
             {/* Property filterData */}
             {filterData && filterData.length > 0 ? (
-                <div className="grid grid-cols-1 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-8">
                     {filterData.map((property) => (
                         <Card key={property._id} property={property} />
                       

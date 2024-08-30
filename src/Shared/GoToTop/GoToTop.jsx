@@ -28,7 +28,7 @@ const GoToTop = () => {
   return (
     <div className="fixed bottom-10 right-10" onClick={goToTop}>
       {isVisible && (
-        <button className="w-12 h-12 bg-blue-500 text-white rounded-full focus:outline-none shadow-lg" title="Go to Top">
+        <button className="w-12 h-12 bg-[#eb7043] text-white rounded-full focus:outline-none shadow-lg" title="Go to Top">
           <FaArrowUp className="text-3xl m-auto" />
         </button>
       )}

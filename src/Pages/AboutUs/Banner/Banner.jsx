@@ -10,26 +10,26 @@ const Banner = () => {
     }, []);
 
     return (
-        <div className="my-[20px] px-4">
+        <div className="mb-[20px] px-4">
             <div className="flex flex-col-reverse md:flex-row items-center">
                 <div
                     data-aos="fade-right"
-                    className="relative  mt-4 border-8 border-yellow-400 rounded-lg max-w-full w-full md:w-auto flex-1"
+                    className="relative  mt-4 border-8 border-[#eb7043] rounded-lg max-w-full w-full md:w-auto flex-1"
                     
                 >
                     <div>
                         <img
-                            src="https://i.ibb.co/PYrj8XH/401-top-Renders-b-7abbbb2796f27c91ef535646dc2c5299.webp"
+                            src="https://i.ibb.co/SXZnN1B/401-top-Renders-b-7abbbb2796f27c91ef535646dc2c5299-ezgif-com-webp-to-jpg-converter.jpg"
                             alt=""
                             className="w-full"
                         />
                     </div>
                     <div
                         data-aos="fade-left"
-                        className="absolute bottom-[-60px] sm:bottom-[-80px] right-[-30px] sm:right-[30px] md:right-[-80px] border-8 border-yellow-400 w-[50%] sm:w-[40%] md:w-1/2 rounded-lg"
+                        className="absolute bottom-[-60px] sm:bottom-[-80px] right-[-30px] sm:right-[30px] md:right-[-80px] border-8 border-[#eb7043] w-[50%] sm:w-[40%] md:w-1/2 rounded-lg"
                     >
                         <img
-                            src="https://i.ibb.co/T1fxnhK/PRESTIGE-ELM-PARK.jpg"
+                            src="https://i.ibb.co/Fg4hLQc/PRESTIGE-ELM-PARK.jpg"
                             alt=""
                             className="w-full"
                         />
@@ -41,10 +41,10 @@ const Banner = () => {
                 >
                     <div className="text-center">
                         <div className="my-6">
-                            <h1 className="text-4xl text-blue-600 font-extrabold">RentRight</h1>
+                            <h1 className="text-xl sm:text-xl md:text-3xl text-[#eb7043] font-extrabold">RentRight</h1>
                         </div>
-                        <p className="text-3xl sm:text-4xl md:text-5xl font-bold">
-                            Building <span className="text-[#0717ff]">Dreams</span>, One <span className="text-[#ffe207]">Home</span> at a Time.
+                        <p className="text-2xl sm:text-2xl md:text-3xl font-bold">
+                            Building <span className="text-[#eb7043]">Dreams</span>, One <span className="text-[#eb7043]">Home</span> at a Time.
                         </p>
                     </div>
                 </div>

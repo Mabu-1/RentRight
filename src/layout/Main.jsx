@@ -11,7 +11,7 @@ const Main = () => {
     return (
         <>
             <ScrollToTop />
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col min-h-screen  overflow-x-hidden">
                 {/* Conditionally render Navbar */}
                 {!noHeaderFooter && <Navbar />}
 

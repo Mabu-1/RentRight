@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import Headline from '../../../Shared/Headline/Headline';
 
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
@@ -40,7 +41,13 @@ const FAQ = () => {
 
     return (
         <div className="my-10">
-            <h2 className="text-4xl text-yellow-400 font-bold text-center mb-8" data-aos="fade-up">FAQ</h2>
+           
+            <Headline
+                data-aos="fade-up"
+                subheading1={"FAQ"}
+                headline1={"Answers to Help You Feel Right at Home"}
+            />
+
             <div className="space-y-6">
                 {faqs.map((faq, index) => (
                     <div
@@ -53,7 +60,7 @@ const FAQ = () => {
                             className="flex justify-between items-center cursor-pointer"
                             onClick={() => toggleFAQ(index)}
                         >
-                            <h3 className="text-xl font-semibold">{faq.question}</h3>
+                            <h3 className="text-lg font-semibold">{faq.question}</h3>
                             <span className="text-2xl">{openIndex === index ? '-' : '+'}</span>
                         </div>
                         {openIndex === index && (

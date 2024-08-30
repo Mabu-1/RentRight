@@ -192,8 +192,8 @@ const Login = () => {
                     <p className="text-xl text-center font-bold">Or</p>
                     <button
                         onClick={() => handleGoogleSignIn(googleLogin)} 
-                        disabled={!captchaValid}
-                        className={`my-2 p-1 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold ${!captchaValid ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#dd1d77] hover:bg-[#9832a5]'}`}
+                        
+                        className={`my-2 p-1 w-full flex justify-center text-center border-neutral-50 rounded-lg font-bold  bg-[#dd1d77] hover:bg-[#9832a5]`}
                     >
                         <FcGoogle className="text-4xl" />
                     </button>

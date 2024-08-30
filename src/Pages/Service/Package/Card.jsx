@@ -84,10 +84,10 @@ const Card = ({ pack }) => {
     return (
         <div className="border-1 bg-gray-100 rounded-lg shadow-lg hover:translate-y-3 transform transition-transform duration-300 flex flex-col overflow-hidden" data-aos="fade-up" data-aos-delay={50}>
             <div className="flex justify-center my-8">
-                <p className="text-yellow-400">{name}</p>
+                <p className="text-[#e96738]">{name}</p>
             </div>
-            <div className="flex justify-center text-white font-extrabold text-6xl mb-4 py-8 bg-yellow-400">
-                <p className="text-orange-700">${price}/-</p>
+        <div className="flex justify-center text-white font-extrabold text-6xl mb-4 py-8 bg-[#e57a54]">
+                <p className="">${price}/-</p>
             </div>
             <div className="flex-grow flex flex-col justify-center text-center">
                 {benefits.map((benefit, idx) => (
@@ -98,7 +98,7 @@ const Card = ({ pack }) => {
                 ))}
             </div>
             <div className="flex justify-center mb-4">
-                <button className="bg-[#f705b7] hover:bg-[#9205f7] p-2 flex justify-center text-center border rounded-lg font-bold" onClick={handleBook}>
+                <button className="bg-[#ff8f67] hover:bg-[#eb7043] hover:text-white p-2 flex justify-center text-center border rounded-lg font-bold" onClick={handleBook}>
                     Book Now
                 </button>
             </div>
