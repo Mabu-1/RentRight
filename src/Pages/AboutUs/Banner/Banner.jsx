@@ -22,12 +22,9 @@ const Banner = () => {
                             src="https://i.ibb.co/SXZnN1B/401-top-Renders-b-7abbbb2796f27c91ef535646dc2c5299-ezgif-com-webp-to-jpg-converter.jpg"
                             alt=""
                             className="w-full"
-
                              loading="eager"
                         />
                         
-
-
                     </div>
                     <div
                         data-aos="fade-left"
@@ -37,9 +34,7 @@ const Banner = () => {
                             src="https://i.ibb.co/Fg4hLQc/PRESTIGE-ELM-PARK.jpg"
                             alt=""
                             className="w-full"
-
                              loading="eager"
-
                         />
                     </div>
                 </div>

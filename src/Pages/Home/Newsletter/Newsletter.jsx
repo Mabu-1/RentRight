@@ -10,7 +10,6 @@ const Newsletter = () => {
     }, []);
 
     return (
-<<<<<<< HEAD
         <div className="my-12 px-4" data-aos="fade-up">
             {/* Headline */}
             <Headline 
@@ -42,31 +41,6 @@ const Newsletter = () => {
             <p className="text-center text-gray-500 text-xs md:text-sm mt-3">
                 We respect your privacy. Unsubscribe anytime.
             </p>
-=======
-        <div className="my-7 " data-aos="fade-up">
-           <Headline 
-           subheading1={"Newsletter"}
-           headline1={"Subscribe to our newsletter to receive the latest updates,"}
-           headline3={" exclusive offers & news."}
-           head
-           />
-           
-            <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row gap-4 justify-center mt-4">
-                <div className="flex items-center border-2 border-[#eb7043] rounded-lg p-2 gap-2">
-                
-                    <input
-                        type="email"
-                        placeholder="Enter your Email ID"
-                        className="outline-none w-full"
-                    />
-                </div>
-               
-               <Button className="w-full ">
-                    Subscribe
-                </Button>
-             
-            </div>
->>>>>>> 864ad4bea09fd6da8e4a510a02760f45e28ecb24
         </div>
     );
 };
