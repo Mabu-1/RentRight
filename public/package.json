@@ -1,0 +1,67 @@
+[
+    {
+     
+      "name": "Basic Listing Plan",
+      "price": 20,
+      "benefits": ["Basic Listing", "Free Documentation"],
+      "bought":0
+    },
+    {
+    
+      "name": "Self Service Plan",
+      "price": 30,
+      "benefits": ["Project Plan Cost", "Free Documentation"],
+      "bought":1
+    },
+    {
+     
+      "name": "Standard Service Plan",
+      "price": 40,
+      "benefits": ["Project Plan Cost", "Basic Listing", "Free Documentation"],
+      "bought":0
+    },
+    {
+     
+      "name": "Agent Service Plan",
+      "price": 50,
+      "benefits": ["Project Plan Cost", "Free Documentation", "Assistance", "Assistance By Agent"],
+      "bought":0
+    },
+    {
+      
+      "name": "Premium Listing Plan",
+      "price": 60,
+      "benefits": ["Premium Listing", "Free Documentation", "Assistance"],
+      "bought":0
+    },
+    {
+      
+      "name": "Brokerage Plan Cost",
+      "price": 70,
+      "benefits": ["Project Plan Cost", "Free Documentation", "Assistance", "Assistance By Agent", "Premium Listing"],
+      "bought":0
+    },
+    {
+      
+      "name": "Advanced Service Plan",
+      "price": 80,
+      "benefits": ["Project Plan Cost", "Premium Listing", "Free Documentation", "Assistance", "Agent Support"],
+      "bought":0
+    },
+    {
+      
+      "name": "Deluxe Service Plan",
+      "price": 100,
+      "benefits": ["Premium Listing", "Free Documentation", "Assistance", "Dedicated Agent Support"],
+      "bought":0
+    },
+    {
+     
+      
+      "name": "Ultimate Service Plan",
+      "price": 120,
+      "benefits": ["Project Plan Cost", "Premium Listing", "Free Documentation", "Full Assistance", "Dedicated Agent Support", "Home Staging"],
+      "bought":0
+    }
+  ]
+  
