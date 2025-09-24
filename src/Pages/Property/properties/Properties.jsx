@@ -257,6 +257,7 @@ const Properties = () => {
 
             {/* Pagination Controls */}
             <div className="flex justify-center items-center space-x-2 mt-8">
+<<<<<<< HEAD
                 {paginatedProperties.length > 0 ? (
                     <>
                         {visiblePages.map((page, index) => (
@@ -277,6 +278,24 @@ const Properties = () => {
                         </select>
                     </>
                 ) : null}
+=======
+                {visiblePages.map((page, index) => (
+                    <button
+                        key={index}
+                        onClick={() => handlePageClick(page)}
+                        className={`p-2 min-w-[40px] rounded-lg ${currentPage === page ? 'bg-[#eb7043] text-white' : 'bg-gray-300'
+                            }`}
+                    >
+                        {page === "Prev" || page === "Next" ? page : page + 1}
+                    </button>
+                ))}
+                <select className="ml-2 p-2 rounded-lg" value={itemsPerPage} onChange={handleItemsPerPage}>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                </select>
+>>>>>>> 864ad4bea09fd6da8e4a510a02760f45e28ecb24
             </div>
         </div>
     );

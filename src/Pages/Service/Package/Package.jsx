@@ -30,7 +30,11 @@ const Package = () => {
     }
 
         return (
+<<<<<<< HEAD
             <div className="my-10" id="package">
+=======
+            <div className="my-10">
+>>>>>>> 864ad4bea09fd6da8e4a510a02760f45e28ecb24
                 <div className="flex justify-between">
                     <div data-aos="fade-right">
                         <img src="https://i.ibb.co/pJMpc6F/Home-2-Pricing-Hd-Left-Img.png" alt="" />

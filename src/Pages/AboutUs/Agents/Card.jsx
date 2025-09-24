@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
+
 const Card = ({ agent, index }) => {
     const { imageUrl, name, profession, about } = agent;
 
@@ -38,6 +39,7 @@ const Card = ({ agent, index }) => {
                     </a>
                     <a href={'/'} target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
                         <FaLinkedin className="text-[#0077b5] w-7 h-7" />
+
                     </a>
                 </div>
             </div>
@@ -45,4 +47,6 @@ const Card = ({ agent, index }) => {
     );
 };
 
+
 export default Card;
+
