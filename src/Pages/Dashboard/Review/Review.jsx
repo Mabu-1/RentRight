@@ -77,7 +77,7 @@ const Review = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 {/* Name */}
                 <div>
-                    <label className="block text-gray-700 font-medium mb-1">Name</label>
+                    <label className="mabu-text3 block text-gray-700 font-medium mb-1">Name</label>
                     <input
                         type="text"
                         className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
@@ -120,7 +120,7 @@ const Review = () => {
 
                 {/* Review */}
                 <div>
-                    <label className="block text-gray-700 font-medium mb-1">Review</label>
+                    <label className=" mabu-text3 block text-gray-700 font-medium mb-1">Review</label>
                     <textarea
                         className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                         rows="5"

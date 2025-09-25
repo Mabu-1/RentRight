@@ -33,9 +33,7 @@ const Banner = () => {
 
           <div className="max-w-md mx-auto md:mx-0">
             <p className="text-gray-500 text-base sm:text-lg md:text-lg">
-              If you have any questions or need assistance, please don't
-              hesitate to reach out. Our team is here to provide you with the
-              support you need.
+            If you have any questions, need clarification, or require assistance with anything, please don’t hesitate to reach out. Our dedicated team is always available to provide you with the guidance and support you need to ensure a smooth experience.
             </p>
           </div>
 
@@ -45,13 +43,14 @@ const Banner = () => {
 
         {/* Image Section */}
         <div
-          className="flex-1 flex justify-center"
+          className="flex-1 flex justify-center mt-5"
           data-aos="fade-left"
         >
           <img
             src="https://i.ibb.co/FqxvRtx/5132732.jpg"
             alt="Support"
-            className="w-full h-auto max-w-sm md:max-w-md lg:max-w-lg "
+            className="w-90 h-90 object-cover rounded-full border-4 border-[#eb7043] shadow-lg "
+      
           />
         </div>
       </div>

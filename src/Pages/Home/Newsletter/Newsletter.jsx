@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Button from "../../../Shared/Button/Button";
 import Headline from '../../../Shared/Headline/Headline';
+import { Link } from 'react-router-dom';
 
 const Newsletter = () => {
     useEffect(() => {
@@ -15,7 +16,6 @@ const Newsletter = () => {
             <Headline 
                 subheading1={"Newsletter"}
                 headline1={"Stay Connected With Us"}
-       
                 headline3={" exclusive offers, property updates & news."}
             />
 
@@ -27,18 +27,22 @@ const Newsletter = () => {
                     <input
                         type="email"
                         placeholder="Enter your email address"
-                        className="outline-none w-full text-sm md:text-base"
+                        className="outline-none w-full text-sm bg-transparent md:text-base 
+                                   text-gray-800 dark:text-gray-200 
+                                   "
                     />
                 </div>
 
                 {/* Subscribe Button */}
+                <Link to="/">
                 <Button className="w-full md:w-auto rounded-full px-6 py-3">
                     Subscribe
                 </Button>
+                </Link>
             </div>
 
-            {/* Small Note */}
-            <p className="text-center text-gray-500 text-xs md:text-sm mt-3">
+         
+            <p className="text-center text-gray-500 dark:text-gray-400 text-xs md:text-sm mt-3">
                 We respect your privacy. Unsubscribe anytime.
             </p>
         </div>

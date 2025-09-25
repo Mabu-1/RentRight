@@ -16,7 +16,7 @@ const Footer = () => {
                         <h3 className="text-2xl md:text-3xl font-bold text-black">
                             Rent<span className="text-[#eb7043]">Right</span>
                         </h3>
-                        <p className="text-black font-medium text-sm mt-4 max-w-xl leading-relaxed">
+                        <p className="mabu-text text-black font-medium text-sm mt-4 max-w-xl leading-relaxed">
                             RentRight Property Management offers modern, efficient solutions for managing residential and commercial properties. We pride ourselves on exceptional service and personalized care, ensuring your property is handled with expertise and attention to detail.
                         </p>
                         <div className="flex gap-4 mt-6 text-xl">
@@ -55,12 +55,12 @@ const Footer = () => {
                         </h2>
                         <ul className="flex flex-col gap-4 mt-4 text-black font-bold">
                             <li className="flex gap-3 items-center">
-                                <BsTelephoneFill className="text-[#2cae74] text-xl md:text-2xl" />
-                                <p>+8 (800) 238 9997</p>
+                                <BsTelephoneFill className=" text-[#2cae74] text-xl md:text-2xl" />
+                                <p className='mabu-text3'>+8 (800) 238 9997</p>
                             </li>
                             <li className="flex gap-3 items-center">
                                 <MdEmail className="text-red-600 text-xl md:text-2xl" />
-                                <p>rentright77@gmail.com</p>
+                                <p className='mabu-text3'>rentright77@gmail.com</p>
                             </li>
                         </ul>
                     </div>
@@ -69,7 +69,7 @@ const Footer = () => {
                 {/* Copyright Bar */}
                 <div className="relative mt-10 border-t pt-4 text-center text-black font-semibold">
                     <p>
-                        © <span className="text-[#ec6331]">RentRight</span> 2024 | Created by{" "}
+                        © <span className="text-[#ec6331]">RentRight</span> <span className='mabu-text3'>2024 | Created by{" "}</span>
                         <span className="font-bold">Mahtab Uddin</span>
                     </p>
                 </div>

@@ -14,7 +14,7 @@ const Requirement = () => {
   }, []);
 
   return (
-    <div className="my-10 px-4">
+    <div className="my-10 px-4  text-gray-900 dark:text-gray-100">
       {/* Headline */}
       <div className="text-center mb-7">
         <Headline
@@ -51,7 +51,7 @@ const Requirement = () => {
 
         {/* Right Content */}
         <div className="md:w-1/2 flex flex-col justify-center" data-aos="fade-up">
-          <p className="text-gray-500 text-sm md:text-lg text-center md:text-left mb-8">
+          <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg text-center md:text-left mb-8">
             We are committed to providing a wide range of services to meet your unique needs. 
             Our expert staff ensures that every requirement is met with precision and care.
           </p>
@@ -60,31 +60,31 @@ const Requirement = () => {
           <div className="flex justify-around md:justify-start md:gap-12 mb-10">
             <div className="flex flex-col items-center gap-2">
               <GrUserExpert className="text-3xl text-[#eb7043]" />
-              <p className="text-sm md:text-base font-bold text-gray-700">Expert Staff</p>
+              <p className="text-sm md:text-base font-bold text-gray-700 dark:text-gray-200">Expert Staff</p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <GiCctvCamera className="text-3xl text-[#eb7043]" />
-              <p className="text-sm md:text-base font-bold text-gray-700">24/7 Surveillance</p>
+              <p className="text-sm md:text-base font-bold text-gray-700 dark:text-gray-200">24/7 Surveillance</p>
             </div>
             <div className="flex flex-col items-center gap-2">
               <BsBank2 className="text-3xl text-[#eb7043]" />
-              <p className="text-sm md:text-base font-bold text-gray-700">Insurance</p>
+              <p className="text-sm md:text-base font-bold text-gray-700 dark:text-gray-200">Insurance</p>
             </div>
           </div>
 
           {/* Counters */}
           <div className="flex gap-6 text-[#eb7043] justify-center md:justify-start">
             <div className="text-center md:text-left">
-              <CountUp end={150} duration={2} suffix="+" className="text-2xl md:text-4xl font-bold" />
-              <p className="text-xs md:text-base font-bold text-gray-700">MANAGED PROPERTIES</p>
+              <CountUp end={150} duration={2} suffix="+" className="text-[#eb7043] text-2xl md:text-4xl font-bold" />
+              <p className="text-xs md:text-base font-bold text-gray-700 dark:text-gray-200">MANAGED PROPERTIES</p>
             </div>
             <div className="text-center md:text-left">
-              <CountUp end={120} duration={2} suffix="+" className="text-2xl md:text-4xl font-bold" />
-              <p className="text-xs md:text-base font-bold text-gray-700">HAPPY CLIENTS</p>
+              <CountUp end={120} duration={2} suffix="+" className="text-[#eb7043] text-2xl md:text-4xl font-bold" />
+              <p className="text-xs md:text-base font-bold text-gray-700 dark:text-gray-200">HAPPY CLIENTS</p>
             </div>
             <div className="text-center md:text-left">
-              <CountUp end={30} duration={2} suffix="+" className="text-2xl md:text-4xl font-bold" />
-              <p className="text-xs md:text-base font-bold text-gray-700">YEARS EXPERIENCE</p>
+              <CountUp end={30} duration={2} suffix="+" className="text-[#eb7043] text-2xl md:text-4xl font-bold" />
+              <p className="text-xs md:text-base font-bold text-gray-700 dark:text-gray-200">YEARS EXPERIENCE</p>
             </div>
           </div>
         </div>

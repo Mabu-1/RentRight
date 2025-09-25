@@ -20,22 +20,22 @@ const Contact = () => {
         {/* Phone */}
         <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
           <FaPhoneAlt className="text-[#eb7043] text-4xl mb-4 mx-auto" />
-          <h4 className="text-xl font-bold mb-2">Phone</h4>
-          <p className="text-gray-600">+123-456-7890</p>
+          <h4 className=" mabu-text3 text-xl font-bold mb-2">Phone</h4>
+          <p className="mabu-text3 text-gray-600">+123-456-7890</p>
         </div>
 
         {/* Email */}
         <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
           <FaEnvelope className="text-[#eb7043] text-4xl mb-4 mx-auto" />
-          <h4 className="text-xl font-bold mb-2">Email</h4>
-          <p className="text-gray-600">info@example.com</p>
+          <h4 className="mabu-text3 text-xl font-bold mb-2">Email</h4>
+          <p className="mabu-text3 text-gray-600">info@example.com</p>
         </div>
 
         {/* Location */}
         <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
           <FaMapMarkerAlt className="text-[#eb7043] text-4xl mb-4 mx-auto" />
-          <h4 className="text-xl font-bold mb-2">Visit Us</h4>
-          <p className="text-gray-600">123 Main Street, City, Country</p>
+          <h4 className="mabu-text3 text-xl font-bold mb-2">Visit Us</h4>
+          <p className="mabu-text3 text-gray-600">123 Main Street, City, Country</p>
         </div>
 
         {/* Social */}
@@ -69,15 +69,15 @@ const Contact = () => {
               <FaInstagram />
             </a>
           </div>
-          <h4 className="text-xl font-bold mb-2">Social</h4>
-          <p className="text-gray-600">Stay connected through our social channels.</p>
+          <h4 className=" mabu-text3 text-xl font-bold mb-2">Social</h4>
+          <p className="mabu-text3 text-gray-600">Stay connected through our social channels.</p>
         </div>
 
         {/* Support */}
         <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
           <FaEnvelope className="text-[#eb7043] text-4xl mb-4 mx-auto" />
-          <h4 className="text-xl font-bold mb-2">Support</h4>
-          <p className="text-gray-600">support@example.com</p>
+          <h4 className=" mabu-text3 text-xl font-bold mb-2">Support</h4>
+          <p className="mabu-text3 text-gray-600">support@example.com</p>
         </div>
       </div>
     </div>

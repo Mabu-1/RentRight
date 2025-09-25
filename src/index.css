@@ -3,3 +3,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Default: Light mode */
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.btn {
+  background-color: #eb7043;
+  color: white;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+
+  .btn {
+    background-color: #ff7542;
+    color: black;
+  }
+
+  a ,span ,select{
+    color: black; /* Example link color for dark mode */
+  }
+p
+{
+  color: white;
+}
+.text-gray-700 {
+  color: white;
+}
+
+.mabu-text ,.mabu-text3{
+  color: black;
+}
+.mabu-text2  {
+  color: white;
+}
+}

@@ -35,20 +35,20 @@ const CreateService = () => {
                 {/* Service Name & Price */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label className="block text-gray-700 font-semibold mb-2">Service Name</label>
+                        <label className="mabu-text3 block text-gray-700 font-semibold mb-2">Service Name</label>
                         <input
                             type="text"
                             {...register("name", { required: "Service name is required" })}
-                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none"
+                            className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none"
                         />
                         {errors.name && <span className="text-red-600 text-sm">{errors.name.message}</span>}
                     </div>
                     <div>
-                        <label className="block text-gray-700 font-semibold mb-2">Price</label>
+                        <label className="mabu-text3  block text-gray-700 font-semibold mb-2">Price</label>
                         <input
                             type="number"
                             {...register("price", { required: "Price is required" })}
-                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none"
+                            className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none"
                         />
                         {errors.price && <span className="text-red-600 text-sm">{errors.price.message}</span>}
                     </div>
@@ -56,7 +56,7 @@ const CreateService = () => {
 
                 {/* Benefits */}
                 <div>
-                    <label className="block text-gray-700 font-semibold mb-2">Benefits</label>
+                    <label className="mabu-text3 block text-gray-700 font-semibold mb-2">Benefits</label>
                     {fields.map((field, index) => (
                         <div key={field.id} className="flex items-center mb-2 gap-2">
                             <input

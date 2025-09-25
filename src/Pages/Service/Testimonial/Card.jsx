@@ -12,8 +12,10 @@ const Card = ({ review }) => {
 
   return (
     <div
-      className="bg-white border border-[#eb7043] rounded-xl shadow-md hover:shadow-lg transition 
-      max-w-md w-full p-5 flex flex-col sm:flex-row gap-4 mx-auto"
+      className="bg-white border border-[#eb7043] rounded-2xl shadow-md hover:shadow-xl 
+      transition-transform transform hover:-translate-y-1 
+      w-full max-w-md md:max-w-lg lg:max-w-xl 
+      p-5 sm:p-6 flex flex-col sm:flex-row gap-5 mx-auto"
       data-aos="fade-up"
     >
       {/* Reviewer Image */}
@@ -21,17 +23,19 @@ const Card = ({ review }) => {
         <img
           src={imageUrl}
           alt={`Review by ${name}`}
-          className="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-lg"
+          className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover rounded-xl border-2 border-[#eb7043]"
         />
       </div>
 
       {/* Review Content */}
-      <div className="flex flex-col justify-between flex-grow">
-        <p className="text-gray-700 text-sm sm:text-base mb-4">{text}</p>
+      <div className="flex flex-col justify-between flex-grow text-center sm:text-left">
+        <p className="mabu-text3 text-gray-700 text-sm sm:text-base md:text-lg mb-4 leading-relaxed">
+          {text}
+        </p>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0">
           {/* Stars */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center justify-center sm:justify-start gap-1">
             {[...Array(5)].map((_, index) => (
               <FaStar
                 key={index}
@@ -40,8 +44,11 @@ const Card = ({ review }) => {
               />
             ))}
           </div>
+
           {/* Reviewer Name */}
-          <p className="font-semibold text-[#e96738]">{name}</p>
+          <p className="font-semibold text-[#e96738] text-sm sm:text-base md:text-lg">
+            {name}
+          </p>
         </div>
       </div>
     </div>

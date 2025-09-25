@@ -16,23 +16,23 @@ const Card = ({branch}) => {
         <div className="w-full">
             <img src={imageUrl} alt={location} className="w-full h-[250px] object-cover" />
             <div className="p-4 bg-gray-800 text-white">
-                <h3 className="text-2xl font-bold mb-2 text-[#eb7043]">{location}</h3>
+                <h3 className="mabu-text2 text-2xl font-bold mb-2 text-[#eb7043]">{location}</h3>
 
                 <div className="flex items-center gap-2 mb-2">
                     <IoLocation className="text-3xl sm:text-3xl md:text-2xl"/>
-                    <span className="mt-3 sm:mt-3 md:mt-[8px] text-base sm:text-base ">{address}</span>
+                    <span className="mabu-text2 mt-3 sm:mt-3 md:mt-[8px] text-base sm:text-base ">{address}</span>
                 </div>
                 <div className="flex items-center gap-2 mb-2">
                     <FaPhone />
-                    <span>{phone}</span>
+                    <span className="mabu-text2"> {phone}</span>
                 </div>
                 <div className="flex items-center gap-2 mb-2">
                     <FaEnvelope />
-                    <span>{email}</span>
+                    <span className="mabu-text2">{email}</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <FaClock />
-                    <span>{hours}</span>
+                    <span className="mabu-text2">{hours}</span>
                 </div>
             </div>
         </div>

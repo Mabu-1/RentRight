@@ -73,7 +73,7 @@ const Card = ({ pack }) => {
       <div className="flex-grow flex flex-col justify-center text-center px-6">
         {benefits.map((benefit, idx) => (
           <div key={idx} className="mb-3">
-            <p className="font-medium text-gray-700">{benefit}</p>
+            <p className="mabu-text3 font-medium text-gray-700">{benefit}</p>
             {idx !== benefits.length - 1 && (
               <hr className="my-3 border-t border-gray-200" />
             )}

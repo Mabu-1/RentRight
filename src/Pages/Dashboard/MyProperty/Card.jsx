@@ -39,14 +39,15 @@ const Card = ({ property }) => {
                 <p className="text-green-600 font-bold text-lg sm:text-xl md:text-2xl mb-4">${price}</p>
 
                 <div className="grid grid-cols-1 gap-2 text-gray-700 text-xs sm:text-sm md:text-base mb-4">
-                    <p className="flex items-center gap-2"><FaHome className="text-red-600" /> <strong>Address:</strong> {address}</p>
-                    <p className="flex items-center gap-2"><FaCity className="text-red-600" /> <strong>City:</strong> {city}</p>
-                    <p className="flex items-center gap-2"><FaBuilding className="text-red-600" /> <strong>Type:</strong> {type}</p>
-                    <p className="flex items-center gap-2"><FaFileAlt className="text-red-600" /> <strong>Description:</strong> {description}</p>
-                    <p className="flex items-center gap-2"><FaCalendarAlt className="text-red-600" /> <strong>Year Built:</strong> {yearBuilt}</p>
-                    <p className="flex items-center gap-2"><FaParking className="text-red-600" /> <strong>Parking:</strong> {parkingSpaces}</p>
-                    <p className="flex items-center gap-2"><FaMapMarkerAlt className="text-red-600" /> <strong>Zoning:</strong> {zoning}</p>
-                    <p className="flex items-center gap-2"><FaPaw className="text-red-600" /> <strong>Pet Friendly:</strong> {petFriendly ? "Yes" : "No"}</p>
+                    <p className=" mabu-text3 flex items-center gap-2"><FaHome className="text-red-600" /> <strong>Address:</strong> {address}</p>
+                    <p className="mabu-text3 flex items-center gap-2"><FaCity className="text-red-600" /> <strong>City:</strong> {city}</p>
+                    <p className="mabu-text3 flex items-center gap-2"><FaBuilding className="text-red-600" /> <strong>Type:</strong> {type}</p>
+                    <p className="mabu-text3 flex items-center gap-2"><FaFileAlt className="text-red-600" /> <strong>Description:</strong> {description}</p>
+                    <p className="mabu-text3 flex items-center gap-2"><FaCalendarAlt className="text-red-600" /> <strong>Year Built:</strong> {yearBuilt}</p>
+                    <p className="mabu-text3 flex items-center gap-2"><FaParking className="text-red-600" /> <strong>Parking:</strong> {parkingSpaces}</p>
+                    <p className=" mabu-text3 flex items-center gap-2"><FaMapMarkerAlt className="text-red-600" /> <strong>Zoning:</strong> {zoning}</p>
+      
+                    <p className="  mabu-text3 flex items-center gap-2"><FaPaw className="text-red-600" /> <strong>Pet Friendly:</strong> {petFriendly ? "Yes" : "No"}</p>
                 </div>
 
                 <div className="mb-3">

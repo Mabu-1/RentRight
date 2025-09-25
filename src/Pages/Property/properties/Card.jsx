@@ -71,19 +71,19 @@ const Card = ({ Property }) => {
                         <div className="flex flex-wrap gap-4 mb-4">
                             <div className="flex items-center gap-2">
                                 <FaBath size={20} className="mt-[-4px]" />
-                                <span className="text-sm">{baths} Baths</span>
+                                <span className=" mabu-text2  text-sm">{baths} Baths</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <FaBed size={20} />
-                                <span className="text-sm">{bed} Beds</span>
+                                <span className="mabu-text2  text-sm">{bed} Beds</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <FaRulerVertical size={20} />
-                                <span className="text-sm">{area} m²</span>
+                                <span className="mabu-text2 text-sm">{area} m²</span>
                             </div>
                             
                         </div>
-                    </div>
+                    </div> 
                    
                         <p className="text-lg font-semibold text-green-600 mb-2">$ {price}</p>
                     <div className="my-1 flex  gap-3 sm:gap-5">

@@ -85,76 +85,76 @@ const CreateProperty = () => {
         {/* Photo & Name */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block font-semibold mb-2">Property Photo</label>
-            <input type="file" {...register("imageURL", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.imageURL && <span className="text-red-500 text-sm">Photo is required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Property Photo</label>
+            <input type="file" {...register("imageURL", { required: true })} className="mabu-text3 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.imageURL && <span className="mabu-text3 text-red-500 text-sm">Photo is required</span>}
           </div>
           <div>
-            <label className="block font-semibold mb-2">Property Name</label>
-            <input type="text" {...register("name", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.name && <span className="text-red-500 text-sm">Name is required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Property Name</label>
+            <input type="text" {...register("name", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.name && <span className="mabu-text3 text-red-500 text-sm">Name is required</span>}
           </div>
         </div>
 
         {/* Description & Address */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block font-semibold mb-2">Description</label>
-            <input type="text" {...register("description", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.description && <span className="text-red-500 text-sm">Description is required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Description</label>
+            <input type="text" {...register("description", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.description && <span className="mabu-text3 text-red-500 text-sm">Description is required</span>}
           </div>
           <div>
-            <label className="block font-semibold mb-2">Address</label>
-            <input type="text" {...register("address", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.address && <span className="text-red-500 text-sm">Address is required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Address</label>
+            <input type="text" {...register("address", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.address && <span className="mabu-text3 text-red-500 text-sm">Address is required</span>}
           </div>
         </div>
 
         {/* Area, Baths, Beds */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block font-semibold mb-2">Area (m²)</label>
-            <input type="number" {...register("area", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.area && <span className="text-red-500 text-sm">Area is required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Area (m²)</label>
+            <input type="number" {...register("area", { required: true })} className=" mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.area && <span className="mabu-text3 text-red-500 text-sm">Area is required</span>}
           </div>
           <div>
-            <label className="block font-semibold mb-2">Baths</label>
-            <input type="number" {...register("baths", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.baths && <span className="text-red-500 text-sm">Baths are required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Baths</label>
+            <input type="number" {...register("baths", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.baths && <span className="mabu-text3 text-red-500 text-sm">Baths are required</span>}
           </div>
           <div>
-            <label className="block font-semibold mb-2">Beds</label>
-            <input type="number" {...register("bed", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.bed && <span className="text-red-500 text-sm">Beds are required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Beds</label>
+            <input type="number" {...register("bed", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.bed && <span className="mabu-text3 text-red-500 text-sm">Beds are required</span>}
           </div>
         </div>
 
         {/* Parking, Price, Type */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block font-semibold mb-2">Parking Spaces</label>
-            <input type="number" {...register("parkingSpaces", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.parkingSpaces && <span className="text-red-500 text-sm">Parking spaces required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Parking Spaces</label>
+            <input type="number" {...register("parkingSpaces", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.parkingSpaces && <span className="mabu-text3 text-red-500 text-sm">Parking spaces required</span>}
           </div>
           <div>
-            <label className="block font-semibold mb-2">Price</label>
-            <input type="number" {...register("price", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.price && <span className="text-red-500 text-sm">Price is required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Price</label>
+            <input type="number" {...register("price", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.price && <span className="mabu-text3 text-red-500 text-sm">Price is required</span>}
           </div>
           <div>
-            <label className="block font-semibold mb-2">Property Type</label>
-            <select {...register("type", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg">
-              <option value="House">House</option>
-              <option value="Apartment">Apartment</option>
-              <option value="Studio">Studio</option>
+            <label className="mabu-text3 block font-semibold mb-2">Property Type</label>
+            <select {...register("type", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg">
+              <option value="mabu-text2 House">House</option>
+              <option value="mabu-text2 Apartment">Apartment</option>
+              <option value="mabu-text2 Studio">Studio</option>
             </select>
-            {errors.type && <span className="text-red-500 text-sm">Property type required</span>}
+            {errors.type && <span className="text-red-500 text-sm mabu-text3 ">Property type required</span>}
           </div>
         </div>
 
         {/* Amenities */}
         <div>
-          <label className="block font-semibold mb-2">Amenities</label>
+          <label className="block font-semibold mb-2 mabu-text3 ">Amenities</label>
           {amenities.map((amenity, index) => (
             <div key={index} className="flex items-center gap-2 mb-2">
               <input
@@ -171,7 +171,7 @@ const CreateProperty = () => {
 
         {/* Nearby Amenities */}
         <div>
-          <label className="block font-semibold mb-2">Nearby Amenities</label>
+          <label className="block font-semibold mb-2 mabu-text3 ">Nearby Amenities</label>
           {nearbyAmenities.map((nearby, index) => (
             <div key={index} className="flex items-center gap-2 mb-2">
               <input
@@ -189,20 +189,20 @@ const CreateProperty = () => {
         {/* Owner Contact */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block font-semibold mb-2">Owner Name</label>
-            <input type="text" {...register("ownerContact.name", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.ownerContact?.name && <span className="text-red-500 text-sm">Owner name required</span>}
+            <label className="mabu-text3 block font-semibold mb-2">Owner Name</label>
+            <input type="text" {...register("ownerContact.name", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.ownerContact?.name && <span className="mabu-text3  text-red-500 text-sm">Owner name required</span>}
           </div>
           <div>
-            <label className="block font-semibold mb-2">Owner Phone</label>
-            <input type="text" {...register("ownerContact.phone", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-            {errors.ownerContact?.phone && <span className="text-red-500 text-sm">Owner phone required</span>}
+            <label className="mabu-text3  block font-semibold mb-2">Owner Phone</label>
+            <input type="text" {...register("ownerContact.phone", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+            {errors.ownerContact?.phone && <span className="mabu-text3  text-red-500 text-sm">Owner phone required</span>}
           </div>
         </div>
         <div>
-          <label className="block font-semibold mb-2">Owner Email</label>
-          <input type="text" {...register("ownerContact.email", { required: true })} className="w-full p-3 border border-gray-300 rounded-lg" />
-          {errors.ownerContact?.email && <span className="text-red-500 text-sm">Owner email required</span>}
+          <label className="mabu-text3 block font-semibold mb-2">Owner Email</label>
+          <input type="text" {...register("ownerContact.email", { required: true })} className="mabu-text2 w-full p-3 border border-gray-300 rounded-lg" />
+          {errors.ownerContact?.email && <span className="mabu-text3 text-red-500 text-sm">Owner email required</span>}
         </div>
 
         {/* Submit */}
