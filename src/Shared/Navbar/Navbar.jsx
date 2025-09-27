@@ -23,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='sticky top-0 z-50 bg-white shadow-md'>
+    <div className='mabu-bg sticky top-0 z-50 bg-white shadow-md'>
       <div className="max-w-screen-2xl mx-auto px-4 lg:px-16 h-16 flex items-center justify-between">
 
         {/* Mobile: Hamburger Left */}
