@@ -37,19 +37,19 @@ const Register = () => {
                     <ul className="space-y-3 text-gray-600 dark:text-gray-300 text-sm sm:text-base md:text-lg">
                         <li className="flex items-center gap-3">
                             <FaCheckCircle className="text-[#eb7043] dark:text-orange-400 text-lg sm:text-xl" />
-                            <span>Easy property management tools</span>
+                            <span className="mabu-text2">Easy property management tools</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <FaCheckCircle className="text-[#eb7043] dark:text-orange-400 text-lg sm:text-xl" />
-                            <span>Connect with reliable tenants</span>
+                            <span className="mabu-text2">Connect with reliable tenants</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <FaCheckCircle className="text-[#eb7043] dark:text-orange-400 text-lg sm:text-xl" />
-                            <span>Streamlined communication</span>
+                            <span className="mabu-text2">Streamlined communication</span>
                         </li>
                         <li className="flex items-center gap-3">
                             <FaCheckCircle className="text-[#eb7043] dark:text-orange-400 text-lg sm:text-xl" />
-                            <span>Comprehensive support</span>
+                            <span className="mabu-text2"> Comprehensive support</span>
                         </li>
                     </ul>
 

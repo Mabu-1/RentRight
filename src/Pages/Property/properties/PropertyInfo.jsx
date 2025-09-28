@@ -63,10 +63,10 @@ const PropertyInfo = () => {
 
                 {/* Description */}
                 <div className="text-gray-700 text-sm sm:text-lg leading-relaxed mb-10">
-                    <p>
+                    <p className="mabu-text3">
                         Nestled in the heart of{" "}
                         <span className="text-blue-600 font-bold">{property.city}</span>, the{" "}
-                        <span className="text-blue-600 font-bold">{property.name}</span> offers a perfect blend of comfort and luxury. 
+                        <span className="text-blue-600 font-bold ">{property.name}</span> offers a perfect blend of comfort and luxury. 
                         With <span className="text-blue-600 font-bold">{property.bed}</span> spacious bedrooms and{" "}
                         <span className="text-blue-600 font-bold">{property.baths}</span> modern bathrooms, this{" "}
                         <span className="text-blue-600 font-bold">{property.type}</span> is ideal for a sophisticated lifestyle. 
@@ -74,7 +74,7 @@ const PropertyInfo = () => {
                         <span className="text-blue-600 font-bold">{property.amenities.join(", ")}</span> and is conveniently 
                         located near <span className="text-blue-600 font-bold">{property.nearbyAmenities.join(", ")}</span>.
                     </p>
-                    <p className="mt-5">
+                    <p className="mt-5 mabu-text3">
                         With modern amenities and stylish interiors, this property is a top choice for urban living. 
                         Enjoy easy access to the city's attractions including parks, museums, and cultural landmarks.
                     </p>

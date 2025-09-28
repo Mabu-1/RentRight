@@ -54,7 +54,7 @@ const Navbar = () => {
           to="/"
           className="text-xl md:text-2xl font-bold absolute left-1/2 transform -translate-x-1/2 md:static md:transform-none"
         >
-          Rent<span className='text-[#eb7043]'>Right</span>
+         <span className="mabu-text2" >Rent </span> <span className='text-[#eb7043]'>Right</span>
         </Link>
 
         {/* Desktop Nav Links */}
@@ -63,7 +63,7 @@ const Navbar = () => {
             <li key={link.name}>
               <Link
                 to={link.to}
-                className="hover:text-[#eb6838] transition-colors duration-300"
+                className="mabu-text2 hover:text-[#eb6838] transition-colors duration-300"
               >
                 {link.name}
               </Link>

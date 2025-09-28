@@ -71,7 +71,7 @@ const Dashboard = () => {
                                     <NavLink
                                         to={link.to}
                                         onClick={handleLinkClick}
-                                        className={({ isActive }) => isActive ? "text-blue-500" : ""}
+                                        className={({ isActive }) => isActive ? "text-blue-500" : "mabu-text3"}
                                     >
                                         {link.icon} {link.name}
                                     </NavLink>
@@ -84,8 +84,8 @@ const Dashboard = () => {
                             </li>
                             <li>
                                 <div className="flex">
-                                    <BiSolidLogOut className="inline mr-2" />
-                                    <button className="bg-none" onClick={handleLogOut}>
+                                    <BiSolidLogOut className="inline mr-2 mabu-text3" />
+                                    <button className="bg-none mabu-text3" onClick={handleLogOut}>
                                         LogOut
                                     </button>
                                 </div>
@@ -103,22 +103,22 @@ const Dashboard = () => {
                             <li key={link.to}>
                                 <NavLink
                                     to={link.to}
-                                    className={({ isActive }) => isActive ? "text-blue-500" : ""}
+                                    className={({ isActive }) => isActive ? "text-blue-500" : "mabu-text3"}
                                 >
                                     {link.icon} {link.name}
                                 </NavLink>
                             </li>
                         ))}
-                        <div className="divider"></div>
+                        <div className="divider "></div>
                         <li>
-                            <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-500" : ""}>
+                            <NavLink to="/" className={({ isActive }) => isActive ? "text-blue-500" : "mabu-text3"}>
                                 <FaHouseUser className="inline mr-2" /> Home
                             </NavLink>
                         </li>
                         <li>
                             <div className="flex">
-                                <BiSolidLogOut className="inline mr-2" />
-                                <button className="bg-none" onClick={handleLogOut}>
+                                <BiSolidLogOut className="inline mr-2 mabu-text3" />
+                                <button className="bg-none mabu-text3" onClick={handleLogOut}>
                                     LogOut
                                 </button>
                             </div>

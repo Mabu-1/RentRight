@@ -263,7 +263,7 @@ const Properties = () => {
                             <button
                                 key={index}
                                 onClick={() => handlePageClick(page)}
-                                className={`p-2 min-w-[40px] rounded-lg ${currentPage === page ? 'bg-[#eb7043] text-white' : 'bg-gray-300'
+                                className={`p-2 min-w-[40px] rounded-lg  mabu-bg ${currentPage === page ? 'bg-[#eb7043] text-white' : 'bg-gray-300'
                                     }`}
                             >
                                 {page === "Prev" || page === "Next" ? page : page + 1}

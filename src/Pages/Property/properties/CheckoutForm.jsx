@@ -96,13 +96,13 @@ const CheckoutForm = ({ property }) => {
 
     return (
         <div className="max-w-md lg:max-w-lg mx-auto p-6 lg:p-8 bg-white shadow-xl rounded-xl border border-gray-200">
-            <h2 className="text-2xl lg:text-3xl font-semibold text-blue-800 mb-6 text-center">Property Purchase</h2>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-blue-800 mb-6 text-center mabu-text3">Property Purchase</h2>
 
             {/* Property Info */}
             <div className="mb-6 p-4 bg-gray-50 rounded-lg shadow-inner">
-                <h3 className="text-lg md:text-2xl font-medium text-gray-700">{property.name}</h3>
-                <p className="text-sm md:text-lg font-semibold text-blue-600">{property.address}</p>
-                <p className="mt-2 text-gray-600 font-semibold">Price: ${property.price}</p>
+                <h3 className="text-lg md:text-2xl font-medium text-gray-700 mabu-text3">{property.name}</h3>
+                <p className="text-sm md:text-lg font-semibold text-blue-600 mabu-text3">{property.address}</p>
+                <p className="mt-2 text-gray-600 font-semibold mabu-text3">Price: ${property.price}</p>
             </div>
 
             {/* Payment Form */}

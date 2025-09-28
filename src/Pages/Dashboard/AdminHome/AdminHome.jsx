@@ -69,7 +69,7 @@ const AdminHome = () => {
   ];
 
   return (
-    <div className="p-4 sm:p-6 md:p-8 bg-gray-100 min-h-screen">
+    <div className="p-4 sm:p-6 md:p-8 bg-gray-100 mabu-bg1 min-h-screen">
       {/* Admin Info */}
       <div className="text-center mb-12">
         <img
@@ -77,8 +77,8 @@ const AdminHome = () => {
           alt="Admin"
           className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 mx-auto rounded-full border-4 border-orange-400 shadow-lg"
         />
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 text-gray-800">Md. Mahtab Uddin</h1>
-        <p className="text-gray-600 mt-2 text-base sm:text-lg md:text-xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 text-gray-800 mabu-text2">Md. Mahtab Uddin</h1>
+        <p className="text-gray-600 mt-2 text-base sm:text-lg md:text-xl mabu-text2">
           Admin Dashboard | Property Management
         </p>
       </div>

@@ -70,9 +70,9 @@ const Card = ({ property }) => {
 
                 <div className="mt-auto text-xs sm:text-sm md:text-base">
                     <p className="font-bold text-red-700 mb-1">Owner Contact:</p>
-                    <p><strong>Name:</strong> {ownerContact.name}</p>
-                    <p><strong>Phone:</strong> {ownerContact.phone}</p>
-                    <p><strong>Email:</strong> {ownerContact.email}</p>
+                    <p className="mabu-text3"><strong>Name:</strong> {ownerContact.name}</p>
+                    <p className="mabu-text3"><strong>Phone:</strong> {ownerContact.phone}</p>
+                    <p className="mabu-text3"><strong>Email:</strong> {ownerContact.email}</p>
                 </div>
             </div>
         </div>

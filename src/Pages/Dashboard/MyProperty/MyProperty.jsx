@@ -31,7 +31,7 @@ const MyProperty = () => {
             ) : (
                 <div className="text-center mt-16">
                     <FaHome className="text-red-500 text-7xl mb-4 mx-auto" />
-                    <p className="text-gray-700 text-lg mb-4">You haven't purchased any property yet.</p>
+                    <p className="text-gray-700 text-lg mb-4 mabu-text3">You haven't purchased any property yet.</p>
                     <Link to="/property">
                         <button className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 transition">
                             Purchase a Property
