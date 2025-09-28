@@ -45,15 +45,15 @@ const UserHome = () => {
           {/* Name */}
           <div className="flex flex-col items-center sm:flex-row sm:items-center gap-1 sm:gap-3">
             <FaUser className="text-[#eb7043]" />
-            <span className="font-semibold text-gray-700 text-sm sm:text-base">Name:</span>
-            <span className="text-gray-600 text-sm sm:text-base">{userData?.name}</span>
+            <span className="font-semibold text-gray-700 text-sm sm:text-base mabu-text3">Name:</span>
+            <span className="text-gray-600 text-sm sm:text-base mabu-text3">{userData?.name}</span>
           </div>
 
           {/* Email */}
           <div className="flex flex-col items-center sm:flex-row sm:items-center gap-1 sm:gap-3">
             <FaEnvelope className="text-[#eb7043]" />
-            <span className="font-semibold text-gray-700 text-sm sm:text-base">Email:</span>
-            <span className="text-gray-600 text-sm sm:text-base">{userData?.email}</span>
+            <span className="font-semibold text-gray-700 text-sm sm:text-base mabu-text3">Email:</span>
+            <span className="text-gray-600 text-sm sm:text-base mabu-text3">{userData?.email}</span>
           </div>
         </div>
       </div>
