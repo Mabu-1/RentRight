@@ -13,7 +13,7 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="flex-1">
                         <h3 className="text-2xl md:text-3xl font-bold text-black">
-                           <span className='mabu-text2'>Rent</span> <span className="text-[#eb7043]">Right</span>
+                           <span className='mabu-text2'>Rent</span><span className="text-[#eb7043]">Right</span>
                         </h3>
                         <p className="mabu-text2 text-black font-medium text-sm mt-4 max-w-xl leading-relaxed">
                             RentRight Property Management offers modern, efficient solutions for managing residential and commercial properties. We pride ourselves on exceptional service and personalized care, ensuring your property is handled with expertise and attention to detail.
