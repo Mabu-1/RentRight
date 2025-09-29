@@ -136,108 +136,111 @@ const Properties = () => {
 
     return (
         <div className="mb-4">
-            <div className="relative mb-8">
-                <img
-                    src="https://i.ibb.co/BtxYTC6/NRI-Property-In-India.jpg"
-                    alt=""
-                    className="w-full object-cover h-[600px] sm:h-[600px] md:h-[600px] lg:h-[400px]"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center  " data-aos="fade-up">
-                    <div className="p-2 text-white">
-                        <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-2">
-                            Find Your <br /> Dream Property
-                        </h1>
-                        <p className="text-md sm:text-md md:text-lg font-bold">
-                            Search through our extensive list of properties.
-                        </p>
-                    </div>
+         <div className="relative my-8">
+  {/* Background */}
+  <div
+    className="w-full h-[600px] sm:h-[600px] md:h-[600px] lg:h-[400px] rounded-lg
+       bg-gradient-to-r from-[#2F64AD] via-[#eb7043] to-[#2F64AD] 
+      flex flex-col justify-center items-center text-center overflow-hidden relative"
+    data-aos="fade-up"
+  >
+    {/* Optional subtle pattern overlay */}
+    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
 
-                    {/* Search Bar */}
-                    <div className="relative z-10 gap-2 flex flex-col justify-center items-center bg-white lg:flex-row rounded-lg w-[250px] md:w-[500px] lg:w-[900px] font-bold mt-4 px-4 py-9">
-                        <div className="flex flex-col items-center   rounded-lg  w-full lg:w-auto space-x-2 lg:mt-[-34px]  ">
-                            <div className="text-center ">
-                                <span className="text-md font-semibold">Price Range:<br /> ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}</span>
-                            </div>
-                            <Box className="w-full sm:w-full md:w-full lg:w-[200px] px-4 lg:border-r-2 border-gray-200">
-                                <Slider
-                                    value={priceRange}
-                                    onChange={handlePriceChange}
-                                    valueLabelDisplay="auto"
-                                    min={80000}
-                                    max={1000000}
-                                    step={50000}
-                                    aria-labelledby="range-slider"
-                                    sx={{
-                                        color: '#eb7043', // Set the active track and thumb color
-                                        '& .MuiSlider-thumb': {
-                                            backgroundColor: '#eb7043', // Set the thumb color
-                                        },
-                                        '& .MuiSlider-rail': {
-                                            color: '#d1d1d1', // Set the unselected portion of the slider color
-                                        },
-                                        '& .MuiSlider-valueLabel': {
-                                            backgroundColor: '#eb7043', // Set the value label background color
-                                        },
-                                    }}
-                                />
-                            </Box>
+    {/* Heading */}
+    <div className="relative p-2 text-white z-10">
+      <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl font-bold mb-2">
+        Find Your <br /> Dream Property
+      </h1>
+      <p className="text-md sm:text-md md:text-lg font-bold">
+        Search through our extensive list of properties.
+      </p>
+    </div>
 
-                        </div>
-                        <div className="flex items-center   w-full lg:w-auto p-2 lg:border-r-2 border-gray-200">
-                            <FaMapMarkerAlt className="text-red-700 h-[20px] w-[14px]" />
-                            <select
-                                className="focus:outline-none bg-transparent w-full text-sm"
-                                value={location}
-                                onChange={(e) => setLocation(e.target.value)}
-                            >
-                                <option value="">Select Location</option>
-                                <option>New York</option>
-                                <option>Los Angeles</option>
-                                <option>Chicago</option>
-                                <option>Houston</option>
-                                <option>Phoenix</option>
-                            </select>
-                        </div>
+    {/* Search Bar */}
+    <div className="relative z-10 gap-2 flex flex-col justify-center items-center bg-white lg:flex-row rounded-lg w-[250px] md:w-[500px] lg:w-[900px] font-bold mt-4 px-4 py-9 shadow-lg">
+      <div className="flex flex-col items-center rounded-lg w-full lg:w-auto space-x-2 lg:mt-[-34px]">
+        <div className="text-center mb-2">
+          <span className="text-md font-semibold">
+            Price Range:<br /> ${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}
+          </span>
+        </div>
+        <Box className="w-full sm:w-full md:w-full lg:w-[200px] px-4 lg:border-r-2 border-gray-200">
+          <Slider
+            value={priceRange}
+            onChange={handlePriceChange}
+            valueLabelDisplay="auto"
+            min={80000}
+            max={1000000}
+            step={50000}
+            aria-labelledby="range-slider"
+            sx={{
+              color: '#eb7043',
+              '& .MuiSlider-thumb': { backgroundColor: '#eb7043' },
+              '& .MuiSlider-rail': { color: '#d1d1d1' },
+              '& .MuiSlider-valueLabel': { backgroundColor: '#eb7043' },
+            }}
+          />
+        </Box>
+      </div>
 
-                        <div className="flex items-center lg:border-r-2 border-gray-200 px-3 py-2 w-full lg:w-auto">
-                            <FaBuilding className="text-yellow-700 h-[20px] w-[14px]" />
-                            <select
-                                className="focus:outline-none bg-transparent w-full text-sm"
-                                value={propertyType}
-                                onChange={(e) => setPropertyType(e.target.value)}
-                            >
-                                <option value="">Property Type</option>
-                                <option>Penthouse</option>
-                                <option>Rowhouse</option>
-                                <option>Studio Apartment</option>
-                                <option>Farmhouse</option>
-                                <option>Villa</option>
-                            </select>
-                        </div>
+      <div className="flex items-center w-full lg:w-auto p-2 lg:border-r-2 border-gray-200">
+        <FaMapMarkerAlt className="text-red-700 h-[20px] w-[14px]" />
+        <select
+          className="focus:outline-none bg-transparent w-full text-sm"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+        >
+          <option value="">Select Location</option>
+          <option>New York</option>
+          <option>Los Angeles</option>
+          <option>Chicago</option>
+          <option>Houston</option>
+          <option>Phoenix</option>
+        </select>
+      </div>
 
-                        <div className="flex items-center lg:border-r-2 border-gray-200 w-full lg:w-auto p-2">
-                            <FaExchangeAlt className="text-blue-700 h-[20px] w-[14px]" />
-                            <select
-                                className="focus:outline-none  bg-transparent w-full text-sm"
-                                value={condition}
-                                onChange={(e) => setCondition(e.target.value)}
-                            >
-                                <option value="">Availability</option>
-                                <option>Rental</option>
-                                <option>Sell</option>
-                            </select>
-                        </div>
-                        <div className="flex justify-center items-center">
-                            <button
-                                onClick={handleSearch}
-                                className="bg-[#e67850] hover:bg-[#eb7043] text-white hover:text-black px-6 py-2 rounded-lg font-semibold text-md"
-                            >
-                                SEARCH
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div className="flex items-center lg:border-r-2 border-gray-200 px-3 py-2 w-full lg:w-auto">
+        <FaBuilding className="text-yellow-700 h-[20px] w-[14px]" />
+        <select
+          className="focus:outline-none bg-transparent w-full text-sm"
+          value={propertyType}
+          onChange={(e) => setPropertyType(e.target.value)}
+        >
+          <option value="">Property Type</option>
+          <option>Penthouse</option>
+          <option>Rowhouse</option>
+          <option>Studio Apartment</option>
+          <option>Farmhouse</option>
+          <option>Villa</option>
+        </select>
+      </div>
+
+      <div className="flex items-center lg:border-r-2 border-gray-200 w-full lg:w-auto p-2">
+        <FaExchangeAlt className="text-blue-700 h-[20px] w-[14px]" />
+        <select
+          className="focus:outline-none bg-transparent w-full text-sm"
+          value={condition}
+          onChange={(e) => setCondition(e.target.value)}
+        >
+          <option value="">Availability</option>
+          <option>Rental</option>
+          <option>Sell</option>
+        </select>
+      </div>
+
+      <div className="flex justify-center items-center">
+        <button
+          onClick={handleSearch}
+          className="bg-[#e67850] hover:bg-[#eb7043] text-white hover:text-black px-6 py-2 rounded-lg font-semibold text-md"
+        >
+          SEARCH
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             {/* Render Paginated Properties */}
             <div>
