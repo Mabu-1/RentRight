@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Card = ({ review }) => {
-  const { star, imageUrl, name, text } = review;
+  const { star, imageUrl, name, country, text, date } = review;
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -12,44 +12,38 @@ const Card = ({ review }) => {
 
   return (
     <div
-      className="bg-white border border-[#eb7043] rounded-2xl shadow-md hover:shadow-xl 
+      className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md 
       transition-transform transform hover:-translate-y-1 
-      w-full max-w-md md:max-w-lg lg:max-w-xl 
-      p-5 sm:p-6 flex flex-col sm:flex-row gap-5 mx-auto"
+      w-full p-5 flex flex-col gap-3"
       data-aos="fade-up"
     >
-      {/* Reviewer Image */}
-      <div className="flex-shrink-0 flex justify-center items-center">
+      {/* Top Section */}
+      <div className="flex items-center gap-4">
         <img
           src={imageUrl}
           alt={`Review by ${name}`}
-          className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover rounded-xl border-2 border-[#eb7043]"
+          className="w-14 h-14 object-cover rounded-full border border-gray-300"
         />
+        <div>
+          <h3 className="font-semibold text-gray-800 text-base mabu-text3">{name}</h3>
+          {country && <p className="text-sm text-gray-500 mabu-text3">{country}</p>}
+          {date && <p className="text-xs text-gray-400 mabu-text3">{date}</p>}
+        </div>
       </div>
 
-      {/* Review Content */}
-      <div className="flex flex-col justify-between flex-grow text-center sm:text-left">
-        <p className="mabu-text3 text-gray-700 text-sm sm:text-base md:text-lg mb-4 leading-relaxed">
-          {text}
-        </p>
+      {/* Review Text */}
+      <p className="text-gray-700 text-sm leading-relaxed mabu-text3">{text}</p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0">
-          {/* Stars */}
-          <div className="flex items-center justify-center sm:justify-start gap-1">
-            {[...Array(5)].map((_, index) => (
-              <FaStar
-                key={index}
-                color={index < star ? "#eb7043" : "#d1d5db"} // orange or gray
-                size={18}
-              />
-            ))}
-          </div>
-
-          {/* Reviewer Name */}
-          <p className="font-semibold text-[#e96738] text-sm sm:text-base md:text-lg">
-            {name}
-          </p>
-        </div>
+      {/* Rating */}
+      <div className="flex items-center gap-1">
+        {[...Array(5)].map((_, index) => (
+          <FaStar
+            key={index}
+            color={index < star ? "#ffb33e" : "#d1d5db"} // Fiverr yellow
+            size={16}
+          />
+        ))}
+        <span className="ml-2 text-sm text-gray-600">{star}.0</span>
       </div>
     </div>
   );
