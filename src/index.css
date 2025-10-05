@@ -15,6 +15,12 @@ body {
   color: white;
 }
 
+/* Default: Light mode */
+.svg-text {
+  stroke: black;  /* black stroke for light mode */
+  fill: none;     /* optional: no fill or change as needed */
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -53,4 +59,8 @@ p
 {
   background-color: #121212;
 }
+
+  .svg-text {
+    stroke: white;
+    fill: white;}
 }
