@@ -4,33 +4,39 @@ import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
 import Button from "../../../Shared/Button/Button";
 import Headline from '../../../Shared/Headline/Headline';
+import useAxiosPublic from '../../../hooks/useAxiosPublic';
 
 const Newsletter = () => {
     const [email, setEmail] = useState('');
+    const axiosPublic = useAxiosPublic();
+
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
 
-    const handleSubscribe = (e) => {
-        e.preventDefault();
+const handleSubscribe = async (e) => {
+    e.preventDefault();
 
-        if (!email) {
-            Swal.fire({
-                position: "center",
-                icon: "error",
-                title: "Please enter a valid email",
-                showConfirmButton: false,
-                timer: 1500
-            });
-            return;
-        }
-
-        // Replace this with actual API call
-        console.log('Subscribed Email:', email);
-
+    if (!email) {
         Swal.fire({
-            position: "center", // centered on screen
+            position: "center",
+            icon: "error",
+            title: "Please enter a valid email",
+            showConfirmButton: false,
+            timer: 1500
+        });
+        return;
+    }
+
+    try {
+        // 1. TRY to perform the API call
+        console.log('Subscribed Email:', email);
+        await axiosPublic.post('/newsletter', { email });
+
+        // 2. If it succeeds, show the SUCCESS popup
+        Swal.fire({
+            position: "center",
             icon: "success",
             title: "Thank you for subscribing!",
             showConfirmButton: false,
@@ -38,7 +44,21 @@ const Newsletter = () => {
         });
 
         setEmail(''); // clear input
-    };
+
+    } catch (error) {
+        // 3. If it fails, the CATCH block will run
+        console.error("Subscription failed:", error);
+
+        // Show an ERROR popup to the user
+        Swal.fire({
+            position: "center",
+            icon: "error",
+            title: "Subscription Failed",
+            text: "Something went wrong. Please try again later.",
+            showConfirmButton: true,
+        });
+    }
+};
 
     return (
         <div className="my-12 px-4" data-aos="fade-up">
