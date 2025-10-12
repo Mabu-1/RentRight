@@ -55,7 +55,9 @@ const Card = ({ pack }) => {
 
   return (
     <div
-      className="border bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300 flex flex-col overflow-hidden"
+      // --- CHANGE IS HERE ---
+      // Added "h-full" to the className string
+      className="border bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300 flex flex-col overflow-hidden h-full"
       data-aos="fade-up"
       data-aos-delay={50}
     >

@@ -29,6 +29,12 @@ const Package = () => {
         return <div className="text-center text-gray-500">No Amenties found.</div>;
     }
 
+    // *** CHANGE 1: Create a sorted copy of the data ***
+    // We use [...data] to make a new copy so we don't change the original data.
+    // Then we sort it by the 'price' property from low to high.
+    const sortedData = [...data].sort((a, b) => a.price - b.price);
+
+
         return (
             <div className="my-10" id="package">
                 <div className="flex justify-between">
@@ -47,8 +53,9 @@ const Package = () => {
                     </div>
                 </div>
 
+                {/* *** CHANGE 2: Use the new 'sortedData' array to map over *** */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-3">
-                    {data.map((pack) => (
+                    {sortedData.map((pack) => (
                         <Card key={pack._id} pack={pack } />
                     ))}
                 </div>
