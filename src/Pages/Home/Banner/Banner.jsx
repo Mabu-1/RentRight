@@ -13,7 +13,7 @@ const Banner = () => {
     }, []);
 
     return (
-        <div className="mt-[40px] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-16 p-2 sm:p-4 md:p-4">
+        <div className="my-[40px] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-16 p-2 sm:p-4 md:p-4">
             
             <div className="w-full text-center md:text-left flex-1" data-aos="fade-right">
                 

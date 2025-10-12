@@ -31,6 +31,7 @@ import PackageBuy from "../Pages/Service/Package/PackageBuy";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import MyService from "../Pages/Dashboard/MyService/MyService";
 import Payment from "../Pages/Dashboard/MyService/Payment";
+import NotFound from "../NotFound";
 
 
 
@@ -196,8 +197,11 @@ const router = createBrowserRouter([
 
            
         ]
-    }
-   
+    },
+   {
+        path: '*',
+        element: <NotFound />
+    }  
 
 ])
 
