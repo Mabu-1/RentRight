@@ -300,7 +300,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
           <form onSubmit={handleClientInfoSubmit} className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                <label className="block text-sm font-medium text-black mb-1">First Name</label>
                 <input
                   type="text"
                   name="firstName"
@@ -313,7 +313,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
                 {formErrors.firstName && <p className="text-red-500 text-xs mt-1">{formErrors.firstName}</p>}
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                <label className="block text-sm font-medium text-black mb-1">Last Name</label>
                 <input
                   type="text"
                   name="lastName"
@@ -329,7 +329,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <label className="block text-sm font-medium text-black mb-1">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -342,7 +342,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
                 {formErrors.email && <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>}
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                <label className="block text-sm font-medium text-black mb-1">Phone Number</label>
                 <input
                   type="tel"
                   name="phone"
@@ -357,7 +357,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Address</label>
+              <label className="block text-sm font-medium text-black mb-1">Address</label>
               <input
                 type="text"
                 name="address"
@@ -372,7 +372,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">City</label>
+                <label className="block text-sm font-medium text-black mb-1">City</label>
                 <input
                   type="text"
                   name="city"
@@ -385,7 +385,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
                 {formErrors.city && <p className="text-red-500 text-xs mt-1">{formErrors.city}</p>}
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">State</label>
+                <label className="block text-sm font-medium text-black mb-1">State</label>
                 <input
                   type="text"
                   name="state"
@@ -401,7 +401,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Zip Code</label>
+                <label className="block text-sm font-medium text-black mb-1">Zip Code</label>
                 <input
                   type="text"
                   name="zipCode"
@@ -414,7 +414,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
                 {formErrors.zipCode && <p className="text-red-500 text-xs mt-1">{formErrors.zipCode}</p>}
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Country</label>
+                <label className="block text-sm font-medium text-black mb-1">Country</label>
                 <select
                   name="country"
                   value={clientInfo.country}
@@ -435,7 +435,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Additional Information (Optional)</label>
+              <label className="block text-sm font-medium text-black mb-1">Additional Information (Optional)</label>
               <textarea
                 name="additionalInfo"
                 value={clientInfo.additionalInfo}
@@ -475,7 +475,7 @@ const CheckoutForm = ({ property, showPaymentForm, setShowPaymentForm }) => {
           
           <form onSubmit={handleSubmit} className="space-y-5">
             <div className="p-4 border border-gray-300 rounded-lg">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Card Details</label>
+              <label className="block text-sm font-medium text-black mb-2">Card Details</label>
               <CardElement
                 options={{
                   style: {
