@@ -34,7 +34,7 @@ const Banner = () => {
             <div className="flex items-center gap-3 bg-white rounded-lg shadow px-4 py-3 border">
               <IoIosCall className="text-green-600 w-8 h-8" />
               <div>
-                <p className="font-bold">Call us Anytime</p>
+                <p className="font-bold mabu-text">Call us Anytime</p>
                 <p className="text-gray-600 text-sm">+90792972337</p>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Banner = () => {
             <div className="flex items-center gap-3 bg-white rounded-lg shadow px-4 py-3 border">
               <IoIosMail className="text-red-600 w-8 h-8" />
               <div>
-                <p className="font-bold">Email us Anytime</p>
+                <p className="font-bold mabu-text">Email us Anytime</p>
                 <p className="text-gray-600 text-sm">resicraft77@gmail.com</p>
               </div>
             </div>

@@ -96,7 +96,7 @@ const Card = ({ Property }) => {
                             </button>
                        
                         <Link to={`/property/${stringId}`}>
-                            <button className="bg-[#2f64ad] hover:bg-[#4351eb] font-bold  border  text-white px-3 sm:px-4 py-2 rounded transition duration-300">
+                            <button className="bg-[#2f64ad] hover:bg-[#4351eb] font-bold    text-white px-3 sm:px-4 py-2 rounded transition duration-300">
                             Details
                             </button>
                         </Link>
