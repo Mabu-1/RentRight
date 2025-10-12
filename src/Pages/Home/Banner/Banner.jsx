@@ -45,7 +45,7 @@ const Banner = () => {
                 <div className="absolute bg-[#eb7043]  top-[-15px] sm:top-[-15px] md:top-[-50px] right-[-20px] sm:right-[-25px] md:right-[-20px] lg:right-[-20px]  transform translate-x-1/2 -translate-y-1/2 z-10 rounded-full w-[80px] sm:w-[100px] md:w-[100px] lg:w-[120px] h-[80px] sm:h-[100px] md:h-[100px] lg:h-[120px] flex items-center justify-center shadow-lg" data-aos="zoom-in">
                     <p className="text-lg sm:text-xl md:text-2xl font-bold text-white">30% off</p>
                 </div>
-                <img src="https://i.ibb.co/JtNZH0J/home-banner.jpg" alt="Modern Home" className="object-cover border-4 sm:border-4 md:border-8 border-[#eb7043] rounded-lg w-full h-auto "  loading="eager" />
+                <img src="https://i.ibb.co/JtNZH0J/home-banner.jpg" alt="Modern Home" className="object-cover border-4 sm:border-4 md:border-8 border-[#eb7043] rounded-lg w-full h-auto "  />
                 <div className="absolute mt-[-25px] sm:mt-[-25px] md:mt-[-40px] lg:mt-[-60px] left-[-20px] sm:left-[-25px] md:left-[-50px] z-2" data-aos="fade-left">
                     <div className="rounded-lg bg-[#eb7043] w-[150px] sm:w-[180px] md:w-[160px] lg:w-[220px] text-center p-1">
                         <p className="text-md sm:text-lg md:text-md lg:text-lg font-bold ">Price Start from</p>
