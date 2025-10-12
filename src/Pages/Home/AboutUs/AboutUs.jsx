@@ -10,7 +10,7 @@ const AboutUs = () => {
     }, []);
 
     return (
-        <div className="my-[70px] gap-4">
+        <div className="my-[100px] gap-4">
             <div className="text-center">
                 <Headline
                     subheading="ABOUT US"

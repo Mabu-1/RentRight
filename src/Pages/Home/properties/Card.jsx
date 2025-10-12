@@ -47,7 +47,7 @@ const Card = ({ Property }) => {
           <div className="flex justify-center">
             <Link to={`/property/${_id}`}>
               <button
-                className="p-2 sm:p-2 md:p-3 lg:p-2 border rounded-lg 
+                className="p-2 sm:p-2 md:p-3 lg:p-2  rounded-lg 
                   bg-[#e98561] hover:bg-[#eb7043] font-bold hover:text-white
                   dark:bg-orange-700 dark:hover:bg-orange-600"
               >

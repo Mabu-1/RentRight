@@ -68,7 +68,7 @@ const Register = () => {
                     data-aos="fade-left"
                 >
                     <img
-                        src="https://i.ibb.co/TPB5fXf/19197347.jpg"
+                        src="https://i.ibb.co.com/spQF4Xgg/Untitled-design.png"
                         alt="Apartment Registration"
                         className="w-full h-auto object-cover"
                     />

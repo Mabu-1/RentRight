@@ -85,7 +85,7 @@ const handleSubscribe = async (e) => {
                     />
                 </div>
 
-                <Button type="submit" className="w-full md:w-auto rounded-full px-6 py-3">
+                <Button type="submit"  className=" w-full md:w-auto rounded-full px-6 py-3">
                     Subscribe
                 </Button>
             </form>

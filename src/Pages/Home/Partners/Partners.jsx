@@ -23,7 +23,7 @@ const Partners = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
-        <div className="my-7">
+        <div className="my-[100px]">
             <div className="text-center gap-3" data-aos="fade-up">
                 <Headline
                     subheading1={"OUR PREMIUM PARTNERS"}
@@ -37,7 +37,7 @@ const Partners = () => {
                 {partners.map((partner, index) => (
                     <div
                         key={index}
-                        className="flex flex-col items-center justify-center p-4 bg-gray-100 rounded-lg transform transition-transform duration-300 hover:scale-105 hover:bg-white"
+                        className="flex flex-col items-center justify-center p-4 bg-gray-100 rounded-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer"
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                         style={{
