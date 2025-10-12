@@ -1,6 +1,6 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
@@ -13,6 +13,7 @@ const Card = ({ pack }) => {
   const location = useLocation();
   const { data } = useUser();
   const { user } = useContext(AuthContext);
+  const [showPaymentForm, setShowPaymentForm] = useState(false);
 
   const handleBook = async () => {
     const email = user?.email;
@@ -30,12 +31,18 @@ const Card = ({ pack }) => {
         });
         return;
       } else {
-        return navigate(`/packageBuy/${_id}`);
+        // Pass the package data and payment form state through navigation
+        return navigate(`/packageBuy/${_id}`, { 
+          state: { 
+            packageData: pack,
+            showPaymentForm: showPaymentForm 
+          } 
+        });
       }
     } else {
       Swal.fire({
         title: "You are not Logged In",
-        text: "Please login to buy your home",
+        text: "Please login to buy your package",
         icon: "warning",
         showCancelButton: true,
         confirmButtonColor: "#eb7043",
@@ -55,8 +62,6 @@ const Card = ({ pack }) => {
 
   return (
     <div
-      // --- CHANGE IS HERE ---
-      // Added "h-full" to the className string
       className="border bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300 flex flex-col overflow-hidden h-full"
       data-aos="fade-up"
       data-aos-delay={50}
